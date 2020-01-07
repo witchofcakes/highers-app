@@ -1,0 +1,629 @@
+.vacancy-cont-short{
+
+    padding-bottom: 90px;
+
+    /*background-color: #ffd3cf;*/
+}
+
+.short-vac{
+    margin-left: 30px;
+    padding-right: 140px;
+}
+
+#border-bottom-container{
+    padding-bottom: 20px;
+    /*border-bottom: 1px solid #EBEBEC;*/
+}
+
+.vac-info-short{
+    padding-left: 30px;
+    padding-top: 10px;
+    color: #212529;
+    padding-bottom: 20px;
+    /*border-bottom: 1px solid #EBEBEC !important;*/
+}
+
+.vac-title-short{
+    padding-top: 25px;
+}
+
+.box-image-short{
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: #61dafb;
+    background-image: url("../images/deloitte-sm-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.vacancy-info-company-short{
+    margin-bottom: 0px;
+    color: #9c9c9c;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*margin-top: -5px;*/
+    /*margin-bottom: 3px;*/
+    text-transform: uppercase;
+}
+
+.vacancy-info-company-short-bl{
+    margin-bottom: 0px;
+    color: #212529;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 15px;
+    padding-right: 25px;
+}
+
+.vacancy-title-short{
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 25px;
+    margin-top: 5px;
+}
+
+.vacancy-title-a-short{
+    color: #212529 !important;
+}
+
+.vacancy-title-a-short:hover, .vacancy-title-a-short:focus{
+    text-decoration: none !important;
+    color: #083883 !important;
+}
+
+.vacancy-dot{
+     font-size: 10px;
+     font-weight: 400;
+     /*display: inline;*/
+     margin: 5px 8px 3px 8px;
+ }
+
+.vacancy-dot-footer{
+    font-size: 10px;
+    font-weight: 400;
+    /*display: inline;*/
+    margin: 5px 8px 3px 8px;
+}
+
+.vacancy-dot-footer:hover{
+    color: #212529 !important;
+}
+
+.vacancy-type-short{
+    margin-top: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.vacancy-salary-short{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.vacancy-location-short{
+    color: #9c9c9c;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.vacancy-info-short{
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.vacancy-2-short{
+    padding-bottom: 25px;
+    padding-top: 25px;
+    border-bottom: 1px solid #EBEBEC !important;
+}
+
+.box-image-2-short{
+    border-radius: 5px;
+    width: 55px;
+    height: 55px;
+    background-color: #61dafb;
+    background-image: url("../images/ey-sm.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box-image-3-short{
+    border-radius: 5px;
+    width: 55px;
+    height: 55px;
+    background-color: #61dafb;
+    background-image: url("../images/procredit-sm.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.vacancy-page-fixed{
+    top: 0;
+    padding-top: 112px;
+    padding-bottom: 0;
+    height: 100%;
+    width: 290px;
+ }
+
+.vacancy-page-fixed-fixed{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+#leftCol {
+    position: fixed;
+    border-right: 1px solid #EBEBEC !important;
+    /*width: 313px;*/
+    /*background-color: #DDD;*/
+    font-size: 21px;
+    /*overflow-y: scroll;*/
+    top: 121px;
+    padding-top: 10px;
+    bottom: 0;
+    width: 316px !important;
+    /*height: 79%;*/
+}
+
+#content {
+    padding-top: 87px;
+    position: relative;
+    margin-left: 350px;
+    min-height: 800px;
+}
+
+.filter-top{
+    box-shadow: 0 2px 20px rgba(46,46,46,0.1);
+    background-color: white !important;
+    min-height: 18px;
+    align-content: center;
+    margin-top: -4px;
+    position: fixed !important;
+    /*top: 0 !important;*/
+    left: 0 !important;
+    z-index: 700;
+    width: 100%;
+    padding: 13px 30px !important;
+}
+
+#all-cat-filter-top{
+    max-width: 160px;
+    font-weight: 500;
+    /*font-size: 16px;*/
+    border: 1px solid white !important;
+    border-radius: 5px !important;
+    background-color: white !important;
+    padding: 10px 30px 10px 10px !important;
+}
+
+#type-filter-top{
+    font-weight: 500;
+    /*font-size: 16px;*/
+    margin-left: 30px;
+    max-width: 160px;
+    border: 1px solid white !important;
+    border-radius: 5px !important;
+    background-color: white !important;
+    padding: 10px 30px 10px 10px !important;
+}
+
+#salary-filter-top{
+    font-weight: 500;
+    /*font-size: 16px;*/
+    margin-left: 30px;
+    /*width: 160px;*/
+    border: 1px solid white !important;
+    border-radius: 5px !important;
+    background-color: white !important;
+    padding: 10px 20px 10px 10px !important;
+}
+
+.button-top-filter{
+    margin-left: 30px;
+    padding: 8px 10px 8px 10px !important;
+    font-size: 14px;
+    text-align: center;
+    background-color: white;
+    color: #212529;
+    border: 1px solid #212529;
+    border-radius: 5px;
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked{
+   color: #212529 !important;
+}
+
+.back-to-vac-but{
+    margin-right: 50px;
+    margin-left: 15px;
+    padding: 8px 22px 8px 22px !important;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: white !important;
+    color: #212529 !important;
+    border: 1px solid #212529 !important;
+}
+
+.back-to-vac-but:active, .back-to-vac-but:focus{
+    border: 1px solid #212529 !important;
+    outline: none !important;
+}
+
+.arrow-back{
+    margin-bottom: 1px;
+    height: 14px;
+    width: 20px;
+    margin-right: 4px;
+}
+
+#all-cat-select{
+    font-size: 14px !important;
+    font-family: 'Rubik', sans-serif !important;
+    font-weight: 400;
+}
+
+.search-but-filter-top{
+    width: 20px;
+    height: 20px;
+    /*margin-bottom: 2px !important;*/
+}
+
+.search-field-top{
+     color: #212529 !important;
+     border: 1px solid #c3c9cf !important;
+     border-right: none !important;
+     border-radius: 5px 0px 0px 5px !important;
+     /*padding: 7px 0px 10px 7px !important;*/
+     width: 200px !important;
+ }
+
+.search-field-top::placeholder{
+    color: #212529 !important;
+    font-size: 14px !important;
+}
+
+.search-field-top-but{
+    padding: 6px 10px 6px 10px !important;
+    background-color: white;
+    color: #212529 !important;
+    border: 1px solid #c3c9cf !important;
+    border-radius: 0px 5px 5px 0px !important;
+    margin-right: 30px;
+    fill: #212529 !important;
+}
+
+.search-field-top-but:active, .search-field-top-but:focus{
+    outline: none !important;
+    border: 1px solid #c3c9cf !important;
+}
+
+.search-field-top:active, .search-field-top:focus{
+    outline: none !important;
+    border: 1px solid #c3c9cf !important;
+    border-right: none !important;
+    box-shadow: none !important;
+}
+
+.title-vacancy{
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.box-image-short-vac{
+    border-radius: 50px;
+    width: 45px;
+    height: 45px;
+    background-color: #61dafb;
+    background-image: url("../images/deloitte-sm-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title-column-short{
+    /*border-bottom: 1px solid #EBEBEC !important;*/
+    padding: 20px 0px 20px 0px;
+    margin-bottom: 10px;
+    /*background-color: #EBEBEC;*/
+}
+
+.apply-button-but{
+    float: right;
+    border-radius: 5px;
+    border: 1px solid #FF6F61;
+    background-color: #FF6F61;
+    padding: 12px 40px 12px 40px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.simplebar-track.simplebar-horizontal{
+    visibility: hidden !important;
+}
+
+.row-vacancy-info{
+    margin-top: -4px;
+    margin-bottom: 50px;
+}
+
+.tags-labels{
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.chip-info{
+    font-family: 'Rubik', sans-serif !important;
+    color: #212529 !important;
+    background-color: #ffe0db !important;
+    margin-right: 10px !important;
+    font-size: 14px !important;
+    border-radius: 5px !important;
+    margin-bottom: 10px !important;
+}
+
+.react-tabs__tab--selected{
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 2px solid #212529 !important;
+}
+
+.react-tabs__tab-list{
+    margin: 0 -15px 30px !important;
+    border-bottom: 1px solid #EBEBEC !important;
+}
+
+.react-tabs__tab{
+    padding: 6px 25px !important;
+    margin-right: 20px;
+
+}
+
+.vacancy-info-categories{
+    color: #2e3134;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.vacancy-info-categories-first{
+    color: #2e3134;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.vacancy-text-align{
+    text-align: justify;
+    font-size: 16px;
+    color: #61676b;
+}
+
+.vacancy-text{
+    /*text-align: justify;*/
+    font-size: 16px;
+    color: #61676b;
+}
+
+.google-map{
+    margin-left: 28px;
+
+}
+
+.location-map{
+    color: #2e3134;
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: 9px;
+    margin-left: 28px;
+    margin-bottom: 15px;
+}
+
+.vacancy-text-address{
+    font-size: 16px;
+    color: #61676b;
+    /*margin-top: 9px;*/
+    margin-left: 28px;
+    margin-bottom: 10px;
+}
+
+.vacancy-info-categories-company{
+    color: #2e3134;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.vacancy-info-categories-company-vac{
+    color: #2e3134;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-left: 28px;
+}
+
+.bottom-fadeout {
+    bottom: 0;
+    background-image: linear-gradient(0deg, #FFF, rgba(255,255,255,0));
+    -webkit-background-image: linear-gradient(0deg, #FFF, rgba(255,255,255,0));
+}
+
+.top-fadeout {
+    /*top: 0;*/
+    background-image: linear-gradient(0deg, rgba(255,255,255,0), #FFF);
+    -webkit-background-image: linear-gradient(0deg, rgba(255,255,255,0), #FFF);
+}
+
+.bottom-fadeout, .top-fadeout {
+    height: 25px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.row-filter{
+    margin-left: 110px !important;
+}
+
+
+
+#search{
+    display: inline-block;
+    width: 30px;
+    height: 38px;
+    background: white;
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: all .3s;
+}
+
+#search img{
+    height: 60%;
+    top: 20%;
+    position: absolute;
+    left: 10px;
+    transition: all .2s;
+}
+
+#icon{
+    top: 23% !important;
+    height: 22px !important;
+    width: 22px !important;
+}
+
+#search input{
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    color: #212529;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+
+#search input:focus{
+    outline: none;
+    background: white;
+}
+
+#search input::placeholder{
+    color: #ddddde;
+    font-size: 15px;
+    font-family: 'Rubik', sans-serif !important;
+    font-weight: 400;
+}
+
+#search.open{
+    width: 180px;
+    border: 1px solid #d9d9da;
+    border-radius: 5px;
+}
+
+#icon-close{
+    height: 13px;
+    width: 13px;
+    display: none;
+}
+
+.p-apply-bot{
+    margin-bottom: 0px !important;
+}
+
+.but-apply-bottom{
+    margin-top: 50px;
+    margin-bottom: 50px !important;
+    background-color: #FF6F61;
+    padding: 15px 25px 15px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    color: white
+}
+
+.but-apply-bottom:focus{
+    outline: none !important;
+}
+
+.row-but-apply-bot{
+    text-align: center;
+    justify-content: center;
+    margin-left: -50px;
+    margin-right: -45px;
+    background-color: #FFE0DB;
+}
+
+.footer-copyright-short.text-center.py-3{
+    margin-top: -12px;
+    color: #454545;
+    font-size: 14px;
+    background-color: #EBEAEB;
+    margin-left: -35px;
+    margin-right: -30px;
+}
+
+.text-center-short{
+    padding-top: 70px !important;
+    padding-bottom: 40px;
+}
+
+.page-footer-short{
+    padding-top: 0px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.fade-in{
+    animation: fadeIn .5s ease-in
+}
+
+.load-more-but{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 90%;
+    background-color: #212529;
+    margin: 50px 0px 35px 0px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+}
+
+.load-more-but:focus{
+    outline: none !important;
+}
+
+[data-simplebar]{
+    /*background-color: #61dafb;*/
+    height: 100% !important;
+}
