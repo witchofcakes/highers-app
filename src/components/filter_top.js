@@ -1,18 +1,10 @@
 import React from 'react';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
-import NativeSelect from '@material-ui/core/NativeSelect';
 import Input from '@material-ui/core/Input';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Select from '@material-ui/core/Select';
-import InputLabel from '@material-ui/core/InputLabel';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import search from "../images/search_2.svg";
 
 export default function Filter_Top() {
     const [state, setState] = React.useState({
@@ -20,7 +12,7 @@ export default function Filter_Top() {
         checkedB: false,
         checkedC: false,
         checkedD: false,
-        age: '',
+        category: '',
         money: '',
     });
 
@@ -42,22 +34,11 @@ export default function Filter_Top() {
         'Віддалено',
     ];
 
-        const [personName, setPersonName] = React.useState([]);
+    const [personName, setPersonName] = React.useState([]);
 
-        const handleChangeType = event => {
-            setPersonName(event.target.value);
-        };
-
-        const handleChangeMultiple = event => {
-            const { options } = event.target;
-            const value = [];
-            for (let i = 0, l = options.length; i < l; i += 1) {
-                if (options[i].selected) {
-                    value.push(options[i].value);
-                }
-            }
-            setPersonName(value);
-        };
+    const handleChangeType = event => {
+        setPersonName(event.target.value);
+    };
 
     const handleChange_cat = name => event => {
         setState({
@@ -66,8 +47,11 @@ export default function Filter_Top() {
         });
     };
 
-    const handleChange = prop => event => {
-        setState({ ...state, [prop]: event.target.value });
+    const handleChange_money = name => event => {
+        setState({
+            ...state,
+            [name]: event.target.value,
+        });
     };
 
     return (
@@ -82,7 +66,7 @@ export default function Filter_Top() {
 
                         <div>
                             <FormControl>
-                                <Select value={state.age} onChange={handleChange_cat('age')} displayEmpty id="all-cat-filter-top">
+                                <Select value={state.category} onChange={handleChange_cat('category')} displayEmpty id="all-cat-filter-top">
                                     <MenuItem value="" id="all-cat-select">Всі категорії</MenuItem>
                                     <MenuItem value={1} id="all-cat-select">Аудит</MenuItem>
                                     <MenuItem value={2} id="all-cat-select">Аналітика</MenuItem>
@@ -99,7 +83,7 @@ export default function Filter_Top() {
                         <FormControl>
                             {/*<InputLabel id="demo-mutiple-checkbox-label">Tag</InputLabel>*/}
                             <Select
-                                labelId="demo-mutiple-checkbox-label"
+                                labelId="type-filter-top"
                                 id="type-filter-top"
                                 multiple
                                 displayEmpty
@@ -127,29 +111,11 @@ export default function Filter_Top() {
 
                         <div>
                             <FormControl>
-                                <Select
-                                    labelId="demo-mutiple-checkbox-label"
-                                    id="type-filter-top"
-                                    multiple
-                                    displayEmpty
-                                    value={personName}
-                                    onChange={handleChangeType}
-                                    input={<Input />}
-                                    renderValue={selected => {
-                                        if (selected.length === 0) {
-                                            return <span>Зарплатня</span>;
-                                        }
-
-                                        return selected.join(', ');
-                                    }}
-                                    MenuProps={MenuProps}
-                                >
-                                    {names.map(name => (
-                                        <MenuItem key={name} value={name}>
-                                            <Checkbox id="checkbox" checked={personName.indexOf(name) > -1} />
-                                            <ListItemText primary={name} />
-                                        </MenuItem>
-                                    ))}
+                                <Select value={state.money} onChange={handleChange_money('money')} displayEmpty id="type-filter-top">
+                                    <MenuItem value="" id="all-cat-select">Зарплатня</MenuItem>
+                                    <MenuItem value={1} id="all-cat-select">5000+ грн</MenuItem>
+                                    <MenuItem value={2} id="all-cat-select">7000+ грн</MenuItem>
+                                    <MenuItem value={3} id="all-cat-select">9000+ грн</MenuItem>
                                 </Select>
                             </FormControl>
                         </div>

@@ -4,6 +4,7 @@ import Landing from '../components/landing_page.js';
 import NavBar from "../components/navbar.js";
 import AllVac from '../components/vacancies.js';
 import Test from "../components/tester";
+import Vac_Page from "../components/vacancy_one";
 
 const Main = () => (
     <div>
@@ -11,6 +12,7 @@ const Main = () => (
     <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/all-vacancies" component={AllVac} />
+        <Route exact path="/vacancy" component={Vac_Page} />
     </Switch>
     </div>
 )

@@ -7,6 +7,8 @@ class NavBar extends React.Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light">
+                <div className="full-filter">
+                    <div className="row">
                 <a className="navbar-brand" href="/"><img src={logo} className="logo-main"/></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,6 +29,8 @@ class NavBar extends React.Component {
                             <a className="nav-link" href="#">Контакти</a>
                         </li>
                     </ul>
+                </div>
+                    </div>
                 </div>
             </nav>
         );

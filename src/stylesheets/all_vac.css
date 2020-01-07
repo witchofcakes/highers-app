@@ -117,7 +117,7 @@
 }
 
 .vacancy-dot-long{
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
     /*display: inline;*/
     margin: 5px 5px 3px 5px;
@@ -134,7 +134,7 @@
     border-radius: 50px;
     width: 55px;
     height: 55px;
-    background-color: #61dafb;
+    /*background-color: #61dafb;*/
     background-image: url("../images/deloitte-sm-2.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -144,7 +144,7 @@
       border-radius: 50px;
       width: 55px;
       height: 55px;
-      background-color: #61dafb;
+      /*background-color: #61dafb;*/
       background-image: url("../images/ey-sm.png");
       background-size: cover;
       background-repeat: no-repeat;
@@ -154,7 +154,7 @@
     border-radius: 50px;
     width: 55px;
     height: 55px;
-    background-color: #61dafb;
+    /*background-color: #61dafb;*/
     background-image: url("../images/procredit-sm.png");
     background-size: cover;
     background-repeat: no-repeat;

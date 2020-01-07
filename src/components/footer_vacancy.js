@@ -57,7 +57,7 @@ class Footer_Vac extends React.Component {
 
 
                 <div className="footer-copyright-short text-center py-3">
-                    © 2019 Copyright HIGHERS
+                    © 2020 Copyright HIGHERS
                 </div>
             </footer>
 

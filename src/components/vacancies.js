@@ -15,39 +15,12 @@ class AllVac extends React.Component {
 
     constructor(props) {
         super(props);
-        this.funcHide = this.funcHide.bind(this);
-        this.funcShow = this.funcShow.bind(this);
+
 
         this.state = {
             showVacancy: false,
         }
 
-    }
-
-
-
-    funcHide(){
-        let display = document.querySelector('.container-filter');
-        display.setAttribute('style', 'display: ' + 'none');
-        let display_search = document.querySelector('.container-search');
-        display_search.setAttribute('style', 'display: ' + 'none');
-        let display_footer = document.querySelector('.footer-vac');
-        display_footer.setAttribute('style', 'display: ' + 'none');
-        let width = document.querySelector('.vacancy-cont');
-        width.setAttribute('style', 'display: ' + 'none');
-        this.setState({showVacancy: true})
-    }
-
-    funcShow(){
-        let display = document.querySelector('.container-filter');
-        display.setAttribute('style', 'display: ' + 'inline');
-        let display_search = document.querySelector('.container-search');
-        display_search.setAttribute('style', 'display: ' + 'block');
-        let display_footer = document.querySelector('.footer-vac');
-        display_footer.setAttribute('style', 'display: ' + 'inline');
-        let width = document.querySelector('.vacancy-cont');
-        width.setAttribute('style', 'display: ' + 'inline');
-        this.setState({showVacancy: false})
     }
 
     render() {
@@ -81,30 +54,6 @@ class AllVac extends React.Component {
                     </div>
                 </div>
 
-                {/*////////////////////////////////////////////Short vacancy/////////////////////////////////////////*/}
-                {this.state.showVacancy ?
-                    <div>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-12 filter-top">
-                                    <div className="row">
-                                        <div>
-                                            <button className="back-to-vac-but" onClick={this.funcShow}>
-                                                <img src={arrow} className="arrow-back"/> Всі вакансії
-                                            </button>
-                                            <Search_Top/>
-                                        </div>
-                                        <div>
-                                            <Filter_Top/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <Vac/>
-                    </div>
-                    : ""}
-                {/*////////////////////////////////////////////Short vacancy/////////////////////////////////////////*/}
 
                 <div className="container">
                 <div class="row">
@@ -119,7 +68,11 @@ class AllVac extends React.Component {
                         <div className="row align-items-center vacancy-2">
                             <div className="box-image"/>
                             <div className="col-5 vacancy-title">
-                                <p className="vacancy-title"><a className="vacancy-title-a" data-toggle="collapse" onClick={this.funcHide} href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Content Maker & Manager Trainee</a></p>
+                                <p className="vacancy-title">
+                                    <a className="vacancy-title-a" href="/vacancy">
+                                        Content Maker & Manager Trainee
+                                    </a>
+                                </p>
                                 <p className="vacancy-info">
                                     Deloitte
                                     <span className="vacancy-dot-long">•</span>

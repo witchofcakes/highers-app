@@ -7,22 +7,24 @@ import 'react-tabs/style/react-tabs.css';
 
 import 'simplebar/dist/simplebar.min.css';
 import Footer_Vac from "./footer_vacancy";
+import Vacancy_Comp from "./vacancy_comp";
 
 
 class Vac extends React.Component {
 
     render() {
         return (
-            <div className="container-fluid short-vac">
+            <div className="full short-vac">
                 <div className="row">
-                    <div className="no-gutters" id="leftCol">
+                    <div className="col no-gutters" id="leftCol">
                         <div className="bottom-fadeout"></div>
                         <div className="top-fadeout"></div>
                         <SimpleBar>
+                            <p className="similar-vac">Схожі вакансії</p>
                             <Vacancy_Short title={"Content Maker & Manager Trainee"} company={"Deloitte"} type={"Full / Part-time"} salary={"15000 грн"} image={"box-image"}/>
                             <Vacancy_Short title={"IT Risk and Assurance"} company={"Ernst & Young"} type={"Full / Part-time"} salary={"13000 грн"} image={"box-image-2"}/>
                             <Vacancy_Short title={"Менеджер із роботи з бізнес - клієнтами"} company={"ProCredit Bank"} type={"Full-time"} salary={"8000 грн"} image={"box-image-3"}/>
-                            <Vacancy_Short title={"Content Maker & Manager Trainee"} company={"Deloitte"} type={"Part-time"} salary={"15000 грн"} image={"box-image"}/>
+                            <Vacancy_Short title={"Content Maker & Manager Trainee"} company={"Deloitte"} type={"Part-time"} salary={"15000 грн"} image={"box-image"} active={"active-vacancy"}/>
                             <Vacancy_Short title={"IT Risk and Assurance"} company={"Ernst & Young"} type={"Full / Part-time"} salary={"13000 грн"} image={"box-image-2"}/>
                             <Vacancy_Short title={"Менеджер із роботи з бізнес - клієнтами"} company={"ProCredit Bank"} type={"Full-time"} salary={"8000 грн"} image={"box-image-3"}/>
                             <Vacancy_Short title={"Content Maker & Manager Trainee"} company={"Deloitte"} type={"Part-time"} salary={"15000 грн"} image={"box-image"}/>
@@ -34,7 +36,7 @@ class Vac extends React.Component {
                             <button className="load-more-but">Показати ще 15 вакансій</button>
                         </SimpleBar>
                     </div>
-                    <div className="col-9" id="content">
+                    <div className="col" id="content">
                         <div className="row">
                             <div className="col-12 title-column-short">
                                 <div className="row">
@@ -148,15 +150,16 @@ class Vac extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-4 no-gutters">
+                                    <div className="col-4 column-location no-gutters">
+                                        <div className="loc-div">
                                         <div className="location-map">Локація:</div>
                                         <p className="vacancy-text-address">м. Київ, вул. Жилянська, 48</p>
-                                        <iframe width="260" height="260" frameBorder="0" className="google-map" scrolling="no"
+                                        <iframe width="250" height="260" frameBorder="0" className="google-map" scrolling="no"
                                                 marginHeight="0" marginWidth="0"
                                                 src="https://www.google.com/maps/embed/v1/place?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%96%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%B0%2C%2048%2C%2050%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2&key=AIzaSyDC2eQOHheWPhWWxe8nYSbJS15QwLHkqiY"
                                                 allowFullScreen>
                                         </iframe>
-
+                                        </div>
                                     </div>
                                 </div>
                             </TabPanel>
@@ -182,6 +185,19 @@ class Vac extends React.Component {
                                 </div>
                                 <div className="col-4 no-gutters">
                                     <div className="vacancy-info-categories-company-vac">Вакансії компанії:</div>
+                                    <Vacancy_Comp title={"IT Risk and Assurance"} company={"Ernst & Young"} type={"Full / Part-time"} salary={"13000 грн"}/>
+                                    <Vacancy_Comp title={"Менеджер із роботи з бізнес - клієнтами"} company={"Deloitte"} type={"Full-time"} salary={"15000 грн"}/>
+                                    <Vacancy_Comp title={"Content Maker & Manager Trainee"} company={"Deloitte"} type={"Full-time"} salary={"8000 грн"}/>
+                                    <Vacancy_Comp title={"Content Maker & Manager Trainee"} company={"Deloitte"} type={"Full-time"} salary={"8000 грн"}/>
+                                    <div className="vac-company-div">
+                                        <a target="_blank" href="/all-vacancies" className="all-vac-company-blue">
+                                            <button className="all-vac-company-but">
+                                                <a className="all-vac-company-blue">
+                                                    Всі вакансії компанії
+                                                </a>
+                                            </button>
+                                        </a>
+                                    </div>
                                 </div>
                                 </div>
                             </TabPanel>
