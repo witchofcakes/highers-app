@@ -7,6 +7,7 @@ import './stylesheets/all_vac.css';
 import './stylesheets/vacancy.css';
 import './javascript/navbar.js';
 import './javascript/cover.js';
+import './stylesheets/employer_vacancies.css';
 // import 'bootstrap/css/bootstrap.css';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';

@@ -1,0 +1,266 @@
+#leftCol-employer-wide {
+    position: fixed;
+    border-right: 1px solid #EBEBEC !important;
+    /*background-color: #DDD;*/
+    font-size: 16px;
+    /*overflow-y: scroll;*/
+    top: 0px;
+    padding-top: 10px;
+    bottom: 0;
+    width: 185px !important;
+}
+
+#leftCol-employer-narrow {
+    position: fixed;
+    border-right: 1px solid #EBEBEC !important;
+    /*background-color: #DDD;*/
+    font-size: 16px;
+    /*overflow-y: scroll;*/
+    top: 0px;
+    padding-top: 10px;
+    bottom: 0;
+    width: 65px !important;
+}
+
+.logo-mount-employer{
+    height: 35px;
+    width: 35px;
+}
+
+#content-employer {
+    padding-top: 70px;
+    position: relative;
+    margin-left: 280px;
+    /*padding-right: 74px;*/
+}
+
+.all-vac-employer{
+    font-size: 15.5px;
+    color: #bdbebf;
+    font-weight: 400;
+    margin-top: 50px;
+    padding: 0px 0px 8px 0px;
+}
+
+.candidates-employer{
+    font-size: 15.5px;
+    color: #bdbebf;
+    font-weight: 400;
+    padding: 0px 0px 8px 0px;
+}
+
+.channels-employer{
+    font-size: 15.5px;
+    color: #bdbebf;
+    font-weight: 400;
+    padding: 0px 0px 8px 0px;
+}
+
+.pricing-employer{
+    font-size: 15.5px;
+    color: #bdbebf;
+    font-weight: 400;
+    padding: 0px 0px 8px 0px;
+}
+
+.feather-file-text{
+    width: 17px;
+    height: 17px;
+    stroke: #bdbebf;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+.feather-user{
+    width: 19px;
+    height: 19px;
+    stroke: #bdbebf;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+.feather-layers{
+    width: 19px;
+    height: 19px;
+    stroke: #bdbebf;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+.feather-credit-card{
+    width: 19px;
+    height: 19px;
+    stroke: #bdbebf;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+.feather-menu{
+    width: 19px;
+    height: 19px;
+    stroke: #bdbebf;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.feather-more-horizontal{
+    width: 19px;
+    height: 19px;
+    stroke: #bdbebf;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.feather-search{
+    width: 19px;
+    height: 19px;
+    stroke: #9c9c9c;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.feather-menu:hover{
+    stroke: #212529;
+}
+
+.button-menu{
+     background-color: white;
+     border: none;
+     margin-left: 5px;
+ }
+
+.button-menu:focus{
+    outline: none;
+}
+
+.all-vac-employer:hover > .feather-file-text {
+    stroke: #135393;
+}
+
+.all-vac-employer:hover {
+    color: #135393;
+    text-decoration: none !important;
+}
+
+#employer-left-active{
+    color: #212529 !important;
+    stroke: #212529 !important;
+}
+
+.avatar-name{
+    color: #212529;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.avatar-job{
+    color: #bdbebf;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: -14px;
+}
+
+.avatar-picture{
+    height: 45px !important;
+    width: 45px !important;
+    margin-left: 15px;
+    margin-right: -3px;
+}
+
+.avatar-employer{
+    position: fixed;
+    bottom: 10px;
+}
+
+.logo-employer{
+    width: 130px;
+    height: 28.5px;
+}
+
+.all-vac-text-employer{
+    font-size: 25px;
+    color: #212529;
+    font-weight: 500;
+}
+
+.create-vac-employer{
+     background-color: #FF6F61;
+    color: white;
+     padding: 15px 20px;
+     font-weight: 500;
+     font-size: 15px;
+     border-radius: 5px;
+     letter-spacing: 0.4px;
+     border: none;
+ }
+
+.create-vac{
+    color: white;
+}
+
+.create-vac-employer:focus{
+    outline: none;
+}
+
+.search-form-employer{
+    display: inline;
+
+
+}
+
+.search-employer{
+    padding: 10px 15px;
+    border: 1px solid #EBEBEC;
+    border-radius: 15px;
+    margin-right: 40px;
+    /*height: 52px !important;*/
+}
+
+.table thead th {
+    /*text-transform: uppercase;*/
+    color: #9c9c9c;
+    font-size: 14px;
+    font-weight: 400 !important;
+    vertical-align: bottom;
+    border-bottom: 1px solid #EBEBEC !important;
+}
+
+.table td, .table th {
+    max-width: 300px;
+    font-size: 14px;
+    padding: .75rem;
+    vertical-align: top;
+    /*border-top: 1px solid #EBEBEC !important;*/
+
+    font-weight: 400 !important;
+}
+
+.table-employers{
+    margin-top: 50px;
+}
+
+.align-center-table{
+    text-align: center;
+}

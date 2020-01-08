@@ -596,16 +596,22 @@ body{
     /*letter-spacing: 1px;*/
 }
 
-.telegram{
-    width: 27px;
-    height: 27px;
+svg#telegram{
+    fill: #212529;
 }
 
-.insta{
-    margin-left: 30px;
-    width: 27px;
-    height: 27px;
+svg#telegram:hover{
+    fill: #135393;
+}
 
+
+svg#insta{
+    margin-left: 30px;
+    fill: #212529;
+}
+
+svg#insta:hover{
+    fill: #135393;
 }
 
 .facebook{
