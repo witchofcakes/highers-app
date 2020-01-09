@@ -328,18 +328,20 @@
     position: relative;
     float: left;
     margin: 0px 10px;
-    padding: 6px 12px;
+    padding: 6px 12px 5px 12px;
     line-height: 1.42857143;
     text-decoration: none;
     color: #212529;
     font-size: 15px;
     background-color: #fff;
+    cursor: pointer;
     /*border: 1px solid #ddd;*/
 }
 
 .pagination li a:hover, .pagination li a:focus{
     background-color: #f0f0f0;
     border-radius: 50px;
+    outline: none !important;
 }
 
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
@@ -347,7 +349,7 @@
     color: #fff;
     background-color: #FF6F61;
     border-color: #FF6F61;
-    cursor: default;
+    cursor: pointer;
     border-radius: 50px;
 }
 
@@ -358,13 +360,27 @@
     cursor: not-allowed;
 }
 
-.pagination>.disabled>a>.arrow-pag, .pagination>.disabled>a:focus>.arrow-pag, .pagination>.disabled>a:hover>.arrow-pag, .pagination>.disabled>span>.arrow-pag, .pagination>.disabled>span:focus>.arrow-pag, .pagination>.disabled>span:hover>.arrow-pag {
+.pagination>.disabled>a>.arrow-pag-prev, .pagination>.disabled>a:focus>.arrow-pag-prev, .pagination>.disabled>a:hover>.arrow-pag-prev, .pagination>.disabled>span>.arrow-pag-prev, .pagination>.disabled>span:focus>.arrow-pag-prev, .pagination>.disabled>span:hover>.arrow-pag-prev {
     fill: #777 !important;
     border-color: #ddd;
     cursor: not-allowed;
 }
 
-.arrow-pag{
+.pagination>.disabled>a>.arrow-pag-next, .pagination>.disabled>a:focus>.arrow-pag-next, .pagination>.disabled>a:hover>.arrow-pag-next, .pagination>.disabled>span>.arrow-pag-next, .pagination>.disabled>span:focus>.arrow-pag-next, .pagination>.disabled>span:hover>.arrow-pag-next {
+    fill: #777 !important;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+
+.arrow-pag-prev{
+    margin-right: -5px;
+    fill: #414141 !important;
+    font-size: 12px !important;
+    width: 14px !important;
+}
+
+.arrow-pag-next{
+    margin-right: -2px;
     fill: #414141 !important;
     font-size: 12px !important;
     width: 14px !important;

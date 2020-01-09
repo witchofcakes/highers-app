@@ -31,6 +31,7 @@
     padding-top: 70px;
     position: relative;
     margin-left: 280px;
+    padding-bottom: 80px;
     /*padding-right: 74px;*/
 }
 
@@ -141,6 +142,49 @@
     fill: none;
 }
 
+.feather-trash{
+    width: 15px;
+    height: 15px;
+    stroke: #212529;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 2px !important;
+
+}
+
+.feather-edit-2{
+    width: 15px;
+    height: 15px;
+    stroke: #212529;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 2px !important;
+}
+
+.feather-filter{
+    width: 19px;
+    height: 19px;
+    stroke: #212529;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+
+}
+
+.filter-button-employer{
+    display: inline;
+    /*background: #efefef;*/
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 30px;
+}
+
 .feather-menu:hover{
     stroke: #212529;
 }
@@ -155,14 +199,17 @@
     outline: none;
 }
 
-.all-vac-employer:hover > .feather-file-text {
+.all-vac-employer:hover > .feather-file-text, .candidates-employer:hover > .feather-user,
+.channels-employer:hover > .feather-layers, .pricing-employer:hover > .feather-credit-card,
+.feather-more-horizontal:hover {
     stroke: #135393;
 }
 
-.all-vac-employer:hover {
+.all-vac-employer:hover, .candidates-employer:hover, .channels-employer:hover, .pricing-employer:hover {
     color: #135393;
     text-decoration: none !important;
 }
+
 
 #employer-left-active{
     color: #212529 !important;
@@ -170,9 +217,15 @@
 }
 
 .avatar-name{
-    color: #212529;
+    color: #212529 !important;
     font-size: 14px;
     font-weight: 400;
+    /*padding-top: 9px;*/
+}
+
+.avatar-name:hover{
+    color: #135393 !important;
+    text-decoration: none !important;
 }
 
 .avatar-job{
@@ -183,8 +236,8 @@
 }
 
 .avatar-picture{
-    height: 45px !important;
-    width: 45px !important;
+    height: 40px !important;
+    width: 40px !important;
     margin-left: 15px;
     margin-right: -3px;
 }
@@ -195,8 +248,16 @@
 }
 
 .logo-employer{
-    width: 130px;
-    height: 28.5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+    width: 140px;
+    height: 31px;
+    margin-left: -8px;
+}
+
+.employer-menu-text{
+    margin-top: 80px !important;
 }
 
 .all-vac-text-employer{
@@ -208,9 +269,9 @@
 .create-vac-employer{
      background-color: #FF6F61;
     color: white;
-     padding: 15px 20px;
+     padding: 13px 20px;
      font-weight: 500;
-     font-size: 15px;
+     font-size: 14px;
      border-radius: 5px;
      letter-spacing: 0.4px;
      border: none;
@@ -230,11 +291,35 @@
 
 }
 
-.search-employer{
-    padding: 10px 15px;
+.feather-search-div{
+    border-radius: 25px 0px 0px 25px;
+    display: inline;
     border: 1px solid #EBEBEC;
-    border-radius: 15px;
+    border-right: none;
+    padding: 12px 15px 13px 15px;
+    margin-right: -7px;
+
+}
+
+.search-employer{
+    margin-left: -10px;
+    font-size: 15px;
+    padding: 11px 15px;
+    border: 1px solid #EBEBEC;
+    border-left: none;
+    border-radius: 0px 25px 25px 0px;
     margin-right: 40px;
+    /*height: 52px !important;*/
+}
+
+.search-employer:focus{
+    outline: none !important;
+    /*height: 52px !important;*/
+}
+
+.search-employer::placeholder{
+    color: #ddddde;
+    font-size: 15px;
     /*height: 52px !important;*/
 }
 
@@ -258,9 +343,92 @@
 }
 
 .table-employers{
+    margin-bottom: 20px;
     margin-top: 50px;
 }
 
 .align-center-table{
     text-align: center;
+}
+
+.button-more{
+    padding: 0px !important;
+}
+
+.button-more:focus{
+    outline: none !important;
+}
+
+.button-more:hover{
+    background-color: white !important;
+}
+
+.button-more-menu{
+    max-width: 200px;
+    text-overflow: ellipsis !important;
+    font-size: 14px !important;
+    font-family: 'Rubik', sans-serif !important;
+}
+
+.menu-text-edit-delete{
+    display: inline;
+    margin-left: 8px;
+}
+
+.menu-text-edit-delete-marg{
+    margin-left: -15px;
+}
+
+.footer-copyright-employer.text-center.py-3{
+    margin-top: -12px;
+    color: #454545;
+    font-size: 14px;
+    background-color: #EBEAEB;
+    margin-left: -95px;
+    margin-right: -51px;
+}
+
+.border-div{
+    margin-left: -95px;
+    margin-right: -51px;
+    margin-bottom: -30px;
+    margin-top: 50px;
+    border-bottom: 1px solid #f1f1f2;
+}
+
+.not-active{
+    color: #9c9c9c !important;
+}
+
+a.not-active:hover{
+    color: #135393 !important;
+}
+
+#not-active-link:hover{
+    color: #135393 !important;
+    text-decoration: none !important;
+}
+
+.MuiBadge-dot {
+    height: 4.5px !important;
+    padding: 0;
+    min-width: 4.5px !important;
+    border-radius: 4px;
+}
+
+.MuiBadge-anchorOriginTopRightRectangle {
+    top: 15px !important;
+    right: 7px !important;
+    transform: scale(1) translate(50%, -50%);
+    transform-origin: 100% 0%;
+}
+
+#table-employer-link{
+    color: #212529;
+    font-size: 14px;
+}
+
+#table-employer-link:hover{
+    color: #135393;
+    text-decoration: none !important;
 }

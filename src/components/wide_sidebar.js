@@ -9,12 +9,11 @@ export default class Wide_SideBar extends React.Component {
 
         return (
             <div className="col-3 wide-sidebar no-gutters" id="leftCol-employer-wide">
-                {/*<div className="row">*/}
-                {/*    <div className="col logo-employer">*/}
-                {/*        <a className="navbar-brand" href="/"><img src={logo} className="logo-employer"/></a>*/}
-
-                {/*    </div>*/}
-                {/*</div>*/}
+                <div className="row align-items-center">
+                    <div className="col-12 no-gutters logo-employer">
+                        <a className="navbar-brand" href="/"><img src={logo} className="logo-employer"/></a>
+                    </div>
+                </div>
 
                 <div className="employer-menu-text">
                     <a href="/employer-vacancies" className="all-vac-employer">
@@ -43,15 +42,19 @@ export default class Wide_SideBar extends React.Component {
                             </a>
                         </div>
 
-                        {/*<div className="avatar-employer">*/}
-                        {/*    <div className="row">*/}
-                        {/*        <Avatar src={avatar} className="avatar-picture" />*/}
-                        {/*        <div className="col">*/}
-                        {/*            <p className="avatar-name">Кріс Хемсворт</p>*/}
-                        {/*            <p className="avatar-job">Deloitte</p>*/}
-                        {/*        </div>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
+                        <div className="avatar-employer">
+                            <div className="row">
+                                <Avatar src={avatar} className="avatar-picture" />
+                                <div className="col">
+                                    <p className="avatar-name">
+                                    <a href="#" className="avatar-name">
+                                        Тетяна
+                                    </a>
+                                    </p>
+                                    <p className="avatar-job">Ernst & Young</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
