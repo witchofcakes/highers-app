@@ -6,6 +6,7 @@ import AllVac from '../components/vacancies.js';
 import Test from "../components/tester";
 import Vac_Page from "../components/vacancy_one";
 import Empl_Vac from "../components/employer_vacancies";
+import Empl_Cand from "../components/employer_candidates";
 
 const Main = () => (
     <div>
@@ -15,6 +16,7 @@ const Main = () => (
             <Route path="/all-vacancies" component={AllVac} />
             <Route path="/vacancy" component={Vac_Page} />
             <Route path="/employer-vacancies" component={Empl_Vac} />
+            <Route path="/employer-candidates" component={Empl_Cand} />
         </Switch>
     </div>
 )

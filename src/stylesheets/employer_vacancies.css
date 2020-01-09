@@ -432,3 +432,7 @@ a.not-active:hover{
     color: #135393;
     text-decoration: none !important;
 }
+
+.scrollme {
+    overflow-x: auto;
+}

@@ -22,7 +22,7 @@ export default class Wide_SideBar extends React.Component {
                             Вакансії
                         </p>
                     </a>
-                    <a href="/employer-vacancies" className="candidates-employer">
+                    <a href="/employer-candidates" className="candidates-employer">
                         <p className="candidates-employer" id="employer-left-active">
                             <svg xmlns="http://www.w3.org/2000/svg"id="employer-left-active" viewBox="0 0 24 24" className="feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                             Кандидати

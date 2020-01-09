@@ -10,10 +10,10 @@ import close_icon from "../images/close-icon.svg";
 import Btn_More from "./button_more";
 import Vac_Row from "./vacancy_row";
 import Pagination_Comp from "./pagination";
-import Footer_Vac from "./footer_vacancy";
-import Footer_Empl from "./footer_employer";
+import SimpleBar from 'simplebar-react';
+import Cand_Row from "./candidate_row";
 
-export default class Empl_Vac extends React.Component {
+export default class Empl_Cand extends React.Component {
 
     constructor(props) {
         super(props);
@@ -58,7 +58,7 @@ export default class Empl_Vac extends React.Component {
                         <div className="row">
                             <div className="col-12">
                                 <div className="row align-items-center">
-                                    <div className="all-vac-text-employer">Всі вакансії</div>
+                                    <div className="all-vac-text-employer">Всі кандидати</div>
                                     <div className="ml-auto">
                                         <form className="search-form-employer" autoComplete="off">
                                             <div className="feather-search-div">
@@ -67,7 +67,7 @@ export default class Empl_Vac extends React.Component {
                                                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                                                 </svg>
                                             </div>
-                                            <input className="search-employer" placeholder="Пошук вакансій" type="text"/>
+                                            <input className="search-employer" placeholder="Пошук кандидатів" type="text"/>
                                         </form>
 
                                         <a target="_blank" className="create-vac" href="#">
@@ -83,35 +83,37 @@ export default class Empl_Vac extends React.Component {
                             </div>
                         </div>
 
-                        <div className="row">
-                            <table className="table table-borderless table-employers">
+                        <div className="row scrollme">
+                            <table className="table table-borderless table-responsive table-employers">
                                 <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Назва</th>
-                                    <th scope="col">Локація</th>
-                                    <th scope="col">Кандидати</th>
+                                    <th scope="col">Прізвище</th>
+                                    <th scope="col">Ім'я</th>
+                                    <th scope="col">Контакти</th>
+                                    <th scope="col">Вакансія</th>
+                                    <th scope="col">Курс</th>
+                                    <th scope="col">Університет</th>
+                                    <th scope="col">Факультет</th>
+                                    <th scope="col">Англійська</th>
+                                    <th scope="col">Вид зайнятості</th>
+                                    <th scope="col">Бажаний рівень зп</th>
+                                    <th scope="col">Іноземні мови</th>
                                     <th scope="col">Статус</th>
                                     <th scope="col">Дата</th>
                                     <th scope="col" className="align-center-table">Більше</th>
                                 </tr>
                                 </thead>
+
                                 <tbody>
-                                    <Vac_Row number={"1"} title={"IT Risk and Assurance"} location={"Київ"} applicants={"12"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"2"} title={"Менеджер із роботи з бізнес - клієнтами"} location={"Київ"} applicants={"3"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"3"} title={"Content Maker & Manager Trainee"} location={"Київ"} applicants={"345"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"4"} title={"IT Risk and Assurance"} location={"Київ"} applicants={"12"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"5"} title={"Менеджер із роботи з бізнес - клієнтами"} location={"Київ"} applicants={"3"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"6"} title={"Content Maker & Manager Trainee"} location={"Київ"} applicants={"345"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"7"} title={"IT Risk and Assurance"} location={"Київ"} applicants={"12"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"8"} title={"Менеджер із роботи з бізнес - клієнтами"} location={"Київ"} applicants={"3"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"9"} title={"Content Maker & Manager Trainee"} location={"Київ"} applicants={"345"} status={"Не активна"} date={"08.01.2020"} active={"not-active"} active_link={"not-active-link"}/>
-                                    <Vac_Row number={"10"} title={"IT Risk and Assurance"} location={"Київ"} applicants={"12"} status={"Не активна"} date={"08.01.2020"} active={"not-active"} active_link={"not-active-link"}/>
-                                    <Vac_Row number={"11"} title={"Менеджер із роботи з бізнес - клієнтами"} location={"Київ"} applicants={"3"} status={"Не активна"} date={"08.01.2020"} active={"not-active"} active_link={"not-active-link"}/>
-                                    <Vac_Row number={"12"} title={"Content Maker & Manager Trainee"} location={"Київ"} applicants={"345"} status={"Не активна"} date={"08.01.2020"} active={"not-active"} active_link={"not-active-link"}/>
+                                    <Cand_Row number={"1"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} english={"B2"} workType={"Full-time"} salary={"8000+"} languages={"Іспанська - А2"} status={"Тест"} date={"08.01.2020"}/>
+                                    <Cand_Row number={"2"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} english={"B1"} workType={"Part-time"} salary={"13000+"} languages={"Німецька - В2"} status={"Новий"} date={"08.01.2020"}/>
+                                    <Cand_Row number={"3"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Філологія"} english={"B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Китайська - А1"} status={"Співбесіда"} date={"08.01.2020"}/>
                                 </tbody>
+
                             </table>
                         </div>
+
 
                         <div className="row align-items-center pagination-row">
                             <Pagination_Comp/>
