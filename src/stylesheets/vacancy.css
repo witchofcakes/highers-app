@@ -1,7 +1,5 @@
 .vacancy-cont-short{
-
     padding-bottom: 90px;
-
     /*background-color: #ffd3cf;*/
 }
 
@@ -370,7 +368,7 @@
 }
 
 .simplebar-track.simplebar-horizontal{
-    visibility: hidden !important;
+    /*visibility: hidden !important;*/
 }
 
 .row-vacancy-info{
@@ -654,9 +652,13 @@
     outline: none !important;
 }
 
+.vacancy-info-scroll{
+    height: 100% !important;
+}
+
 [data-simplebar]{
     /*background-color: #61dafb;*/
-    height: 100% !important;
+    /*height: 100% !important;*/
 }
 
 .full{

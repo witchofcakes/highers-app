@@ -19,7 +19,7 @@ class Vac extends React.Component {
                     <div className="col no-gutters" id="leftCol">
                         <div className="bottom-fadeout"></div>
                         <div className="top-fadeout"></div>
-                        <SimpleBar>
+                        <SimpleBar className="vacancy-info-scroll">
                             <p className="similar-vac">Схожі вакансії</p>
                             <Vacancy_Short title={"Content Maker & Manager Trainee"} company={"Deloitte"} type={"Full / Part-time"} salary={"15000 грн"} image={"box-image"}/>
                             <Vacancy_Short title={"IT Risk and Assurance"} company={"Ernst & Young"} type={"Full / Part-time"} salary={"13000 грн"} image={"box-image-2"}/>

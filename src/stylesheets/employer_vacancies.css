@@ -330,21 +330,33 @@
     font-weight: 400 !important;
     vertical-align: bottom;
     border-bottom: 1px solid #EBEBEC !important;
+    padding-top: 0.9rem !important;
 }
 
 .table td, .table th {
-    max-width: 300px;
     font-size: 14px;
     padding: .75rem;
     vertical-align: top;
     /*border-top: 1px solid #EBEBEC !important;*/
-
     font-weight: 400 !important;
+}
+
+#vacancy-row-td{
+    max-width: 300px !important;
 }
 
 .table-employers{
     margin-bottom: 20px;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
+}
+
+.table-candidates{
+    margin-bottom: 20px;
+    width: 2100px !important;
+}
+
+.row-all-vac-margin{
+    margin-bottom: 60px;
 }
 
 .align-center-table{
@@ -435,4 +447,108 @@ a.not-active:hover{
 
 .scrollme {
     overflow-x: auto;
+}
+
+.simplebar-candidate{
+    width: 901px !important;
+    height: 520px !important;
+}
+
+.left-fadeout-candidates {
+    position: absolute;
+    left: -4px;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    margin-top: 166px;
+    margin-bottom: 187px;
+    width: 20px;
+    background-image: linear-gradient(90deg, #FFF, rgba(255,255,255,0));
+    -webkit-background-image: linear-gradient(0deg, #FFF, rgba(255,255,255,0));
+}
+
+.right-fadeout-candidates {
+    position: absolute;
+    right: 11px;
+    top: 0;
+    margin-top: 166px;
+    margin-bottom: 188px;
+    bottom: 0;
+    z-index: 2;
+    width: 20px;
+    background-image: linear-gradient(-90deg, #FFF, rgba(255,255,255,0));
+    -webkit-background-image: linear-gradient(0deg, #FFF, rgba(255,255,255,0));
+}
+
+.bottom-fadeout-candidates {
+    margin-right: 11px;
+    bottom: 188px;
+    background-image: linear-gradient(0deg, #FFF, rgba(255,255,255,0));
+    -webkit-background-image: linear-gradient(0deg, #FFF, rgba(255,255,255,0));
+}
+
+.top-fadeout-candidates {
+    /*margin-top: px;*/
+    margin-right: 10px;
+    background-image: linear-gradient(0deg, rgba(255,255,255,0), #FFF);
+    -webkit-background-image: linear-gradient(0deg, rgba(255,255,255,0), #FFF);
+}
+
+.bottom-fadeout-candidates, .top-fadeout-candidates {
+    height: 25px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.simplebar-track.simplebar-vertical, .simplebar-track.simplebar-horizontal  {
+    background-color: white !important;
+}
+
+.simplebar-track.simplebar-horizontal  {
+    margin-right: 9px !important;
+}
+
+td{
+    word-break: break-word !important;
+}
+
+#candidate-row-td{
+    max-width: 200px !important;
+}
+
+#candidate-row-td-ellipsis{
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    max-width: 200px !important;
+}
+
+.test-status, .new-status, .interview-status, .accepted-status, .decline-status{
+    padding: 5px;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 4px;
+}
+
+.accepted-status{
+    background-color: #24a148;
+}
+
+.decline-status{
+    background-color: #da1e28;
+}
+
+.test-status{
+    background-color: #f1c21b;
+}
+
+.interview-status{
+    background-color: #ff832b;
+}
+
+.new-status{
+    background-color: #61dafb;
 }

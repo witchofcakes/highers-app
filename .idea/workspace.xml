@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a402fc95-8c4c-4da0-b3e1-6d4570d563e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/button_more.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button_more.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/employer_vacancies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/employer_vacancies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wide_sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wide_sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javascript/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/javascript/navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/candidate_row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/candidate_row.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/employer_candidates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/employer_candidates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/vac_info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vac_info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/vacancy_row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vacancy_row.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/employer_vacancies.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/employer_vacancies.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/vacancy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/vacancy.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +99,8 @@
       <workItem from="1578396157444" duration="22191000" />
       <workItem from="1578430972977" duration="998000" />
       <workItem from="1578479921519" duration="26428000" />
-      <workItem from="1578573708823" duration="24429000" />
+      <workItem from="1578573708823" duration="24686000" />
+      <workItem from="1578644264363" duration="17783000" />
     </task>
     <servers />
   </component>
