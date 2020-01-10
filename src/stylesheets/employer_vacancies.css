@@ -7,8 +7,9 @@
     top: 0px;
     padding-top: 10px;
     bottom: 0;
-    width: 185px !important;
+    width: 205px !important;
 }
+
 
 #leftCol-employer-narrow {
     position: fixed;
@@ -22,6 +23,14 @@
     width: 65px !important;
 }
 
+.not-active-menu{
+    display: none !important;
+}
+
+.active-button{
+    display: inline !important;
+}
+
 .logo-mount-employer{
     height: 35px;
     width: 35px;
@@ -32,8 +41,19 @@
     position: relative;
     margin-left: 280px;
     padding-bottom: 80px;
+    transition: margin-left 250ms ease-out,transform 250ms ease-out,-webkit-transform 250ms ease-out;
     /*padding-right: 74px;*/
 }
+
+#simplebar-candidate{
+    width: 922px;
+    height: 480px;
+}
+
+#fadeout-t, #fadeout-b, #fadeout-r, #fadeout-l{
+    display: inline;
+}
+
 
 .all-vac-employer{
     font-size: 15.5px;
@@ -113,8 +133,8 @@
 }
 
 .feather-menu{
-    width: 19px;
-    height: 19px;
+    width: 21px;
+    height: 21px;
     stroke: #bdbebf;
     stroke-width: 2;
     stroke-linecap: round;
@@ -176,6 +196,38 @@
 
 }
 
+.logo-employer{
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+    width: 120px;
+    height: 27px;
+    /*margin-top: 4px;*/
+    margin-left: -11px;
+}
+
+.menu-button-close{
+    margin-left: 10px;
+    margin-right: -10px;
+    margin-top: 12.5px;
+    background-color: white;
+    border: none;
+}
+
+.menu-button-close:focus{
+    outline: none !important;
+}
+
+.menu-close-icon{
+    width: 22px;
+    height: 22px;
+    stroke: #bdbebf;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
 .filter-button-employer{
     display: inline;
     /*background: #efefef;*/
@@ -192,16 +244,23 @@
 .button-menu{
      background-color: white;
      border: none;
-     margin-left: 5px;
+     margin-top: -72px;
+     margin-left: -80px;
+     margin-right: 51px;
+     display: none;
  }
 
 .button-menu:focus{
     outline: none;
 }
 
+.menu-close-icon:hover{
+    stroke: #212529;
+}
+
 .all-vac-employer:hover > .feather-file-text, .candidates-employer:hover > .feather-user,
 .channels-employer:hover > .feather-layers, .pricing-employer:hover > .feather-credit-card,
-.feather-more-horizontal:hover {
+.feather-more-horizontal:hover  {
     stroke: #135393;
 }
 
@@ -245,15 +304,6 @@
 .avatar-employer{
     position: fixed;
     bottom: 10px;
-}
-
-.logo-employer{
-    display: flex;
-    justify-content: center;
-    margin-top: 2px;
-    width: 140px;
-    height: 31px;
-    margin-left: -8px;
 }
 
 .employer-menu-text{
@@ -352,11 +402,11 @@
 
 .table-candidates{
     margin-bottom: 20px;
-    width: 2100px !important;
+    /*width: 2100px !important;*/
 }
 
 .row-all-vac-margin{
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .align-center-table{
@@ -436,6 +486,7 @@ a.not-active:hover{
 }
 
 #table-employer-link{
+
     color: #212529;
     font-size: 14px;
 }
@@ -447,11 +498,6 @@ a.not-active:hover{
 
 .scrollme {
     overflow-x: auto;
-}
-
-.simplebar-candidate{
-    width: 901px !important;
-    height: 520px !important;
 }
 
 .left-fadeout-candidates {
@@ -523,7 +569,7 @@ td{
     overflow: hidden !important;
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
-    max-width: 200px !important;
+    max-width: 150px !important;
 }
 
 .test-status, .new-status, .interview-status, .accepted-status, .decline-status{
@@ -551,4 +597,44 @@ td{
 
 .new-status{
     background-color: #61dafb;
+}
+
+.td-margin{
+    margin-bottom: 3px;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}
+
+.td-margin-name-width{
+    margin-right: -18px;
+    max-width: 120px;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    margin-bottom: 3px;
+}
+
+.td-margin-type-work{
+    word-break: break-word !important;
+    max-width: 100px;
+    /*overflow: hidden !important;*/
+    /*white-space: nowrap !important;*/
+    /*text-overflow: ellipsis !important;*/
+    margin-bottom: 3px;
+}
+
+#candidate-row-td-ellipsis-date{
+    padding-right: 0px;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    max-width: 150px !important;
+}
+
+#candidate-row-td-ellipsis-status{
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    max-width: 107px !important;
 }

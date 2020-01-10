@@ -24,9 +24,15 @@ export default class Empl_Vac extends React.Component {
     }
 
     handleClick() {
-        this.setState({
-            display: !this.state.display
-        });
+        var sidebar = document.getElementById("leftCol-employer-wide");
+        sidebar.classList.remove("not-active-menu");
+        var content = document.getElementById("content-employer");
+        content.setAttribute('style', 'margin-left: ' + '290px');
+        var button = document.getElementById("menu-button");
+        button.classList.remove("active-button");
+        // field.setAttribute("placeholder", "Пошук");
+        // icon.setAttribute('style', 'display: ' + 'none');
+        // icon_close.setAttribute('style', 'display: ' + 'inline');
     }
 
     render() {
@@ -34,30 +40,22 @@ export default class Empl_Vac extends React.Component {
         return (
             <div className="full">
                 <div className="row">
-                    {(() => {
-                        if (this.state.display){
-                            return (
-                                <Wide_SideBar/>
-                            );
-                        }
-                        else {
-                            return (
-                                <Narrow_SideBar/>
-                            );
-                        }
-                    })()}
 
-                    <div className="col-9" id="content-employer">
-                        {/*<button className="button-menu" onClick={this.handleClick}>*/}
-                        {/*    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-menu">*/}
-                        {/*        <line x1="3" y1="12" x2="21" y2="12"></line>*/}
-                        {/*        <line x1="3" y1="6" x2="21" y2="6"></line>*/}
-                        {/*        <line x1="3" y1="18" x2="21" y2="18"></line>*/}
-                        {/*    </svg>*/}
-                        {/*</button>*/}
+                    <Wide_SideBar/>
+
+                    <div className="col" id="content-employer">
+                        <div className="row">
+                            <button id="menu-button" className="button-menu" onClick={this.handleClick}>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-menu">
+                                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                                </svg>
+                            </button>
+                        </div>
                         <div className="row">
                             <div className="col-12">
-                                <div className="row align-items-center">
+                                <div className="row row-all-vac-margin align-items-center">
                                     <div className="all-vac-text-employer">Всі вакансії</div>
                                     <div className="ml-auto">
                                         <form className="search-form-employer" autoComplete="off">
