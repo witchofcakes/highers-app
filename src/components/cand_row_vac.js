@@ -17,7 +17,7 @@ const LightTooltip = withStyles(theme => ({
 }))(Tooltip);
 
 
-export default class Cand_Row extends React.Component {
+export default class Cand_Row_Vac extends React.Component {
 
     constructor(props) {
         super(props);
@@ -45,9 +45,9 @@ export default class Cand_Row extends React.Component {
                     </p>
                     <p className="td-margin-name-width"><a href="#" id="table-employer-link" className={this.props.active}>{this.props.name}</a></p>
                 </td>
-                <td id="candidate-row-td-ellipsis-vacancy">
-                    <a href="#" id="table-employer-link">{this.props.vacancy}</a>
-                </td>
+                {/*<td id="candidate-row-td-ellipsis-vacancy">*/}
+                {/*    <a href="#" id="table-employer-link">{this.props.vacancy}</a>*/}
+                {/*</td>*/}
                 <td id="candidate-row-td-ellipsis-education">
                     <p className="td-margin">{this.props.university}</p>
                     <p className="td-margin">{this.props.faculty}</p>

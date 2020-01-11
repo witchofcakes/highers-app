@@ -1,65 +1,73 @@
-import React from 'react';
-import Vacancy_Short from "./vacancy_short";
-import SimpleBar from "simplebar-react";
+import React from "react";
+import Btn_More from "./button_more";
+import Badge from '@material-ui/core/Badge';
+import Typography from '@material-ui/core/Typography';
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
 
-export default class Test extends React.Component  {
+export default class Test extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
-            items: [ ],
-            visible: 1,
-            error: false
-        };
-
-        this.loadMore = this.loadMore.bind(this);
+            status: '',
+            activeState: true
+        }
+        this.handleChange_status = this.handleChange_status.bind(this);
+        this.changeNotActive = this.changeNotActive.bind(this);
+        this.changeActive = this.changeActive.bind(this);
     }
 
-    loadMore() {
-        this.setState((prev) => {
-            return {visible: prev.visible + 1};
-        });
+    handleChange_status = (name) => event => {
+        this.setState({ [name]: event.target.value,});
+    };
+
+    changeNotActive(){
+        document.querySelectorAll('.class1, .class2, .class3')
+            .forEach(el => el.classList.add('not-active'))
     }
 
-    // componentDidMount() {
-    //     fetch("https://jsonplaceholder.typicode.com/posts").then(
-    //         res => res.json()
-    //     ).then(res => {
-    //         this.setState({
-    //             items: res
-    //         });
-    //     }).catch(error => {
-    //         console.error(error);
-    //         this.setState({
-    //             error: true
-    //         });
-    //     });
-    // }
+    changeActive(){
+        document.querySelectorAll('.class1, .class2, .class3')
+            .forEach(el => el.classList.remove('not-active'))
+    }
 
     render() {
 
         return (
-
-            <section className="feed">
-                <h1>Simple Load More/Pagination with React</h1>
-                <h2>With Array.prototype.slice() and the power of component state!</h2>
-
-                <div className="tiles" aria-live="polite">
-                    {this.state.items.slice(0, this.state.visible).map((item, index) => {
-                        return (
-                            <div className="tile fade-in" key={item.id}>
-                                <span className="count">{index+1}</span>
-                                <h2>{item.title}</h2>
-                                <p>{item.body}</p>
-                            </div>
-                        );
-                    })}
-                </div>
-                {this.state.visible < this.state.items.length &&
-                <button onClick={this.loadMore} type="button" className="load-more">Load more</button>
-                }
-            </section>
+            <tr>
+                <th className="class1" id="id-active" scope="row">8</th>
+                <td className="class2" id="vacancy-row-td">
+                    <a href="#" id="table-employer-link">hello</a>
+                </td>
+                <td className="class3" id="vacancy-row-td">this</td>
+                <td id="vacancy-row-td-3">
+                    <a href="#" id="table-employer-link">should</a>
+                </td>
+                <td id="vacancy-row-td">
+                    <FormControl>
+                        <Select value={this.state.status} onChange={this.handleChange_status('status')} displayEmpty id="select-status">
+                            <MenuItem value="" id="all-cat-select">
+                                <button onClick={this.changeActive}>
+                                    <div className="active-status"></div>
+                                    Активна
+                                </button>
+                            </MenuItem>
+                            <MenuItem value={1} id="all-cat-select">
+                                <button onClick={this.changeNotActive}>
+                                    <div className="not-active-status"></div>
+                                    Неактивна
+                                </button>
+                            </MenuItem>
+                        </Select>
+                    </FormControl>
+                </td>
+                <td id="vacancy-row-td">be</td>
+                <td id="vacancy-row-td" className="align-center-table">
+                    <Btn_More/>
+                </td>
+            </tr>
         );
     }
 }

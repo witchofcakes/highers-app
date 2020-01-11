@@ -17,19 +17,34 @@ export default class Wide_SideBar extends React.Component {
         var sidebar = document.getElementById("leftCol-employer-wide");
         sidebar.classList.add("not-active-menu");
         var content = document.getElementById("content-employer");
-        content.setAttribute('style', 'margin-left: ' + '88px');
+        if (content) {
+            content.setAttribute('style', 'margin-left: ' + '28px');
+        }
+
         var button = document.getElementById("menu-button");
         button.classList.add("active-button");
+
         var table = document.getElementById("simplebar-candidate");
-        table.setAttribute('style', 'width: ' + '1115px' + '; height: ' + '100%');
-        var fadeout_b = document.getElementById("fadeout-b");
-        fadeout_b.setAttribute('style', 'display: ' + 'none');
-        var fadeout_t = document.getElementById("fadeout-t");
-        fadeout_t.setAttribute('style', 'display: ' + 'none');
-        var fadeout_r = document.getElementById("fadeout-r");
-        fadeout_r.setAttribute('style', 'display: ' + 'none');
-        var fadeout_l = document.getElementById("fadeout-l");
-        fadeout_l.setAttribute('style', 'display: ' + 'none');
+
+        if (table) {
+            table.setAttribute('style', 'width: ' + '1175px' + '; height: ' + '100%');
+            var fadeout_b = document.getElementById("fadeout-b");
+            fadeout_b.setAttribute('style', 'display: ' + 'none');
+            var fadeout_t = document.getElementById("fadeout-t");
+            fadeout_t.setAttribute('style', 'display: ' + 'none');
+            var fadeout_r = document.getElementById("fadeout-r");
+            fadeout_r.setAttribute('style', 'display: ' + 'none');
+            var fadeout_l = document.getElementById("fadeout-l");
+            fadeout_l.setAttribute('style', 'display: ' + 'none');
+        }
+
+        var one_vacancy = document.getElementById("content-employer-vacancy");
+
+        if (one_vacancy) {
+            var sidebar_vacancy = document.getElementById("leftCol-employer-vacancies");
+            sidebar_vacancy.setAttribute('style', 'margin-left: ' + '0px');
+            one_vacancy.setAttribute('style', 'margin-left: ' + '280px');
+        }
         // var fadeout_r = document.getElementById("leftCol-employer-wide");
         // fadeout_r.setAttribute('style', 'margin-left: ' + 'none');
         // var table1 = document.getElementById("simplebar-candidate");
@@ -70,34 +85,34 @@ export default class Wide_SideBar extends React.Component {
                             Кандидати
                         </p>
                     </a>
-                            <a href="/employer-vacancies" className="channels-employer">
-                                <p className="channels-employer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                                    Канали
-                                </p>
-                            </a>
-                            <a href="/employer-vacancies" className="pricing-employer">
-                                <p className="pricing-employer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-                                    Тариф
-                                </p>
-                            </a>
-                        </div>
+                    <a href="/employer-vacancies" className="channels-employer">
+                        <p className="channels-employer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            Канали
+                        </p>
+                    </a>
+                    <a href="/employer-vacancies" className="pricing-employer">
+                        <p className="pricing-employer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                            Тариф
+                        </p>
+                    </a>
+                </div>
 
-                        <div className="avatar-employer">
-                            <div className="row">
-                                <Avatar src={avatar} className="avatar-picture" />
-                                <div className="col">
-                                    <p className="avatar-name">
-                                    <a href="#" className="avatar-name">
-                                        Тетяна
-                                    </a>
-                                    </p>
-                                    <p className="avatar-job">Ernst & Young</p>
-                                </div>
-                            </div>
+                <div className="avatar-employer">
+                    <div className="row">
+                        <Avatar src={avatar} className="avatar-picture" />
+                        <div className="col">
+                            <p className="avatar-name">
+                                <a href="#" className="avatar-name">
+                                    Тетяна
+                                </a>
+                            </p>
+                            <p className="avatar-job">Ernst & Young</p>
                         </div>
                     </div>
+                </div>
+            </div>
 
 
 

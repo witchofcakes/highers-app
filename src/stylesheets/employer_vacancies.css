@@ -10,7 +10,6 @@
     width: 205px !important;
 }
 
-
 #leftCol-employer-narrow {
     position: fixed;
     border-right: 1px solid #EBEBEC !important;
@@ -245,7 +244,7 @@
      background-color: white;
      border: none;
      margin-top: -72px;
-     margin-left: -80px;
+     margin-left: -5px;
      margin-right: 51px;
      display: none;
  }
@@ -402,6 +401,7 @@
 
 .table-candidates{
     margin-bottom: 20px;
+    width: 1175px !important;
     /*width: 2100px !important;*/
 }
 
@@ -486,7 +486,6 @@ a.not-active:hover{
 }
 
 #table-employer-link{
-
     color: #212529;
     font-size: 14px;
 }
@@ -566,10 +565,46 @@ td{
 }
 
 #candidate-row-td-ellipsis{
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    text-overflow: ellipsis !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     max-width: 150px !important;
+}
+
+#candidate-row-td-ellipsis:hover {
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-word;
+}
+
+#candidate-row-td-ellipsis-vacancy{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 140px !important;
+}
+
+#candidate-row-td-ellipsis-vacancy:hover {
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-word;
+}
+
+#candidate-row-td-ellipsis-education{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 190px !important;
+}
+
+#candidate-row-td-ellipsis-education:hover {
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.not-active .change-status-btn {
+    color: #9c9c9c;
 }
 
 .test-status, .new-status, .interview-status, .accepted-status, .decline-status{
@@ -599,20 +634,49 @@ td{
     background-color: #61dafb;
 }
 
+.active-status, .not-active-status{
+    padding: 3px;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 8px;
+    margin-bottom: 2px;
+}
+
+.active-status{
+    background-color: #24a148;
+}
+
+.not-active-status{
+    background-color: #bdbebf;
+}
+
 .td-margin{
     margin-bottom: 3px;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    text-overflow: ellipsis !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.td-margin:hover{
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-word;
+
 }
 
 .td-margin-name-width{
     margin-right: -18px;
     max-width: 120px;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    text-overflow: ellipsis !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     margin-bottom: 3px;
+}
+
+.td-margin-name-width:hover {
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .td-margin-type-work{
@@ -626,15 +690,64 @@ td{
 
 #candidate-row-td-ellipsis-date{
     padding-right: 0px;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    text-overflow: ellipsis !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     max-width: 150px !important;
 }
 
+#candidate-row-td-ellipsis-date:hover{
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-word;
+}
+
 #candidate-row-td-ellipsis-status{
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    text-overflow: ellipsis !important;
-    max-width: 107px !important;
+    /*overflow: hidden;*/
+    /*white-space: nowrap;*/
+    /*text-overflow: ellipsis;*/
+    max-width: 108px !important;
+}
+
+#select-status{
+    /*max-width: 160px;*/
+    margin-top: -3.5px;
+    background-color: white !important;
+}
+
+#select-status-vacancy{
+    padding-right: 24px;
+    /*max-width: 160px;*/
+    margin-top: -3.5px;
+    background-color: white !important;
+}
+
+#candidate-row-td-ellipsis-status .MuiSelect-icon{
+    /*max-width: 160px;*/
+    margin-top: -2px !important;
+}
+
+#vacancy-row-td .MuiSelect-icon{
+    /*max-width: 160px;*/
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 3px !important;
+    margin-top: -2px !important;
+}
+
+.change-status-btn{
+    background: none;
+    border: none;
+}
+
+.change-status-btn:focus{
+    outline: none !important;
+}
+
+#candidate-row-td-ellipsis-status .MuiSelect-icon{
+    /*max-width: 160px;*/
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 3px !important;
+    margin-top: -2px !important;
 }
