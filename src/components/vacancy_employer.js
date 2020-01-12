@@ -11,6 +11,101 @@ import Chip from "@material-ui/core/Chip";
 import Vacancy_Comp from "./vacancy_comp";
 import Cand_Row from "./candidate_row";
 import SimpleBar from "simplebar-react";
+import Cand_Row_Vac from "./cand_row_vac";
+import {makeStyles} from "@material-ui/core";
+import Paper from "@material-ui/core/Paper";
+import TableContainer from "@material-ui/core/TableContainer";
+import PerfectScrollbar from "react-perfect-scrollbar";
+import Table from "@material-ui/core/Table";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import TableCell from "@material-ui/core/TableCell";
+import TableBody from "@material-ui/core/TableBody";
+import TablePagination from "@material-ui/core/TablePagination";
+
+function createData(number, name, vacancy, education, languages, contacts, type, cv, status, date) {
+    return { number, name, vacancy, education, languages, contacts, type, cv, status, date };
+}
+
+const rows = [
+    createData('1', "Валерія Караульна", "Менеджер", "КНУ", "Англ - В1", "(067) 220-08-73", "Фулл-тайм, 8000+", "нема", "Тест", "08 січ"),
+];
+
+const useStyles = makeStyles({
+    table: {
+        width: '130%',
+        height: '500px !important'
+    },
+});
+
+const TableCandidates = () => {
+    const classes2 = useStyles();
+
+    const [page, setPage] = React.useState(0);
+    const [rowsPerPage, setRowsPerPage] = React.useState(9);
+
+    const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+
+    const handleChangeRowsPerPage = event => {
+        setRowsPerPage(parseInt(event.target.value, 9));
+        setPage(0);
+    };
+
+    return (
+        <Paper className="paper-mui-table">
+            <TableContainer className="container-mui-table">
+                <PerfectScrollbar>
+                    <Table stickyHeader className={classes2.table} aria-label="simple table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell align="left">#</TableCell>
+                                <TableCell align="left">Ім'я</TableCell>
+                                {/*<TableCell align="left">Вакансія</TableCell>*/}
+                                <TableCell align="left">Освіта</TableCell>
+                                <TableCell align="left">Мови</TableCell>
+                                <TableCell align="left">Контакти</TableCell>
+                                <TableCell align="left">Зайнятість</TableCell>
+                                <TableCell align="center">Резюме</TableCell>
+                                <TableCell align="left">Статус</TableCell>
+                                <TableCell align="left">Дата</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            <Cand_Row_Vac number={"1"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} cv={"true"} date={"08 січ"}/>
+                            <Cand_Row_Vac number={"2"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} date={"08 січ"}/>
+                            <Cand_Row_Vac number={"3"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Інженерії та природоохоронних систем"} english={"Англ - B2"} workType={"Full-time, Part-time, Стажування"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
+                            <Cand_Row_Vac number={"4"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} cv={"true"} date={"08 січ"}/>
+                            <Cand_Row_Vac number={"5"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} cv={"true"} date={"08 січ"}/>
+                            <Cand_Row_Vac number={"6"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Інженерії та природоохоронних систем"} english={"Англ - B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
+                            <Cand_Row_Vac number={"7"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} cv={"true"} date={"08 січ"}/>
+                            <Cand_Row_Vac number={"8"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} date={"08 січ"}/>
+                            <Cand_Row_Vac number={"9"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Інженерії та природоохоронних систем"} english={"Англ - B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
+                            {/*{emptyRows > 0 && (*/}
+                            {/*    <TableRow style={{ height: 76 * emptyRows }}>*/}
+                            {/*        <TableCell colSpan={5} />*/}
+                            {/*    </TableRow>*/}
+                            {/*)}*/}
+                        </TableBody>
+                    </Table>
+                </PerfectScrollbar>
+            </TableContainer>
+            <TablePagination
+                rowsPerPageOptions={[10, 25, 100]}
+                component="div"
+                count={12}
+                rowsPerPage={10}
+                page={0}
+                id="table-pagination"
+                // onChangePage={handleChangePage}
+                // onChangeRowsPerPage={handleChangeRowsPerPage}
+            />
+        </Paper>
+    )
+}
 
 export default class Empl_Vac_One extends React.Component {
 
@@ -26,11 +121,13 @@ export default class Empl_Vac_One extends React.Component {
         var sidebar = document.getElementById("leftCol-employer-wide");
         sidebar.classList.remove("not-active-menu");
         var sidebar_vacancy = document.getElementById("leftCol-employer-vacancies");
-        sidebar_vacancy.setAttribute('style', 'margin-left: ' + '230px');
+        sidebar_vacancy.setAttribute('style', 'margin-left: ' + '205px');
         var content = document.getElementById("content-employer-vacancy");
         content.setAttribute('style', 'margin-left: ' + '500px');
         var button = document.getElementById("menu-button");
         button.classList.remove("active-button");
+        var title_padding = document.getElementById("vacancy-title-employer-id");
+        title_padding.setAttribute('style', 'padding-left: ' + '25px');
     }
 
     render() {
@@ -42,41 +139,41 @@ export default class Empl_Vac_One extends React.Component {
                     <Wide_SideBar/>
 
                     <div className="col-3 no-gutters" id="leftCol-employer-vacancies">
-                        {/*    <div className="one-vacancy-employer">*/}
-                        {/*        /!*<p className="vacancy-info-employer">*!/*/}
-                        {/*        /!*    03 січня*!/*/}
-                        {/*        /!*</p>*!/*/}
-                        {/*        <p className="vacancy-title-employer">*/}
-                        {/*            <a className="vacancy-title-a-employer" id={this.props.active} href="/vacancy">*/}
-                        {/*                Content Maker & Manager Trainee*/}
-                        {/*            </a>*/}
-                        {/*        </p>*/}
-                        {/*        <p className="vacancy-title-employer">*/}
-                        {/*            <p className="vacancy-type-employer">*/}
-                        {/*                Full-time*/}
-                        {/*                <span className="vacancy-dot">•</span>*/}
-                        {/*                Київ*/}
-                        {/*            </p>*/}
-                        {/*        </p>*/}
-                        {/*    </div>*/}
+                            <div className="one-vacancy-employer">
+                                {/*<p className="vacancy-info-employer">*/}
+                                {/*    03 січня*/}
+                                {/*</p>*/}
+                                <p id="vacancy-title-employer-id" className="vacancy-title-employer">
+                                    <a className="vacancy-title-a-employer" id={this.props.active} href="/vacancy">
+                                        Content Maker & Manager Trainee
+                                    </a>
+                                </p>
+                                <p id="vacancy-title-employer-id" className="vacancy-title-employer">
+                                    <p className="vacancy-type-employer">
+                                        Full-time
+                                        <span className="vacancy-dot">•</span>
+                                        Київ
+                                    </p>
+                                </p>
+                            </div>
 
-                        {/*<div className="one-vacancy-employer">*/}
-                        {/*    /!*<p className="vacancy-info-employer">*!/*/}
-                        {/*    /!*    03 січня*!/*/}
-                        {/*    /!*</p>*!/*/}
-                        {/*    <p className="vacancy-title-employer">*/}
-                        {/*        <a className="vacancy-title-a-employer" id={this.props.active} href="/vacancy">*/}
-                        {/*            Менеджер із роботи з бізнес - клієнтами*/}
-                        {/*        </a>*/}
-                        {/*    </p>*/}
-                        {/*    <p className="vacancy-title-employer">*/}
-                        {/*        <p className="vacancy-type-employer">*/}
-                        {/*            Full-time*/}
-                        {/*            <span className="vacancy-dot">•</span>*/}
-                        {/*            Київ*/}
-                        {/*        </p>*/}
-                        {/*    </p>*/}
-                        {/*</div>*/}
+                        <div className="one-vacancy-employer active-one-vacancy">
+                            {/*<p className="vacancy-info-employer">*/}
+                            {/*    03 січня*/}
+                            {/*</p>*/}
+                            <p id="vacancy-title-employer-id" className="vacancy-title-employer">
+                                <a className="vacancy-title-a-employer" id={this.props.active} href="/vacancy">
+                                    IT Risk and Assurance
+                                </a>
+                            </p>
+                            <p id="vacancy-title-employer-id" className="vacancy-title-employer">
+                                <p className="vacancy-type-employer">
+                                    Full-time
+                                    <span className="vacancy-dot">•</span>
+                                    Київ
+                                </p>
+                            </p>
+                        </div>
                     </div>
 
 
@@ -244,47 +341,11 @@ export default class Empl_Vac_One extends React.Component {
                             <TabPanel>
                                 <div className="row row-vacancy-info">
                                     <div className="col-12 no-gutters">
-                                        <div id="fadeout-b" className="bottom-fadeout-candidates"></div>
-                                        <div id="fadeout-t" className="top-fadeout-candidates"></div>
-                                        <div id="fadeout-l" className="left-fadeout-candidates"></div>
-                                        <div id="fadeout-r" className="right-fadeout-candidates"></div>
-                                        <SimpleBar autoHide={false} id="simplebar-candidate">
-                                            <table className="table table-borderless table-candidates">
-                                                <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Ім'я</th>
-                                                    <th scope="col">Освіта</th>
-                                                    <th scope="col">Мови</th>
-                                                    <th scope="col">Контакти</th>
-                                                    <th scope="col">Зайнятість</th>
-                                                    <th scope="col">Статус</th>
-                                                    <th scope="col">Дата</th>
-                                                    {/*<th scope="col" className="align-center-table">Більше</th>*/}
-                                                </tr>
-                                                </thead>
-
-                                                <tbody>
-
-                                                <Cand_Row number={"1"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} english={"B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} status_color={"test-status"} status={"Тест"} date={"08 січ"}/>
-                                                <Cand_Row number={"2"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} english={"B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} status_color={"new-status"} status={"Новий"} date={"08 січ"}/>
-                                                <Cand_Row number={"3"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Інженерії та природоохоронних систем"} english={"B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Кит - А1"} status_color={"interview-status"} status={"Співбесіда"} date={"08 січ"}/>
-                                                <Cand_Row number={"4"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} english={"B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} status_color={"test-status"} status={"Тест"} date={"08 січ"}/>
-                                                <Cand_Row number={"5"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Valuation, Modeling, Economics Intern"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} english={"B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} status_color={"new-status"} status={"Новий"} date={"08 січ"}/>
-                                                <Cand_Row number={"6"} surname={"Коваленко-Караульна"} name={"Олександра"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee Content Maker"} course={"4"} university={"КНЕУ"} faculty={"Філологія"} english={"B2"} workType={"Part-time, Стажування, Віддалено"} salary={"5000+"} languages={"Кит - А1"} status_color={"accepted-status"} status={"Прийнятий"} date={"08 січ"}/>
-                                                <Cand_Row number={"7"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} english={"B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} status_color={"decline-status"} status={"Відмова"} date={"08 січ"}/>
-                                                <Cand_Row number={"8"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} english={"B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} status_color={"new-status"} status={"Новий"} date={"08 січ"}/>
-                                                <Cand_Row number={"9"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Філологія"} english={"B2"} workType={"Full-time, Part-time"} salary={"5000+"} status_color={"interview-status"} status={"Співбесіда"} date={"08 січ"}/>
-                                                <Cand_Row number={"10"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} english={"B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} status_color={"test-status"} status={"Тест"} date={"08 січ"}/>
-                                                <Cand_Row number={"11"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} english={"B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} status_color={"accepted-status"} status={"Прийнятий"} date={"08 січ"}/>
-                                                <Cand_Row number={"12"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Філологія"} english={"B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Кит - А1"} status_color={"interview-status"} status={"Співбесіда"} date={"08 січ"}/>
-
-
-                                                </tbody>
-
-                                            </table>
-                                        </SimpleBar>
-
+                                        {/*<div id="fadeout-b" className="bottom-fadeout-candidates"></div>*/}
+                                        {/*<div id="fadeout-t" className="top-fadeout-candidates"></div>*/}
+                                        {/*<div id="fadeout-l" className="left-fadeout-candidates"></div>*/}
+                                        {/*<div id="fadeout-r" className="right-fadeout-candidates"></div>*/}
+                                        <TableCandidates/>
                                     </div>
                                 </div>
                             </TabPanel>

@@ -1,20 +1,25 @@
 #leftCol-employer-vacancies{
     position: fixed;
-    border-right: 1px solid #EBEBEC !important;
-    /*background-color: rgba(178, 221, 220, 0.68);*/
+    /*border-right: 1px solid #EBEBEC !important;*/
+    -webkit-box-shadow: 9px 0px 18px -12px rgba(46,46,46,0.1);
+    -moz-box-shadow: 9px 0px 20px -12px rgba(46,46,46,0.1);
+    box-shadow: 9px 0px 20px -12px rgba(46,46,46,0.1);
+    /*background-color: #F5F5F7;*/
+    /*background-color: #F6F6F6;*/
     font-size: 16px;
     /*overflow-y: scroll;*/
     top: 0px;
-    padding-top: 25px;
+    padding-top: 64px;
     bottom: 0;
-    width: 215px;
-    margin-left: 230px;
+    width: 225px;
+    margin-left: 205px;
 }
 
 #content-employer-vacancy {
     padding-top: 70px;
     position: relative;
     /*margin-left: 530px;*/
+    width: 0%;
     margin-left: 500px;
     padding-bottom: 80px;
     transition: margin-left 250ms ease-out,transform 250ms ease-out,-webkit-transform 250ms ease-out;
@@ -22,9 +27,7 @@
 }
 
 .one-vacancy-employer{
-    /*padding-bottom: 5px;*/
-    /* border-bottom: 1px solid #EBEBEC; */
-    margin-left: -10px;
+    padding-top: 10px;
 }
 
 .vacancy-info-employer{
@@ -35,8 +38,6 @@
     font-weight: 400;
     padding-left: 15px;
     padding-right: 15px;
-    /*margin-top: -5px;*/
-    /*margin-bottom: 3px;*/
     text-transform: uppercase;
 }
 
@@ -47,7 +48,7 @@
     font-size: 15.5px;
     font-weight: 400;
     margin-bottom: 3px;
-    padding-left: 15px;
+    padding-left: 25px;
     padding-right: 25px;
     margin-top: 5px;
 }
@@ -66,4 +67,10 @@
     color: #9c9c9c;
     font-weight: 400;
     margin-top: -2px;
+}
+
+.active-one-vacancy{
+    border-right: 2px solid white !important;
+    /*background-color: #f6f6f6;*/
+    /*background-image: linear-gradient(90deg, #f6f6f6,  #ffffff42);*/
 }

@@ -16,6 +16,7 @@ const Main = () => (
                     <Route path="/employer-vacancies" component={EmployerContainer}/>
                     <Route path="/employer-candidates" component={EmployerContainer} />
                     <Route path="/employer-vacancy" component={EmployerContainer} />
+                    <Route path="/test" component={EmployerContainer} />
                     <Route component={DefaultContainer}/>
                 </Switch>
             </BrowserRouter>
@@ -28,6 +29,7 @@ const EmployerContainer = () => (
             <Route path="/employer-vacancies" component={Empl_Vac} />
             <Route path="/employer-candidates" component={Empl_Cand} />
             <Route path="/employer-vacancy" component={Empl_Vac_One} />
+            <Route path="/test" component={Test} />
         </Switch>
 
 )

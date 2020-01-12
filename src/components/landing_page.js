@@ -19,7 +19,7 @@ class Landing extends React.Component {
                     <div className="video-container">
                         <div className="filter"></div>
                         <video playsinline="playsinline" autoPlay="autoplay" muted="muted" loop="loop" class="fillWidth">
-                            <source src="https://assets.mixkit.co/videos/1800/1800-720.mp4" type="video/mp4"/>
+                            <source src="https://res.cloudinary.com/ddxpsbpyv/video/upload/v1578778059/video_eiapzm.mp4" type="video/mp4"/>
                         </video>
                     </div>
                     <div className="container h-100">

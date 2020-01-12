@@ -12,6 +12,103 @@ import Vac_Row from "./vacancy_row";
 import Pagination_Comp from "./pagination";
 import Footer_Vac from "./footer_vacancy";
 import Footer_Empl from "./footer_employer";
+import TablePagination from "@material-ui/core/TablePagination";
+import Paper from "@material-ui/core/Paper";
+import TableContainer from "@material-ui/core/TableContainer";
+import PerfectScrollbar from "react-perfect-scrollbar";
+import Table from "@material-ui/core/Table";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import TableCell from "@material-ui/core/TableCell";
+import TableBody from "@material-ui/core/TableBody";
+import Cand_Row from "./candidate_row";
+import {makeStyles} from "@material-ui/core";
+
+
+
+function createData(number, name, vacancy, education, languages, contacts, type, cv, status, date) {
+    return { number, name, vacancy, education, languages, contacts, type, cv, status, date };
+}
+
+const rows = [
+    // createData('1', "Валерія Караульна", "Менеджер", "КНУ", "Англ - В1", "(067) 220-08-73", "Фулл-тайм, 8000+", "нема", "Тест", "08 січ"),
+];
+
+const useStyles = makeStyles({
+    table: {
+        width: '130%',
+        height: '500px !important'
+    },
+});
+
+const TableVacancies = () => {
+    const classes = useStyles();
+    const [page, setPage] = React.useState(0);
+    const [rowsPerPage, setRowsPerPage] = React.useState(9);
+
+    const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+
+    const handleChangeRowsPerPage = event => {
+        setRowsPerPage(parseInt(event.target.value, 9));
+        setPage(0);
+    };
+
+    return (
+        <Paper className="paper-mui-table">
+            <TableContainer className="container-mui-table">
+                <PerfectScrollbar>
+                    <Table stickyHeader className={classes.table} aria-label="simple table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell align="left">#</TableCell>
+                                <TableCell align="left">Назва</TableCell>
+                                <TableCell align="left">Приорітет</TableCell>
+                                <TableCell align="left">Локація</TableCell>
+                                <TableCell align="center">Кандидати</TableCell>
+                                <TableCell align="left">Зайнятість</TableCell>
+                                <TableCell align="left">Освіта</TableCell>
+                                <TableCell align="left">Мови</TableCell>
+                                <TableCell align="left">Статус</TableCell>
+                                <TableCell align="left">Дата</TableCell>
+                                <TableCell align="center">Більше</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            <Vac_Row number={"1"} title={"IT Risk and Assurance"} location={"Київ"} applicants={"3"} course={"3"} faculty={"Фінансисти"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} date={"08 січ"}/>
+                            <Vac_Row number={"2"} title={"Менеджер із роботи з бізнес - клієнтами"} location={"Київ"} applicants={"45"} course={"5"} faculty={"Економісти"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} date={"08 січ"}/>
+                            <Vac_Row number={"3"} title={"Content Maker & Manager Trainee"} location={"Київ"} applicants={"17"} course={"4"} faculty={"Маркетологи"} english={"Англ - B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
+                            <Vac_Row number={"4"} title={"IT Risk and Assurance"} location={"Київ"} applicants={"3"} course={"3"} faculty={"Фінансисти"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} date={"08 січ"}/>
+                            <Vac_Row number={"5"} title={"Менеджер із роботи з бізнес - клієнтами"} location={"Київ"} applicants={"45"} course={"5"} faculty={"Економісти"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} date={"08 січ"}/>
+                            <Vac_Row number={"6"} title={"Content Maker & Manager Trainee"} location={"Київ"} applicants={"17"} course={"4"} faculty={"Маркетологи"} english={"Англ - B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
+                            <Vac_Row number={"7"} title={"IT Risk and Assurance"} location={"Київ"} applicants={"3"} course={"3"} faculty={"Фінансисти"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} date={"08 січ"}/>
+                            <Vac_Row number={"8"} title={"Менеджер із роботи з бізнес - клієнтами"} location={"Київ"} applicants={"45"} course={"5"} faculty={"Економісти"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} date={"08 січ"}/>
+                            <Vac_Row number={"9"} title={"Content Maker & Manager Trainee"} location={"Київ"} applicants={"17"} course={"4"} faculty={"Маркетологи"} english={"Англ - B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
+                            {/*{emptyRows > 0 && (*/}
+                            {/*    <TableRow style={{ height: 76 * emptyRows }}>*/}
+                            {/*        <TableCell colSpan={5} />*/}
+                            {/*    </TableRow>*/}
+                            {/*)}*/}
+                        </TableBody>
+                    </Table>
+                </PerfectScrollbar>
+            </TableContainer>
+            <TablePagination
+                rowsPerPageOptions={[10, 25, 100]}
+                component="div"
+                count={12}
+                rowsPerPage={10}
+                page={0}
+                id="table-pagination"
+                // onChangePage={handleChangePage}
+                // onChangeRowsPerPage={handleChangeRowsPerPage}
+            />
+        </Paper>
+    )
+}
 
 export default class Empl_Vac extends React.Component {
 
@@ -30,9 +127,6 @@ export default class Empl_Vac extends React.Component {
         content.setAttribute('style', 'margin-left: ' + '290px');
         var button = document.getElementById("menu-button");
         button.classList.remove("active-button");
-        // field.setAttribute("placeholder", "Пошук");
-        // icon.setAttribute('style', 'display: ' + 'none');
-        // icon_close.setAttribute('style', 'display: ' + 'inline');
     }
 
     render() {
@@ -73,60 +167,16 @@ export default class Empl_Vac extends React.Component {
                                         </a>
                                     </div>
                                 </div>
-                                {/*<div className="row">*/}
-                                {/*    <div className="filter-button-employer">*/}
-                                {/*        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
                             </div>
                         </div>
 
                         <div className="row">
-                            <table className="table table-borderless table-employers">
-                                <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Назва</th>
-                                    <th scope="col">Локація</th>
-                                    <th scope="col">Кандидати</th>
-                                    <th scope="col">Статус</th>
-                                    <th scope="col">Дата</th>
-                                    <th scope="col" className="align-center-table">Більше</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    <Vac_Row number={"1"} title={"IT Risk and Assurance"} location={"Київ"} applicants={"12"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"2"} title={"Менеджер із роботи з бізнес - клієнтами"} location={"Київ"} applicants={"3"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"3"} title={"Content Maker & Manager Trainee"} location={"Київ"} applicants={"345"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"4"} title={"IT Risk and Assurance"} location={"Київ"} applicants={"12"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"5"} title={"Менеджер із роботи з бізнес - клієнтами"} location={"Київ"} applicants={"3"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"6"} title={"Content Maker & Manager Trainee"} location={"Київ"} applicants={"345"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"7"} title={"IT Risk and Assurance"} location={"Київ"} applicants={"12"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"8"} title={"Менеджер із роботи з бізнес - клієнтами"} location={"Київ"} applicants={"3"} status={"Активна"} date={"08.01.2020"}/>
-                                    <Vac_Row number={"9"} title={"Content Maker & Manager Trainee"} location={"Київ"} applicants={"345"} status={"Не активна"} date={"08.01.2020"} active={"not-active"} active_link={"not-active-link"}/>
-                                    <Vac_Row number={"10"} title={"IT Risk and Assurance"} location={"Київ"} applicants={"12"} status={"Не активна"} date={"08.01.2020"} active={"not-active"} active_link={"not-active-link"}/>
-                                    <Vac_Row number={"11"} title={"Менеджер із роботи з бізнес - клієнтами"} location={"Київ"} applicants={"3"} status={"Не активна"} date={"08.01.2020"} active={"not-active"} active_link={"not-active-link"}/>
-                                    <Vac_Row number={"12"} title={"Content Maker & Manager Trainee"} location={"Київ"} applicants={"345"} status={"Не активна"} date={"08.01.2020"} active={"not-active"} active_link={"not-active-link"}/>
-                                </tbody>
-                            </table>
+                            <div id="fadeout-b" className="bottom-fadeout-candidates"></div>
+                            <div id="fadeout-t" className="top-fadeout-candidates"></div>
+                            <div id="fadeout-l" className="left-fadeout-candidates"></div>
+                            <div id="fadeout-r" className="right-fadeout-candidates"></div>
+                            <TableVacancies/>
                         </div>
-
-                        <div className="row align-items-center pagination-row">
-                            <Pagination_Comp/>
-                        </div>
-
-                        {/*<div className="row">*/}
-                        {/*    <div className="col-12 border-div">*/}
-
-                        {/*    </div>*/}
-                        {/*</div>*/}
-
-                        {/*<div className="row">*/}
-                        {/*    <div className="col-12 no-gutters">*/}
-                        {/*        <Footer_Empl/>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
-
                     </div>
                 </div>
             </div>

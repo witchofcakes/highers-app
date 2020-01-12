@@ -1,73 +1,62 @@
-import React from "react";
-import Btn_More from "./button_more";
-import Badge from '@material-ui/core/Badge';
-import Typography from '@material-ui/core/Typography';
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 
-export default class Test extends React.Component {
+const useStyles = makeStyles({
+    table: {
+        minWidth: 650,
+    },
+});
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            status: '',
-            activeState: true
-        }
-        this.handleChange_status = this.handleChange_status.bind(this);
-        this.changeNotActive = this.changeNotActive.bind(this);
-        this.changeActive = this.changeActive.bind(this);
-    }
+function createData(number, name, vacancy, education, languages, contacts, type, cv, status, date) {
+    return { number, name, vacancy, education, languages, contacts, type, cv, status, date };
+}
 
-    handleChange_status = (name) => event => {
-        this.setState({ [name]: event.target.value,});
-    };
+const rows = [
+    createData('1', "Валерія Караульereeeeeeeeна", "Менедeeeeeeeeeeeeeeeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeeeeeeeeжер", "КНУ", "Англeeeeeeeeeeeeeeeeeeee - В1", "(067) 220-08e564654645645-73", "Фулл-тайм, 8000+", "нема", "Тест", "08 січ"),
+];
 
-    changeNotActive(){
-        document.querySelectorAll('.class1, .class2, .class3')
-            .forEach(el => el.classList.add('not-active'))
-    }
+export default function Test() {
+    const classes = useStyles();
 
-    changeActive(){
-        document.querySelectorAll('.class1, .class2, .class3')
-            .forEach(el => el.classList.remove('not-active'))
-    }
-
-    render() {
-
-        return (
-            <tr>
-                <th className="class1" id="id-active" scope="row">8</th>
-                <td className="class2" id="vacancy-row-td">
-                    <a href="#" id="table-employer-link">hello</a>
-                </td>
-                <td className="class3" id="vacancy-row-td">this</td>
-                <td id="vacancy-row-td-3">
-                    <a href="#" id="table-employer-link">should</a>
-                </td>
-                <td id="vacancy-row-td">
-                    <FormControl>
-                        <Select value={this.state.status} onChange={this.handleChange_status('status')} displayEmpty id="select-status">
-                            <MenuItem value="" id="all-cat-select">
-                                <button onClick={this.changeActive}>
-                                    <div className="active-status"></div>
-                                    Активна
-                                </button>
-                            </MenuItem>
-                            <MenuItem value={1} id="all-cat-select">
-                                <button onClick={this.changeNotActive}>
-                                    <div className="not-active-status"></div>
-                                    Неактивна
-                                </button>
-                            </MenuItem>
-                        </Select>
-                    </FormControl>
-                </td>
-                <td id="vacancy-row-td">be</td>
-                <td id="vacancy-row-td" className="align-center-table">
-                    <Btn_More/>
-                </td>
-            </tr>
-        );
-    }
+    return (
+        <TableContainer component={Paper}>
+            <Table className={classes.table} aria-label="simple table">
+                <TableHead>
+                    <TableRow>
+                        <TableCell>Dessert (100g serving)</TableCell>
+                        <TableCell align="right">Calories</TableCell>
+                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {rows.map(row => (
+                        <TableRow key={row.number}>
+                            <TableCell component="th" scope="row">
+                                {row.number}
+                            </TableCell>
+                            <TableCell className="td-margin" align="right">{row.name}</TableCell>
+                            <TableCell className="td-margin" align="right">{row.vacancy}</TableCell>
+                            <TableCell className="td-margin"align="right">{row.education}</TableCell>
+                            <TableCell className="td-margin"align="right">{row.languages}</TableCell>
+                            <TableCell className="td-margin" align="right">{row.vacancy}</TableCell>
+                            <TableCell className="td-margin" align="right">{row.contacts}</TableCell>
+                            <TableCell className="td-margin" align="right">{row.type}</TableCell>
+                            <TableCell className="td-margin" align="right">{row.cv}</TableCell>
+                            <TableCell className="td-margin" align="right">{row.status}</TableCell>
+                            <TableCell className="td-margin" align="right">{row.date}</TableCell>
+                        </TableRow>
+                    ))}
+                </TableBody>
+            </Table>
+        </TableContainer>
+    );
 }

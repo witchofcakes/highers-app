@@ -10,18 +10,6 @@
     width: 205px !important;
 }
 
-#leftCol-employer-narrow {
-    position: fixed;
-    border-right: 1px solid #EBEBEC !important;
-    /*background-color: #DDD;*/
-    font-size: 16px;
-    /*overflow-y: scroll;*/
-    top: 0px;
-    padding-top: 10px;
-    bottom: 0;
-    width: 65px !important;
-}
-
 .not-active-menu{
     display: none !important;
 }
@@ -36,12 +24,33 @@
 }
 
 #content-employer {
+    width: 70%;
     padding-top: 70px;
     position: relative;
     margin-left: 280px;
     padding-bottom: 80px;
     transition: margin-left 250ms ease-out,transform 250ms ease-out,-webkit-transform 250ms ease-out;
     /*padding-right: 74px;*/
+}
+
+#table-pagination{
+    border-top: 1px solid #EBEBEC !important;
+}
+
+.container-mui-table {
+    height: 500px;
+}
+
+.paper-mui-table{
+    width: 100%;
+}
+
+.MuiTableCell-stickyHeader{
+    background-color: white !important;
+}
+
+.ps--active-x > .ps__rail-x, .ps--active-y > .ps__rail-y{
+    z-index: 3 !important;
 }
 
 #simplebar-candidate{
@@ -105,6 +114,30 @@
     fill: none;
     margin-right: 10px;
     margin-bottom: 3px;
+}
+
+.feather-cv{
+    width: 22px;
+    height: 22px;
+    /*stroke: #212529;*/
+    /*stroke-width: 7;*/
+    fill-rule:nonzero;
+    fill: #212529;
+    fill-opacity:1;
+    /*margin-right: 10px;*/
+    /*margin-bottom: 3px;*/
+}
+
+.feather-cv-2{
+    width: 21px;
+    height: 21px;
+    stroke: #212529;
+    stroke-width: 5;
+    fill-rule:nonzero;
+    fill: #212529;
+    fill-opacity:1;
+    /*margin-right: 10px;*/
+    /*margin-bottom: 3px;*/
 }
 
 .feather-layers{
@@ -257,8 +290,8 @@
     stroke: #212529;
 }
 
-.all-vac-employer:hover > .feather-file-text, .candidates-employer:hover > .feather-user,
-.channels-employer:hover > .feather-layers, .pricing-employer:hover > .feather-credit-card,
+.all-vac-employer:hover .feather-file-text, .candidates-employer:hover .feather-user,
+.channels-employer:hover .feather-layers, .pricing-employer:hover .feather-credit-card,
 .feather-more-horizontal:hover  {
     stroke: #135393;
 }
@@ -269,8 +302,11 @@
 }
 
 
-#employer-left-active{
+.employer-left-active{
     color: #212529 !important;
+}
+
+.employer-left-active .feather-user, .employer-left-active .feather-file-text{
     stroke: #212529 !important;
 }
 
@@ -305,8 +341,12 @@
     bottom: 10px;
 }
 
+.p-navlinks {
+    margin-bottom: 20px;
+}
+
 .employer-menu-text{
-    margin-top: 80px !important;
+    margin-top: 110px !important;
 }
 
 .all-vac-text-employer{
@@ -382,36 +422,35 @@
     padding-top: 0.9rem !important;
 }
 
-.table td, .table th {
-    font-size: 14px;
+ .MuiTableRow-head th {
+    font-size: 14px !important;
+    color: #9c9c9c !important;
     padding: .75rem;
     vertical-align: top;
-    /*border-top: 1px solid #EBEBEC !important;*/
+     font-family: 'Rubik', sans-serif !important;
+    border-bottom: 1px solid #EBEBEC !important;
     font-weight: 400 !important;
 }
 
-#vacancy-row-td{
-    max-width: 300px !important;
-}
+ .MuiTableCell-root{
+     font-size: 14px !important;
+     color: #212529 !important;
+     font-family: 'Rubik', sans-serif !important;
+     border-bottom: none !important;
+     padding: 14px 16px !important;
+ }
+
 
 .table-employers{
     margin-bottom: 20px;
     /*margin-top: 50px;*/
 }
 
-.table-candidates{
-    margin-bottom: 20px;
-    width: 1175px !important;
-    /*width: 2100px !important;*/
-}
 
 .row-all-vac-margin{
     margin-bottom: 50px;
 }
 
-.align-center-table{
-    text-align: center;
-}
 
 .button-more{
     padding: 0px !important;
@@ -495,18 +534,15 @@ a.not-active:hover{
     text-decoration: none !important;
 }
 
-.scrollme {
-    overflow-x: auto;
-}
 
 .left-fadeout-candidates {
     position: absolute;
-    left: -4px;
+    /*left: -4px;*/
     top: 0;
     bottom: 0;
     z-index: 2;
-    margin-top: 166px;
-    margin-bottom: 187px;
+    margin-top: 220px;
+    margin-bottom: 133px;
     width: 20px;
     background-image: linear-gradient(90deg, #FFF, rgba(255,255,255,0));
     -webkit-background-image: linear-gradient(0deg, #FFF, rgba(255,255,255,0));
@@ -514,10 +550,10 @@ a.not-active:hover{
 
 .right-fadeout-candidates {
     position: absolute;
-    right: 11px;
+    right: 0px;
     top: 0;
-    margin-top: 166px;
-    margin-bottom: 188px;
+    margin-top: 220px;
+    margin-bottom: 133px;
     bottom: 0;
     z-index: 2;
     width: 20px;
@@ -526,26 +562,35 @@ a.not-active:hover{
 }
 
 .bottom-fadeout-candidates {
-    margin-right: 11px;
-    bottom: 188px;
+    bottom: 133px;
+    /*margin-right: 11px;*/
     background-image: linear-gradient(0deg, #FFF, rgba(255,255,255,0));
     -webkit-background-image: linear-gradient(0deg, #FFF, rgba(255,255,255,0));
 }
 
 .top-fadeout-candidates {
-    /*margin-top: px;*/
-    margin-right: 10px;
+    margin-top: 53px;
+    margin-right: 14px;
     background-image: linear-gradient(0deg, rgba(255,255,255,0), #FFF);
     -webkit-background-image: linear-gradient(0deg, rgba(255,255,255,0), #FFF);
 }
 
-.bottom-fadeout-candidates, .top-fadeout-candidates {
+.bottom-fadeout-candidates {
     height: 25px;
     pointer-events: none;
     position: absolute;
     right: 0;
     left: 0;
     z-index: 2;
+}
+
+.top-fadeout-candidates {
+    height: 25px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 5;
 }
 
 .simplebar-track.simplebar-vertical, .simplebar-track.simplebar-horizontal  {
@@ -560,51 +605,28 @@ td{
     word-break: break-word !important;
 }
 
-#candidate-row-td{
-    max-width: 200px !important;
-}
-
-#candidate-row-td-ellipsis{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    max-width: 150px !important;
-}
-
-#candidate-row-td-ellipsis:hover {
-    text-overflow: clip;
-    white-space: normal;
-    word-break: break-word;
-}
-
-#candidate-row-td-ellipsis-vacancy{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    max-width: 140px !important;
-}
-
-#candidate-row-td-ellipsis-vacancy:hover {
-    text-overflow: clip;
-    white-space: normal;
-    word-break: break-word;
-}
-
-#candidate-row-td-ellipsis-education{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    max-width: 190px !important;
-}
-
-#candidate-row-td-ellipsis-education:hover {
-    text-overflow: clip;
-    white-space: normal;
-    word-break: break-word;
-}
 
 .not-active .change-status-btn {
     color: #9c9c9c;
+}
+
+.high-priority, .medium-priority, .low-priority{
+    padding: 5px;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 4px;
+}
+
+.high-priority{
+    background-color: rgba(218, 30, 40, 0.76);
+}
+
+.medium-priority{
+    background-color: rgba(241, 194, 27, 0.75);
+}
+
+.low-priority{
+    background-color: rgba(97, 218, 251, 0.76);
 }
 
 .test-status, .new-status, .interview-status, .accepted-status, .decline-status{
@@ -650,65 +672,6 @@ td{
     background-color: #bdbebf;
 }
 
-.td-margin{
-    margin-bottom: 3px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.td-margin:hover{
-    text-overflow: clip;
-    white-space: normal;
-    word-break: break-word;
-
-}
-
-.td-margin-name-width{
-    margin-right: -18px;
-    max-width: 120px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    margin-bottom: 3px;
-}
-
-.td-margin-name-width:hover {
-    text-overflow: clip;
-    white-space: normal;
-    word-break: break-word;
-}
-
-.td-margin-type-work{
-    word-break: break-word !important;
-    max-width: 100px;
-    /*overflow: hidden !important;*/
-    /*white-space: nowrap !important;*/
-    /*text-overflow: ellipsis !important;*/
-    margin-bottom: 3px;
-}
-
-#candidate-row-td-ellipsis-date{
-    padding-right: 0px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    max-width: 150px !important;
-}
-
-#candidate-row-td-ellipsis-date:hover{
-    text-overflow: clip;
-    white-space: normal;
-    word-break: break-word;
-}
-
-#candidate-row-td-ellipsis-status{
-    /*overflow: hidden;*/
-    /*white-space: nowrap;*/
-    /*text-overflow: ellipsis;*/
-    max-width: 108px !important;
-}
-
 #select-status{
     /*max-width: 160px;*/
     margin-top: -3.5px;
@@ -744,10 +707,57 @@ td{
     outline: none !important;
 }
 
-#candidate-row-td-ellipsis-status .MuiSelect-icon{
+#select-status-icon .MuiSelect-icon{
     /*max-width: 160px;*/
     width: 18px !important;
     height: 18px !important;
     margin-right: 3px !important;
     margin-top: -2px !important;
+}
+
+.cand-row-link{
+    color: #212529;
+}
+
+.cand-row-link:hover{
+    color: #135393;
+    text-decoration: none !important;
+}
+
+.td-margin{
+    margin-bottom: 3px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.td-margin:hover{
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.cand-row-contacts, .cand-row-name, .cand-row-languages, .cand-row-education, .cand-row-vacancy{
+    max-width: 200px !important;
+}
+
+.cand-row-type{
+    max-width: 180px !important;
+}
+
+.cand-row-date{
+    max-width: 80px !important
+}
+
+.resume-button-employer{
+     background: none !important;
+     border: none !important;
+ }
+
+.resume-button-employer:focus{
+    outline: none !important;
+}
+
+.vac-row-title, .vac-row-location, .vac-row-applicants, .vac-row-type, .vac-row-education, .vac-row-languages, .vac-row-date, .vac-row-more{
+    max-width: 200px !important;
 }
