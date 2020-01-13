@@ -11,6 +11,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import SideBar from "./sidebar";
 
 function ChooseWorkType() {
     const [value, setValue] = React.useState('Full-time');
@@ -245,6 +246,7 @@ export default class Create_Vac extends React.Component {
             <div className="full">
                 <div className="row">
 
+                    {/*<SideBar/>*/}
                     <Wide_SideBar/>
 
                     <div className="col" id="content-employer">

@@ -135,3 +135,59 @@
 #mui-salary .MuiTouchRipple-root{
     display: none !important;
 }
+
+.logo-mount-sidebar{
+    height: 40px;
+    width: 40px;
+}
+
+#leftCol-employer-sidebar {
+    position: fixed;
+    border-right: 1px solid #EBEBEC !important;
+    /*background-color: #DDD;*/
+    font-size: 16px;
+    /*overflow-y: scroll;*/
+    top: 0px;
+    padding-top: 10px;
+    bottom: 0;
+    width: 65px !important;
+}
+
+.all-vac-employer-sidebar{
+    font-size: 13px;
+    color: #b5b6b7;
+    font-weight: 400;
+    margin-top: 50px;
+    padding: 0px 0px 8px 0px;
+}
+
+.candidates-employer-sidebar{
+    font-size: 13px;
+    color: #b5b6b7;
+    font-weight: 400;
+    padding: 0px 0px 8px 0px;
+}
+
+.feather-file-text-sidebar{
+    width: 25px;
+    height: 25px;
+    stroke: #b5b6b7;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+.feather-user-sidebar{
+    width: 25px;
+    height: 25px;
+    stroke: #b5b6b7;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
