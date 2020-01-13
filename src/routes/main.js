@@ -8,6 +8,7 @@ import Vac_Page from "../components/vacancy_one";
 import Empl_Vac from "../components/employer_vacancies";
 import Empl_Cand from "../components/employer_candidates";
 import Empl_Vac_One from "../components/vacancy_employer";
+import Create_Vac from "../components/create_vacancy";
 
 const Main = () => (
         <div>
@@ -16,6 +17,7 @@ const Main = () => (
                     <Route path="/employer-vacancies" component={EmployerContainer}/>
                     <Route path="/employer-candidates" component={EmployerContainer} />
                     <Route path="/employer-vacancy" component={EmployerContainer} />
+                    <Route path="/create-vacancy" component={EmployerContainer} />
                     <Route path="/test" component={EmployerContainer} />
                     <Route component={DefaultContainer}/>
                 </Switch>
@@ -29,6 +31,7 @@ const EmployerContainer = () => (
             <Route path="/employer-vacancies" component={Empl_Vac} />
             <Route path="/employer-candidates" component={Empl_Cand} />
             <Route path="/employer-vacancy" component={Empl_Vac_One} />
+            <Route path="/create-vacancy" component={Create_Vac} />
             <Route path="/test" component={Test} />
         </Switch>
 

@@ -20,7 +20,7 @@
     position: relative;
     /*margin-left: 530px;*/
     width: 0%;
-    margin-left: 500px;
+    margin-left: 480px;
     padding-bottom: 80px;
     transition: margin-left 250ms ease-out,transform 250ms ease-out,-webkit-transform 250ms ease-out;
     /*padding-right: 74px;*/
@@ -73,4 +73,104 @@
     border-right: 2px solid white !important;
     /*background-color: #f6f6f6;*/
     /*background-image: linear-gradient(90deg, #f6f6f6,  #ffffff42);*/
+}
+
+.block-name-details{
+    display: inline;
+    font-size: 14px;
+    color: #9c9c9c;
+    margin-right: 8px;
+}
+
+.block-details{
+    display: inline;
+    font-size: 14px;
+    color: #212529;
+    /*margin-right: 30px;*/
+}
+
+.ellipsis-col-details{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.details-row-margin{
+    margin-bottom: 15px;
+}
+
+.details-row-margin-second{
+    margin-bottom: 38px;
+}
+
+.candidates-details-link{
+     color: #212529;
+ }
+
+.candidates-details-link:hover{
+    color: #135393;
+    text-decoration: none !important;
+}
+
+.vacancy-details-word{
+    color: #2e3134;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.but-edit-employer{
+     padding: 10px 15px;
+     border: 1px solid #EBEBEC;
+     background-color: white;
+     border-radius: 100%;
+     margin-right: 20px;
+ }
+
+.but-edit-employer:focus{
+    outline: none !important;
+}
+
+.but-delete-employer{
+    padding: 10px 15px;
+    border: 1px solid #EBEBEC;
+    background-color: white;
+    border-radius: 100%;
+    margin-right: 35px;
+}
+
+.but-delete-employer:focus{
+    outline: none !important;
+}
+
+.feather-edit-employer{
+    width: 17px;
+    height: 17px;
+    stroke: #212529;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 2px !important;
+}
+
+.feather-trash-employer{
+    width: 17px;
+    height: 17px;
+    stroke: #212529;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 2px !important;
+}
+
+#active-vacancy-employer{
+    /*background: rgba(255, 224, 219, 0.28);*/
+    background-image: linear-gradient(120deg, #ffe0db 100%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 8px;
+    background-position: 0 99%;
+    transition: background-size 0.25s ease-in;
 }

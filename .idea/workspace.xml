@@ -3,21 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a402fc95-8c4c-4da0-b3e1-6d4570d563e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cand_row_vac.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cand_row_vac.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/candidate_row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/candidate_row.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/employer_candidates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/employer_candidates.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/employer_vacancies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/employer_vacancies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/tester.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tester.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/vacancy_employer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vacancy_employer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/vacancy_row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vacancy_row.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/wide_sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wide_sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/all_vac.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/all_vac.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/employer_vacancies.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/employer_vacancies.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/landing.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/landing.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/vacancy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/vacancy.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/vacancy_employer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/vacancy_employer.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,7 +103,7 @@
       <workItem from="1578573708823" duration="24686000" />
       <workItem from="1578644264363" duration="31361000" />
       <workItem from="1578685341751" duration="4958000" />
-      <workItem from="1578731115642" duration="61883000" />
+      <workItem from="1578731115642" duration="92921000" />
     </task>
     <servers />
   </component>

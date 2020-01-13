@@ -1,0 +1,137 @@
+.create-vac-input{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 10px 15px;
+}
+
+.create-vac-input:focus, .create-vac-input-city:focus, .create-vac-input-salary:focus, .create-vac-input-street:focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3;
+    outline: none !important;
+}
+
+.create-vac-input-city{
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 10px 15px;
+    margin-right: 20px;
+}
+
+.create-vac-input-street{
+    width: 110%;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 10px 15px;
+    margin-right: 20px;
+    margin-left: -31px;
+}
+
+.create-vac-input-salary{
+    width: 35%;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 10px 15px;
+}
+
+.create-vac-input-name{
+    color: #212529;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.create-vac-input-name-sm{
+    color: #212529;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.create-vac-input-name-sm-street{
+    color: #212529;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: -31px;
+}
+
+.bottom-create{
+    margin-bottom: 40px;
+}
+
+.bottom-create-salary{
+    margin-bottom: 20px;
+}
+
+.MuiRadio-colorPrimary.Mui-checked{
+    color: #212529 !important;
+}
+
+.salary-create-vac{
+    display: inline;
+    font-size: 15px;
+     margin-left: 15px;
+ }
+
+.salary-create-vac-vid{
+    display: inline;
+    font-size: 15px;
+    margin-right: 15px;
+}
+
+.required-mark{
+    margin-left: 3px;
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #FF6F61;
+}
+
+#salary-choose-create .MuiSvgIcon-root{
+    width: 17px !important;
+    fill: #135393;
+    height: 17px !important;
+}
+
+#mui-worktype .MuiFormControlLabel-root{
+    margin-right: 0px !important;
+}
+
+#mui-worktype  .PrivateSwitchBase-root-126{
+    padding-left: 0px !important;
+}
+
+#mui-worktype  .PrivateSwitchBase-root-126:hover{
+    background: none !important;
+}
+
+#mui-worktype  .PrivateSwitchBase-root-126:active{
+    background: none !important;
+}
+
+#mui-worktype .PrivateSwitchBase-input-129{
+    display: none !important;
+}
+
+#mui-worktype .MuiTouchRipple-root{
+    display: none !important;
+}
+
+#mui-salary  .PrivateSwitchBase-root-126:hover{
+    background: none !important;
+}
+
+#mui-salary  .PrivateSwitchBase-root-126:active{
+    background: none !important;
+}
+
+#mui-salary .PrivateSwitchBase-input-129{
+    display: none !important;
+}
+
+#mui-salary .MuiTouchRipple-root{
+    display: none !important;
+}

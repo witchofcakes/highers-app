@@ -12,16 +12,27 @@ import Vacancy_Comp from "./vacancy_comp";
 import Cand_Row from "./candidate_row";
 import SimpleBar from "simplebar-react";
 import Cand_Row_Vac from "./cand_row_vac";
-import {makeStyles} from "@material-ui/core";
+import {withStyles, makeStyles} from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import TableContainer from "@material-ui/core/TableContainer";
 import PerfectScrollbar from "react-perfect-scrollbar";
+import Tooltip from '@material-ui/core/Tooltip';
 import Table from "@material-ui/core/Table";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import TablePagination from "@material-ui/core/TablePagination";
+import Empl_Vac_All from "./vac_short_employer";
+
+const LightTooltip = withStyles(theme => ({
+    tooltip: {
+        backgroundColor: theme.palette.common.white,
+        color: 'rgba(0, 0, 0, 0.87)',
+        boxShadow: theme.shadows[1],
+        fontSize: 11,
+    },
+}))(Tooltip);
 
 function createData(number, name, vacancy, education, languages, contacts, type, cv, status, date) {
     return { number, name, vacancy, education, languages, contacts, type, cv, status, date };
@@ -123,11 +134,13 @@ export default class Empl_Vac_One extends React.Component {
         var sidebar_vacancy = document.getElementById("leftCol-employer-vacancies");
         sidebar_vacancy.setAttribute('style', 'margin-left: ' + '205px');
         var content = document.getElementById("content-employer-vacancy");
-        content.setAttribute('style', 'margin-left: ' + '500px');
+        content.setAttribute('style', 'margin-left: ' + '480px');
         var button = document.getElementById("menu-button");
         button.classList.remove("active-button");
-        var title_padding = document.getElementById("vacancy-title-employer-id");
-        title_padding.setAttribute('style', 'padding-left: ' + '25px');
+        var map = document.getElementById("iframe-map");
+        if (map) {
+            map.setAttribute('style', 'width: ' + '210px');
+        }
     }
 
     render() {
@@ -139,41 +152,8 @@ export default class Empl_Vac_One extends React.Component {
                     <Wide_SideBar/>
 
                     <div className="col-3 no-gutters" id="leftCol-employer-vacancies">
-                            <div className="one-vacancy-employer">
-                                {/*<p className="vacancy-info-employer">*/}
-                                {/*    03 січня*/}
-                                {/*</p>*/}
-                                <p id="vacancy-title-employer-id" className="vacancy-title-employer">
-                                    <a className="vacancy-title-a-employer" id={this.props.active} href="/vacancy">
-                                        Content Maker & Manager Trainee
-                                    </a>
-                                </p>
-                                <p id="vacancy-title-employer-id" className="vacancy-title-employer">
-                                    <p className="vacancy-type-employer">
-                                        Full-time
-                                        <span className="vacancy-dot">•</span>
-                                        Київ
-                                    </p>
-                                </p>
-                            </div>
-
-                        <div className="one-vacancy-employer active-one-vacancy">
-                            {/*<p className="vacancy-info-employer">*/}
-                            {/*    03 січня*/}
-                            {/*</p>*/}
-                            <p id="vacancy-title-employer-id" className="vacancy-title-employer">
-                                <a className="vacancy-title-a-employer" id={this.props.active} href="/vacancy">
-                                    IT Risk and Assurance
-                                </a>
-                            </p>
-                            <p id="vacancy-title-employer-id" className="vacancy-title-employer">
-                                <p className="vacancy-type-employer">
-                                    Full-time
-                                    <span className="vacancy-dot">•</span>
-                                    Київ
-                                </p>
-                            </p>
-                        </div>
+                        <Empl_Vac_All title={"Content Maker & Manager Trainee"} location={"Київ"} type={"Full-time"}/>
+                        <Empl_Vac_All title={"IT Risk and Assurance"} location={"Київ"} type={"Full-time"} active={"active-vacancy-employer"}/>
                     </div>
 
 
@@ -192,16 +172,30 @@ export default class Empl_Vac_One extends React.Component {
                                 <div className="row row-all-vac-margin align-items-center">
                                     <div className="all-vac-text-employer">IT Risk and Assurance</div>
                                     <div className="ml-auto">
-                                        <a target="_blank" className="create-vac" href="#">
+                                        <a className="create-vac" href="#">
+                                            <LightTooltip title="Редагувати вакансію">
+                                                <button className="but-edit-employer">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-edit-employer">
+                                                        <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                                    </svg>
+                                                </button>
+                                            </LightTooltip>
+                                        </a>
+                                        <a className="create-vac" href="#">
+                                            <LightTooltip title="Видалити вакансію">
+                                                <button className="but-delete-employer">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-trash-employer">
+                                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                    </svg>
+                                                </button>
+                                            </LightTooltip>
+                                        </a>
+                                        <a className="create-vac" href="/create-vacancy">
                                             <button className="create-vac-employer">Створити вакансію</button>
                                         </a>
                                     </div>
                                 </div>
-                                {/*<div className="row">*/}
-                                {/*    <div className="filter-button-employer">*/}
-                                {/*        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
                             </div>
                         </div>
 
@@ -216,35 +210,99 @@ export default class Empl_Vac_One extends React.Component {
                                     <div className="col-8 no-gutters">
                                         <div className="row">
                                             <div className="col-12">
-                                                <div className="tags-labels">Освіта</div>
+                                                <div className="vacancy-details-word">Деталі:</div>
+                                                <div className="row details-row-margin">
+                                                    <div className="col-4 ellipsis-col-details">
+                                                        <p className="block-name-details">Зайнятість:</p>
+                                                        <p className="block-details">Full-time</p>
+                                                    </div>
+                                                    <div className="col-4 ellipsis-col-details">
+                                                        <p className="block-name-details">Локація:</p>
+                                                        <p className="block-details">Київ</p>
+                                                    </div>
+                                                    <div className="col-4 ellipsis-col-details">
+                                                        <p className="block-name-details">Зарплатня:</p>
+                                                        <p className="block-details">15000 грн</p>
+                                                    </div>
+                                                </div>
+                                                <div className="row details-row-margin-second">
+                                                    <div className="col-4 ellipsis-col-details">
+                                                        <p className="block-name-details">Статус:</p>
+                                                        <p className="block-details">Активна</p>
+                                                    </div>
+                                                    <div className="col-4 ellipsis-col-details">
+                                                        <p className="block-name-details">Кандидати:</p>
+                                                        <p className="block-details">34</p>
+                                                    </div>
+                                                    <div className="col-4 ellipsis-col-details">
+                                                        <p className="block-name-details">Дата відкриття:</p>
+                                                        <p className="block-details">08 січ</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-12">
+                                                <div className="row tags-labels">
+                                                    <div className="col-8">Освіта</div>
+                                                </div>
                                                 <Chip label="4+ курс" className="chip-info"/>
                                                 <Chip label="Фінанси" className="chip-info"/>
                                                 <Chip label="Економіка" className="chip-info"/>
-                                                <div className="tags-labels">Навички</div>
+                                                <div className="row tags-labels">
+                                                    <div className="col-8">Навички</div>
+                                                </div>
                                                 <Chip label="MS Office" className="chip-info"/>
                                                 <Chip label="Бухоблік" className="chip-info"/>
                                             </div>
                                         </div>
                                         <div className="row">
                                             <div className="col-12">
-                                                <div className="vacancy-info-categories-first">Кого ми шукаємо:</div>
+                                                <div className="row vacancy-info-categories-first">
+                                                    <div className="col-8">
+                                                        Кого ми шукаємо:
+                                                    </div>
+                                                </div>
                                                 <p className="vacancy-text-align">З початку 2020 року влада Нідерландів відмовилася від назви «Голландія» ― її перестали використовувати як символ країни та на офіційному логотипі.
-
                                                     На новому логотипі замість слова «Голландія» зображені помаранчеві букви NL та написана назва країни англійською мовою — «Netherlands».
-
                                                     Влада Нідерландів вважає, що слово «Голландія» у іноземців часто асоціюється з тими розвагами, яких вони б хотіли уникати: легальними рекреаційними наркотиками та кварталом червоних ліхтарів.
                                                 </p>
                                             </div>
                                         </div>
                                         <div className="row">
                                             <div className="col-12">
-                                                <div className="vacancy-info-categories">Графік роботи:</div>
+                                                <div className="row vacancy-info-categories">
+                                                    <div className="col-8">
+                                                        Графік роботи:
+                                                    </div>
+                                                    {/*<div className="col-4 ml-auto">*/}
+                                                    {/*    <LightTooltip title="Видалити блок">*/}
+                                                    {/*        <button className="but-edit-employer">*/}
+                                                    {/*            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-trash-employer">*/}
+                                                    {/*                <polyline points="3 6 5 6 21 6"></polyline>*/}
+                                                    {/*                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>*/}
+                                                    {/*            </svg>*/}
+                                                    {/*        </button>*/}
+                                                    {/*    </LightTooltip>*/}
+                                                    {/*    <LightTooltip title="Редагувати блок">*/}
+                                                    {/*        <button className="but-edit-employer">*/}
+                                                    {/*            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-edit-employer">*/}
+                                                    {/*                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>*/}
+                                                    {/*            </svg>*/}
+                                                    {/*        </button>*/}
+                                                    {/*    </LightTooltip>*/}
+                                                    {/*</div>*/}
+                                                </div>
                                                 <p className="vacancy-text">Full-time, з можливістю іноді відвідувати пари. Також з оплачуваною відпусткою на період сесії.</p>
                                             </div>
                                         </div>
                                         <div className="row">
                                             <div className="col-12">
-                                                <div className="vacancy-info-categories">Вимоги:</div>
+                                                <div className="row vacancy-info-categories">
+                                                    <div className="col-8">
+                                                        Вимоги:
+                                                    </div>
+                                                </div>
                                                 <ul>
                                                     <li className="vacancy-text">Ступінь бакалавра в галузі ІТ або суміжній галузі.</li>
                                                     <li className="vacancy-text">Відмінне розуміння балансу обсягу, строку та вартості.</li>
@@ -256,7 +314,11 @@ export default class Empl_Vac_One extends React.Component {
                                         </div>
                                         <div className="row">
                                             <div className="col-12">
-                                                <div className="vacancy-info-categories">Буде плюсом:</div>
+                                                <div className="row vacancy-info-categories">
+                                                    <div className="col-8">
+                                                        Буде плюсом:
+                                                    </div>
+                                                </div>
                                                 <ul>
                                                     <li className="vacancy-text">Від 3 до 5 років досвіду в розробці розроблених на замовлення ІТ-рішень.</li>
                                                     <li className="vacancy-text">Поєднання освіти та досвіду, що дають рівноцінні знання.</li>
@@ -265,7 +327,11 @@ export default class Empl_Vac_One extends React.Component {
                                         </div>
                                         <div className="row">
                                             <div className="col-12">
-                                                <div className="vacancy-info-categories">Задачі:</div>
+                                                <div className="row vacancy-info-categories">
+                                                    <div className="col-8">
+                                                        Задачі:
+                                                    </div>
+                                                </div>
                                                 <ul>
                                                     <li className="vacancy-text">Розробка та інтеграція нових функцій та функціональності з метою оптимізації бізнес-процесів та можливостей Salesforce.com.</li>
                                                     <li className="vacancy-text">Співпрацювати з адміністраторами Salesforce.com, бізнес-зацікавленими сторонами та іншими членами команди.</li>
@@ -277,7 +343,11 @@ export default class Empl_Vac_One extends React.Component {
                                         </div>
                                         <div className="row">
                                             <div className="col-12">
-                                                <div className="vacancy-info-categories">Ми пропонуємо:</div>
+                                                <div className="row vacancy-info-categories">
+                                                <div className="col-8">
+                                                    Ми пропонуємо:
+                                                </div>
+                                                </div>
                                                 <ul>
                                                     <li className="vacancy-text">Офіс в стилі лофт</li>
                                                     <li className="vacancy-text">Повністю виплачені пільги на здоров'я</li>
@@ -293,7 +363,7 @@ export default class Empl_Vac_One extends React.Component {
                                         <div className="loc-div">
                                             <div className="location-map">Локація:</div>
                                             <p className="vacancy-text-address">м. Київ, вул. Жилянська, 48</p>
-                                            <iframe width="250" height="260" frameBorder="0" className="google-map" scrolling="no"
+                                            <iframe id="iframe-map" width="210" height="260" frameBorder="0" className="google-map" scrolling="no"
                                                     marginHeight="0" marginWidth="0"
                                                     src="https://www.google.com/maps/embed/v1/place?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%96%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%B0%2C%2048%2C%2050%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2&key=AIzaSyDC2eQOHheWPhWWxe8nYSbJS15QwLHkqiY"
                                                     allowFullScreen>

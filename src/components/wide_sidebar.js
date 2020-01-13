@@ -49,10 +49,12 @@ export default class Wide_SideBar extends React.Component {
 
         if (one_vacancy) {
             var sidebar_vacancy = document.getElementById("leftCol-employer-vacancies");
-            sidebar_vacancy.setAttribute('style', 'margin-left: ' + '0px');
-            one_vacancy.setAttribute('style', 'margin-left: ' + '280px');
-            var title_padding = document.getElementById("vacancy-title-employer-id");
-            title_padding.setAttribute('style', 'padding-left: ' + '0px');
+            sidebar_vacancy.setAttribute('style', 'margin-left: ' + '-25px');
+            one_vacancy.setAttribute('style', 'margin-left: ' + '255px');
+            var map = document.getElementById("iframe-map");
+            if (map) {
+                map.setAttribute('style', 'width: ' + '250px');
+            }
         }
         // var fadeout_r = document.getElementById("leftCol-employer-wide");
         // fadeout_r.setAttribute('style', 'margin-left: ' + 'none');
