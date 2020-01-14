@@ -24,6 +24,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import TablePagination from "@material-ui/core/TablePagination";
 import Empl_Vac_All from "./vac_short_employer";
+import SideBar from "./sidebar";
 
 const LightTooltip = withStyles(theme => ({
     tooltip: {
@@ -120,36 +121,13 @@ const TableCandidates = () => {
 
 export default class Empl_Vac_One extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state= {
-            display: true,
-        }
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick() {
-        var sidebar = document.getElementById("leftCol-employer-wide");
-        sidebar.classList.remove("not-active-menu");
-        var sidebar_vacancy = document.getElementById("leftCol-employer-vacancies");
-        sidebar_vacancy.setAttribute('style', 'margin-left: ' + '205px');
-        var content = document.getElementById("content-employer-vacancy");
-        content.setAttribute('style', 'margin-left: ' + '480px');
-        var button = document.getElementById("menu-button");
-        button.classList.remove("active-button");
-        var map = document.getElementById("iframe-map");
-        if (map) {
-            map.setAttribute('style', 'width: ' + '210px');
-        }
-    }
-
     render() {
 
         return (
             <div className="full">
                 <div className="row">
 
-                    <Wide_SideBar/>
+                    <SideBar/>
 
                     <div className="col-3 no-gutters" id="leftCol-employer-vacancies">
                         <Empl_Vac_All title={"Content Maker & Manager Trainee"} location={"Київ"} type={"Full-time"}/>
@@ -158,15 +136,6 @@ export default class Empl_Vac_One extends React.Component {
 
 
                     <div className="col" id="content-employer-vacancy">
-                        <div className="row">
-                            <button id="menu-button" className="button-menu" onClick={this.handleClick}>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-menu">
-                                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                                </svg>
-                            </button>
-                        </div>
                         <div className="row">
                             <div className="col-12">
                                 <div className="row row-all-vac-margin align-items-center">
@@ -363,7 +332,7 @@ export default class Empl_Vac_One extends React.Component {
                                         <div className="loc-div">
                                             <div className="location-map">Локація:</div>
                                             <p className="vacancy-text-address">м. Київ, вул. Жилянська, 48</p>
-                                            <iframe id="iframe-map" width="210" height="260" frameBorder="0" className="google-map" scrolling="no"
+                                            <iframe id="iframe-map" width="230" height="260" frameBorder="0" className="google-map" scrolling="no"
                                                     marginHeight="0" marginWidth="0"
                                                     src="https://www.google.com/maps/embed/v1/place?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%96%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%B0%2C%2048%2C%2050%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2&key=AIzaSyDC2eQOHheWPhWWxe8nYSbJS15QwLHkqiY"
                                                     allowFullScreen>

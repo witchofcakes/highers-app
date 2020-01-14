@@ -1,17 +1,5 @@
 import React from "react";
-import logo from "../images/logo.png";
-import logo_mount from "../images/logo-mountain.png";
-import Avatar from '@material-ui/core/Avatar';
-import avatar from '../images/avatar.jpeg'
-import Wide_SideBar from "./wide_sidebar";
-import Narrow_SideBar from "./narrow_sidebar";
-import search_bl from "../images/search-black.svg";
-import close_icon from "../images/close-icon.svg";
-import Btn_More from "./button_more";
 import Vac_Row from "./vacancy_row";
-import Pagination_Comp from "./pagination";
-import Footer_Vac from "./footer_vacancy";
-import Footer_Empl from "./footer_employer";
 import TablePagination from "@material-ui/core/TablePagination";
 import Paper from "@material-ui/core/Paper";
 import TableContainer from "@material-ui/core/TableContainer";
@@ -21,8 +9,8 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
-import Cand_Row from "./candidate_row";
 import {makeStyles} from "@material-ui/core";
+import SideBar from "./sidebar";
 
 
 
@@ -112,41 +100,15 @@ const TableVacancies = () => {
 
 export default class Empl_Vac extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state= {
-            display: true,
-        }
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick() {
-        var sidebar = document.getElementById("leftCol-employer-wide");
-        sidebar.classList.remove("not-active-menu");
-        var content = document.getElementById("content-employer");
-        content.setAttribute('style', 'margin-left: ' + '290px');
-        var button = document.getElementById("menu-button");
-        button.classList.remove("active-button");
-    }
-
     render() {
 
         return (
             <div className="full">
                 <div className="row">
 
-                    <Wide_SideBar/>
+                    <SideBar/>
 
                     <div className="col" id="content-employer">
-                        <div className="row">
-                            <button id="menu-button" className="button-menu" onClick={this.handleClick}>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-menu">
-                                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                                </svg>
-                            </button>
-                        </div>
                         <div className="row">
                             <div className="col-12">
                                 <div className="row row-all-vac-margin align-items-center">
@@ -162,7 +124,7 @@ export default class Empl_Vac extends React.Component {
                                             <input className="search-employer" placeholder="Пошук вакансій" type="text"/>
                                         </form>
 
-                                        <a target="_blank" className="create-vac" href="#">
+                                        <a target="_blank" className="create-vac" href="/create-vacancy">
                                             <button className="create-vac-employer">Створити вакансію</button>
                                         </a>
                                     </div>

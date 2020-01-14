@@ -1,5 +1,4 @@
 import React from "react";
-import Wide_SideBar from "./wide_sidebar";
 import Cand_Row from "./candidate_row";
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import 'react-perfect-scrollbar/dist/css/styles.css';
@@ -12,6 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import {makeStyles} from "@material-ui/core";
 import TablePagination from '@material-ui/core/TablePagination';
+import SideBar from "./sidebar";
 
 function createData(number, name, vacancy, education, languages, contacts, type, cv, status, date) {
     return { number, name, vacancy, education, languages, contacts, type, cv, status, date };
@@ -99,42 +99,15 @@ const TableCandidates = () => {
 
 export default class Empl_Cand extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state= {
-            display: true,
-        }
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick() {
-        var sidebar = document.getElementById("leftCol-employer-wide");
-        sidebar.classList.remove("not-active-menu");
-        var content = document.getElementById("content-employer");
-        content.setAttribute('style', 'margin-left: ' + '280px' + '; width: '+'70%');
-        var button = document.getElementById("menu-button");
-        button.classList.remove("active-button");
-    }
-
-
     render() {
 
         return (
             <div className="full">
                 <div className="row">
 
-                    <Wide_SideBar/>
+                    <SideBar/>
 
                     <div className="col" id="content-employer">
-                        <div className="row">
-                            <button id="menu-button" className="button-menu" onClick={this.handleClick}>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-menu">
-                                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                                </svg>
-                            </button>
-                        </div>
                         <div className="row">
                             <div className="col-12">
                                 <div className="row row-all-vac-margin align-items-center">
@@ -150,7 +123,7 @@ export default class Empl_Cand extends React.Component {
                                             <input className="search-employer" placeholder="Пошук кандидатів" type="text"/>
                                         </form>
 
-                                        <a target="_blank" className="create-vac" href="#">
+                                        <a target="_blank" className="create-vac" href="/create-vacancy">
                                             <button className="create-vac-employer">Створити вакансію</button>
                                         </a>
                                     </div>

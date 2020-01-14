@@ -1,18 +1,18 @@
 #leftCol-employer-vacancies{
     position: fixed;
     /*border-right: 1px solid #EBEBEC !important;*/
-    -webkit-box-shadow: 9px 0px 18px -12px rgba(46,46,46,0.1);
-    -moz-box-shadow: 9px 0px 20px -12px rgba(46,46,46,0.1);
-    box-shadow: 9px 0px 20px -12px rgba(46,46,46,0.1);
+    /*-webkit-box-shadow: 9px 0px 18px -12px rgba(46,46,46,0.1);*/
+    /*-moz-box-shadow: 9px 0px 20px -12px rgba(46,46,46,0.1);*/
+    /*box-shadow: 9px 0px 20px -12px rgba(46,46,46,0.1);*/
     /*background-color: #F5F5F7;*/
-    /*background-color: #F6F6F6;*/
+    background-color: #F6F6F6;
     font-size: 16px;
     /*overflow-y: scroll;*/
     top: 0px;
     padding-top: 64px;
     bottom: 0;
     width: 225px;
-    margin-left: 205px;
+    margin-left: 55px;
 }
 
 #content-employer-vacancy {
@@ -20,7 +20,7 @@
     position: relative;
     /*margin-left: 530px;*/
     width: 0%;
-    margin-left: 480px;
+    margin-left: 340px;
     padding-bottom: 80px;
     transition: margin-left 250ms ease-out,transform 250ms ease-out,-webkit-transform 250ms ease-out;
     /*padding-right: 74px;*/
@@ -167,10 +167,17 @@
 }
 
 #active-vacancy-employer{
-    /*background: rgba(255, 224, 219, 0.28);*/
-    background-image: linear-gradient(120deg, #ffe0db 100%, #8fd3f4 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 8px;
-    background-position: 0 99%;
-    transition: background-size 0.25s ease-in;
+    background: white;
+    /*background-image: linear-gradient(120deg, #ffe0db 100%, #8fd3f4 100%);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100% 8px;*/
+    /*background-position: 0 99%;*/
+    /*transition: background-size 0.25s ease-in;*/
+}
+
+.paper-mui-table .MuiPaper-elevation1{
+    box-shadow:  0px 1px 0px 0px rgba(210, 210, 210, 0.2),
+    0px 1px 1px 0px rgba(255, 255, 255, 0.14),
+    0px 1px 3px 0px rgba(23, 23, 23, 0.12);
+;
 }

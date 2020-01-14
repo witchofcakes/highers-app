@@ -93,73 +93,72 @@ export default class Create_Vac extends React.Component {
             case 0:
                 return (
                     <div>
-                        <div className="row">
-                            <p className="create-vac-input-name">
+                        <div className="title-vac-div">
+                            <div className="col-8 no-gutters create-vac-input-name-title">
                                 Назва
                                 <div className="required-mark">*</div>
-                            </p>
-                        </div>
-                        <div className="row bottom-create">
+                            </div>
                             <div className="col-8 no-gutters">
                                 <input type="text" className="create-vac-input" placeholder="Назва вакансії" aria-label="Назва вакансії"/>
                             </div>
                         </div>
-                        <div className="row">
-                            <p className="create-vac-input-name">Локація роботи</p>
+                        <div className="title-vac-div">
+                            <div className="col-8 no-gutters create-vac-input-name">
+                                Локація роботи
+                            </div>
+                            <div className="row">
+                                <div className="col-4 column-city no-gutters">
+                                    <p className="create-vac-input-name-sm">
+                                        Місто
+                                        <div className="required-mark">*</div>
+                                    </p>
+                                    <input type="text" className="create-vac-input-city bottom-create" placeholder="Місто" aria-label="Місто"/>
+                                </div>
+                                <div className="col-4 column-street no-gutters">
+                                    <p className="create-vac-input-name-sm-street">Вулиця</p>
+                                    <input type="text" className="create-vac-input-street bottom-create" placeholder="Вулиця" aria-label="Вулиця"/>
+                                </div>
+                            </div>
                         </div>
-                        <div className="row">
-                            <div className="col-4 no-gutters">
-                                <p className="create-vac-input-name-sm">
-                                    Місто
+                        <div className="title-vac-div">
+                            <div>
+                                <div className="col-8 no-gutters create-vac-input-name-type">
+                                    Зайнятість
                                     <div className="required-mark">*</div>
-                                </p>
-                                <input type="text" className="create-vac-input-city bottom-create" placeholder="Місто" aria-label="Місто"/>
+                                </div>
                             </div>
-                            <div className="col-4 no-gutters">
-                                <p className="create-vac-input-name-sm-street">Вулиця</p>
-                                <input type="text" className="create-vac-input-street bottom-create" placeholder="Вулиця" aria-label="Вулиця"/>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <p className="create-vac-input-name">
-                                Зайнятість
-                                <div className="required-mark">*</div>
-                            </p>
-                        </div>
-                        <div className="row bottom-create">
-                            <div className="col-8 no-gutters">
-                                <ChooseWorkType/>
+                            <div>
+                                <div className="col-8 col-for-margin no-gutters">
+                                    <ChooseWorkType/>
+                                </div>
                             </div>
                         </div>
-                        <div className="row">
-                            <p className="create-vac-input-name">Зарплатня</p>
-                        </div>
+                        <div className="title-vac-div">
+                            <div className="col-8 no-gutters create-vac-input-name-salary">
+                                Зарплатня
+                            </div>
 
-                        {(() => {
-                            if (this.state.value=="Estimate"){
-                                return (
-                                    <div className="row bottom-create-salary align-items-center">
-                                        <div className="col-8 no-gutters">
+                            {(() => {
+                                if (this.state.value=="Estimate"){
+                                    return (
+                                        <div className="col-8 col-for-margin-sal no-gutters">
                                             <div className="salary-create-vac-vid">від</div>
                                             <input type="text" className="create-vac-input-salary" placeholder="Зарплатня" aria-label="Зарплатня"/>
                                             <div className="salary-create-vac">грн</div>
                                         </div>
-                                    </div>
-                                );
-                            }
-                            else if (this.state.value=="Precise"){
-                                return (
-                                    <div className="row bottom-create-salary align-items-center">
-                                        <div className="col-8 no-gutters">
+                                    );
+                                }
+                                else if (this.state.value=="Precise"){
+                                    return (
+                                        <div className="col-8 col-for-margin-sal no-gutters">
                                             <input type="text" className="create-vac-input-salary" placeholder="Зарплатня" aria-label="Зарплатня"/>
                                             <div className="salary-create-vac">грн</div>
                                         </div>
-                                    </div>
-                                );
-                            }
-                        })()}
 
-                        <div className="row">
+                                    );
+                                }
+                            })()}
+
                             <div className="col-8 no-gutters">
                                 <FormControl component="fieldset">
                                     <RadioGroup aria-label="position" name="position" id="mui-salary" value={this.state.value} onChange={this.handleChange_salary} row>
@@ -243,13 +242,12 @@ export default class Create_Vac extends React.Component {
     render() {
         const { activeStep } = this.state;
         return (
-            <div className="full">
+            <div className="full-employer">
                 <div className="row">
 
-                    {/*<SideBar/>*/}
-                    <Wide_SideBar/>
+                    <SideBar/>
 
-                    <div className="col" id="content-employer">
+                    <div className="col" id="content-employer-create">
                         <div className="row">
                             <button id="menu-button" className="button-menu" onClick={this.handleClick}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-menu">
@@ -261,9 +259,12 @@ export default class Create_Vac extends React.Component {
                         </div>
 
                         <div>
-                            <Stepper activeStep={activeStep} alternativeLabel>
+                            <div className="row row-stepper-center">
+                            <Stepper className="col-9 no-gutters" id="stepper-icons" activeStep={activeStep} alternativeLabel>
                                 <Step key={0}>
-                                    <StepLabel>Інформація про вакансію</StepLabel>
+                                    <StepLabel>
+                                       Інформація про вакансію
+                                    </StepLabel>
                                 </Step>
                                 <Step key={1}>
                                     <StepLabel>Опис вакансії</StepLabel>
@@ -272,12 +273,13 @@ export default class Create_Vac extends React.Component {
                                     <StepLabel>Інформація про вакансію</StepLabel>
                                 </Step>
                             </Stepper>
+                            </div>
 
-                            <div>
+                            <div className="steps-content-div">
                                 {activeStep === this.getNumberOfSteps() ? (
                                     <div>
                                         <Typography>
-                                            All steps completed - you&quot;re finished
+                                            Вся інформація заповнена!
                                         </Typography>
                                         <Button onClick={this.handleReset}>
                                             Reset
@@ -288,21 +290,25 @@ export default class Create_Vac extends React.Component {
                                     {
                                         this.getStepContent(activeStep)
                                     }
-                                        <div>
+                                    <div className="row buttons-vac-div">
+                                        <div className="col-8 no-gutters">
                                             <Button
+                                                id="back-btn-stepper"
                                                 disabled={activeStep === 0}
                                                 onClick={this.handleBack}
                                             >
-                                                Back
+                                                Назад
                                             </Button>
                                             <Button
+                                                id="next-btn-stepper"
                                                 variant="raised"
                                                 color="primary"
                                                 onClick={this.handleNext}
                                             >
-                                                {activeStep === this.getNumberOfSteps() - 1 ? 'Finish' : 'Next'}
+                                                {activeStep === this.getNumberOfSteps() - 1 ? 'Закінчити' : 'Далі'}
                                             </Button>
                                         </div>
+                                    </div>
                                     </div>
                                 )}
                             </div>

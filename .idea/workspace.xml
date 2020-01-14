@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a402fc95-8c4c-4da0-b3e1-6d4570d563e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/create_vacancy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/create_vacancy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/employer_candidates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/employer_candidates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/employer_vacancies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/employer_vacancies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tester.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tester.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/vac_short_employer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vac_short_employer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/vacancy_employer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vacancy_employer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/create_vacancy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/create_vacancy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/employer_vacancies.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/employer_vacancies.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/vacancy_employer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/vacancy_employer.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +33,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1VZRZ5iDJ9zKLklOPSfIgPvHMaU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -98,7 +115,7 @@
       <workItem from="1578573708823" duration="24686000" />
       <workItem from="1578644264363" duration="31361000" />
       <workItem from="1578685341751" duration="4958000" />
-      <workItem from="1578731115642" duration="94954000" />
+      <workItem from="1578731115642" duration="124739000" />
     </task>
     <servers />
   </component>
