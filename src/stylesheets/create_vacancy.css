@@ -245,6 +245,16 @@
     margin-bottom: 3px;
 }
 
+.feather-chevron-down{
+    width: 24px;
+    height: 24px;
+    stroke: #212529;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
 .feather-arrow-left-sidebar{
     width: 21px;
     height: 21px;
@@ -529,4 +539,53 @@ border-radius: 50%;
 .row-text-editor{
     margin-top: 20px;
     justify-content: center;
+}
+
+.panel-header{
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    font-family: 'Rubik', sans-serif !important;
+    color: #212529 !important;
+}
+
+.panel-create-vac:before{
+    background-color: unset !important;
+}
+
+.panel-create-vac{
+    border: none !important;
+    border-radius: 5px !important;
+    /*background-color: #61dafb !important;*/
+    margin-bottom: 20px !important;
+}
+
+.panel-create-vac-first{
+    border: none !important;
+    border-radius: 5px !important;
+    /*background-color: #61dafb !important;*/
+    margin-bottom: 20px !important;
+    margin-top: 40px !important;
+}
+
+.row-expansion-panel-center{
+    display: flex;
+    justify-content: center;
+}
+
+#panel1a-content .MuiExpansionPanelDetails-root{
+    display: block !important;
+}
+
+#panel1a-header .MuiExpansionPanelSummary-content.Mui-expanded .MuiTypography-root.panel-header.MuiTypography-body1{
+    color: #135393 !important;
+}
+
+#panel1a-header .MuiButtonBase-root.MuiIconButton-root.MuiExpansionPanelSummary-expandIcon.Mui-expanded.MuiIconButton-edgeEnd .MuiIconButton-label .feather-chevron-down{
+    stroke: #135393 !important;
+}
+
+.text-div-panel{
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #525a5e;
 }

@@ -138,7 +138,7 @@ class Vac extends React.Component {
                                         </div>
                                         <div className="row">
                                             <div className="col-12">
-                                                <div className="vacancy-info-categories">Ми пропонуємо:</div>
+                                                <div className="vacancy-info-categories">Від компанії:</div>
                                                 <ul>
                                                     <li className="vacancy-text">Офіс в стилі лофт</li>
                                                     <li className="vacancy-text">Повністю виплачені пільги на здоров'я</li>

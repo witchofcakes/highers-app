@@ -28,17 +28,15 @@ export default class Text_Editor extends React.Component {
     render() {
 
         return (
-            <div>
-                <div className="row row-text-editor">
-                    <div className="col-10">
-                        <RichTextEditor
-                            value={this.state.value}
-                            onChange={this.onChange}
-                            placeholder="Введіть текст тут"
-                            toolbarConfig={toolbarConfig}
-                        />
-                    </div>
-                </div>
+            <div className="col-12 no-gutters text-editor-panel">
+                <RichTextEditor
+                    value={this.state.value}
+                    onChange={this.onChange}
+                    placeholder="Введіть текст тут"
+                    toolbarConfig={toolbarConfig}
+                />
+
+
                 {/*<textarea*/}
                 {/*    className="source"*/}
                 {/*    placeholder="Editor Source"*/}

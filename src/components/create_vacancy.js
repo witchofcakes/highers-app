@@ -12,6 +12,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import SideBar from "./sidebar";
+import ExpansionPanel from "@material-ui/core/ExpansionPanel";
+import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
+import ExpandMoreIcon from "@material-ui/core/SvgIcon/SvgIcon";
+import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
+import Text_Editor from "./text_editor";
 
 function ChooseWorkType() {
     const [value, setValue] = React.useState('Full-time');
@@ -184,9 +189,106 @@ export default class Create_Vac extends React.Component {
                 );
             case 1:
                 return (
-                    <div>
-                        <Typography>Some more arbitrary content.</Typography>
-                        <Button>And a big button for good measure</Button>
+                    <div className="row row-expansion-panel-center">
+                        <ExpansionPanel className="col-8 panel-create-vac-first">
+                            <ExpansionPanelSummary
+                                expandIcon={
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-chevron-down">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                }
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                            >
+                                <Typography className="panel-header">
+                                    Кого ми шукаємо
+                                    <div className="required-mark">*</div>
+                                </Typography>
+                            </ExpansionPanelSummary>
+                            <ExpansionPanelDetails>
+                                    <div className="col-12 no-gutters text-div-panel">
+                                        Опишіть тут детальніше яку саме людину Ви шукаєте.
+                                        З ким потрібно буде працювати, якого роду роботу виконувати, який результат Ви очікуєте.
+                                    </div>
+                                    <Text_Editor/>
+                            </ExpansionPanelDetails>
+                        </ExpansionPanel>
+                        <ExpansionPanel className="col-8 panel-create-vac">
+                            <ExpansionPanelSummary
+                                expandIcon={
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-chevron-down">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                }
+                                aria-controls="panel2a-content"
+                                id="panel2a-header"
+                            >
+                                <Typography className="panel-header">
+                                    Вимоги
+                                    <div className="required-mark">*</div>
+                                </Typography>
+                            </ExpansionPanelSummary>
+                            <ExpansionPanelDetails>
+                                <Typography>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                    sit amet blandit leo lobortis eget.
+                                </Typography>
+                            </ExpansionPanelDetails>
+                        </ExpansionPanel>
+                        <ExpansionPanel className="col-8 panel-create-vac">
+                            <ExpansionPanelSummary
+                                expandIcon={
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-chevron-down">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                }
+                                aria-controls="panel2a-content"
+                                id="panel2a-header"
+                            >
+                                <Typography className="panel-header">
+                                    Графік роботи
+                                    <div className="required-mark">*</div>
+                                </Typography>
+                            </ExpansionPanelSummary>
+                            <ExpansionPanelDetails>
+                                <Typography>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                    sit amet blandit leo lobortis eget.
+                                </Typography>
+                            </ExpansionPanelDetails>
+                        </ExpansionPanel>
+                        <ExpansionPanel className="col-8 panel-create-vac">
+                            <ExpansionPanelSummary
+                                expandIcon={
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-chevron-down">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                }
+                                aria-controls="panel3a-content"
+                                id="panel3a-header"
+                            >
+                                <Typography className="panel-header">
+                                    Задачі
+                                    <div className="required-mark">*</div>
+                                </Typography>
+                            </ExpansionPanelSummary>
+                        </ExpansionPanel>
+                        <ExpansionPanel className="col-8 panel-create-vac">
+                            <ExpansionPanelSummary
+                                expandIcon={
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-chevron-down">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                }
+                                aria-controls="panel3a-content"
+                                id="panel3a-header"
+                            >
+                                <Typography className="panel-header">
+                                    Від компанії
+                                    <div className="required-mark">*</div>
+                                </Typography>
+                            </ExpansionPanelSummary>
+                        </ExpansionPanel>
                     </div>
                 );
             case 2:
