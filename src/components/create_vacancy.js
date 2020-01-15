@@ -1,6 +1,7 @@
 import React from "react";
-import Wide_SideBar from "./wide_sidebar";
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -10,7 +11,7 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
+import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
 import SideBar from "./sidebar";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
@@ -19,7 +20,10 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Text_Editor from "./text_editor";
 import Chip from "@material-ui/core/Chip";
 import Paper from '@material-ui/core/Paper';
-import TagFacesIcon from '@material-ui/icons/TagFaces';
+import Input from "@material-ui/core/Input";
+import Checkbox from "@material-ui/core/Checkbox";
+import ListItemText from "@material-ui/core/ListItemText";
+
 
 function ChooseWorkType() {
     const [value, setValue] = React.useState('Full-time');
@@ -79,35 +83,147 @@ function ChooseWorkType() {
     );
 }
 
-function ChipArray() {
+function Course_Select() {
+    const [state, setState] = React.useState({
+        course: ''
+    });
 
-    const [chipData, setChipData] = React.useState([
-        { key: 0, label: 'Angular' },
-        { key: 1, label: 'jQuery' },
-        { key: 2, label: 'Polymer' },
-        { key: 3, label: 'React' },
-        { key: 4, label: 'Vue.js' },
-    ]);
-
-    const handleDelete = chipToDelete => () => {
-        setChipData(chips => chips.filter(chip => chip.key !== chipToDelete.key));
+    const handleChange_course = name => event => {
+        setState({
+            ...state,
+            [name]: event.target.value,
+        });
     };
 
     return (
-        <div>
-            {chipData.map(data => {
-                let icon;
 
-                return (
-                    <Chip
-                        key={data.key}
-                        icon={icon}
-                        label={data.label}
-                        onDelete={data.label === 'React' ? undefined : handleDelete(data)}
-                    />
-                );
-            })}
-        </div>
+        <FormControl id="course-select-course-form">
+            <Select value={state.course}
+                    onChange={handleChange_course('course')}
+                    displayEmpty id="course-select-course"
+                    IconComponent = {ExpandMoreRoundedIcon}
+            >
+                <MenuItem value="" disabled id="all-cat-select">
+                    <p className="course-placeholder">Курс</p>
+                </MenuItem>
+                <MenuItem value={1} id="all-cat-select">1+</MenuItem>
+                <MenuItem value={2} id="all-cat-select">2+</MenuItem>
+                <MenuItem value={3} id="all-cat-select">3+</MenuItem>
+                <MenuItem value={4} id="all-cat-select">4+</MenuItem>
+                <MenuItem value={5} id="all-cat-select">5+</MenuItem>
+                <MenuItem value={6} id="all-cat-select">6+</MenuItem>
+            </Select>
+        </FormControl>
+    );
+}
+
+function Education_Select() {
+    const ITEM_HEIGHT = 48;
+    const ITEM_PADDING_TOP = 8;
+    const MenuProps = {
+        PaperProps: {
+            style: {
+                maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+                width: 250,
+            },
+        },
+    };
+
+    const names = [
+        'Менеджемент',
+        'Маркетинг',
+        'Аудит',
+        'Фінанси',
+    ];
+
+    const [personName, setPersonName] = React.useState([]);
+
+    const handleChangeType = event => {
+        setPersonName(event.target.value);
+    };
+
+    return (
+        <FormControl id="course-select-course-form">
+            <Select
+                labelId="type-filter-top"
+                id="course-select-education"
+                multiple
+                displayEmpty
+                value={personName}
+                onChange={handleChangeType}
+                input={<Input />}
+                IconComponent = {ExpandMoreRoundedIcon}
+                renderValue={selected => {
+                    if (selected.length === 0) {
+                        return <p className="course-placeholder">Спеціалізація</p>;
+                    }
+
+                    return selected.join(', ');
+                }}
+                MenuProps={MenuProps}
+            >
+                {names.map(name => (
+                    <MenuItem key={name} value={name} id="all-cat-select">
+                        <Checkbox id="checkbox" checked={personName.indexOf(name) > -1} />
+                        <ListItemText primary={name} />
+                    </MenuItem>
+                ))}
+            </Select>
+        </FormControl>
+    );
+}
+
+function Skills_Select() {
+    const ITEM_HEIGHT = 48;
+    const ITEM_PADDING_TOP = 8;
+    const MenuProps = {
+        PaperProps: {
+            style: {
+                maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+                width: 250,
+            },
+        },
+    };
+
+    const names = [
+        'MS Office',
+        'Бухоблік',
+    ];
+
+    const [personName, setPersonName] = React.useState([]);
+
+    const handleChangeType = event => {
+        setPersonName(event.target.value);
+    };
+
+    return (
+        <FormControl id="course-select-course-form">
+            <Select
+                labelId="type-filter-top"
+                id="course-select-skills"
+                multiple
+                displayEmpty
+                value={personName}
+                onChange={handleChangeType}
+                IconComponent = {ExpandMoreRoundedIcon}
+                input={<Input />}
+                renderValue={selected => {
+                    if (selected.length === 0) {
+                        return <p className="course-placeholder">Навички</p>;
+                    }
+
+                    return selected.join(', ');
+                }}
+                MenuProps={MenuProps}
+            >
+                {names.map(name => (
+                    <MenuItem key={name} value={name} id="all-cat-select">
+                        <Checkbox id="checkbox" checked={personName.indexOf(name) > -1} />
+                        <ListItemText primary={name} />
+                    </MenuItem>
+                ))}
+            </Select>
+        </FormControl>
     );
 }
 
@@ -172,15 +288,34 @@ export default class Create_Vac extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        {/*<div className="title-vac-div">*/}
-                        {/*    <div className="col-8 no-gutters create-vac-input-name-title">*/}
-                        {/*        Теги*/}
-                        {/*        <div className="required-mark">*</div>*/}
-                        {/*    </div>*/}
-                        {/*    <div className="col-8 no-gutters">*/}
-                        {/*        <ChipArray/>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
+                        <div className="title-vac-div">
+                            <div className="col-8 no-gutters create-vac-input-name">
+                                Освіта
+                            </div>
+                            <div className="row">
+                                <div className="col-2 column-city no-gutters">
+                                    <p className="create-vac-input-name-sm">
+                                        Курс
+                                        <div className="required-mark">*</div>
+                                    </p>
+                                    <Course_Select/>
+                                </div>
+                                <div className="col-2 column-street no-gutters">
+                                    <p className="create-vac-input-name-sm-2">
+                                        Спеціалізація
+                                        <div className="required-mark">*</div>
+                                    </p>
+                                    <Education_Select/>
+                                </div>
+                                <div className="col-2 column-street no-gutters">
+                                    <p className="create-vac-input-name-sm-3">
+                                        Навички
+                                        <div className="required-mark">*</div>
+                                    </p>
+                                    <Skills_Select/>
+                                </div>
+                            </div>
+                        </div>
                         <div className="title-vac-div">
                             <div className="col-8 no-gutters create-vac-input-name-salary">
                                 Зарплатня
@@ -357,6 +492,60 @@ export default class Create_Vac extends React.Component {
                 );
             case 2:
                 return (
+                    <div className="row row-expansion-panel-center">
+                        <ExpansionPanel className="col-8 panel-create-vac-first">
+                            <ExpansionPanelSummary
+                                expandIcon={
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-chevron-down">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                }
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                            >
+                                <Typography className="panel-header">
+                                    Про компанію
+                                    <div className="required-mark">*</div>
+                                </Typography>
+                            </ExpansionPanelSummary>
+                            <ExpansionPanelDetails>
+                                <div className="col-12 no-gutters text-div-panel">
+                                    Даня, цей блок людина має заповнювати тільки один раз. Для усіх наступних вакансій,
+                                    ця інфа має підтягуватись у текстовий редактор. Якщо людина захоче щось змінити, вона змінить тут,
+                                    і інфа про компанію має оновитись.
+                                </div>
+                                <Text_Editor/>
+                            </ExpansionPanelDetails>
+                        </ExpansionPanel>
+                        <div className="col-8 separator"></div>
+                        <ExpansionPanel className="col-8 panel-create-vac">
+                            <ExpansionPanelSummary
+                                expandIcon={
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-chevron-down">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                }
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                            >
+                                <Typography className="panel-header">
+                                    Переваги компанії
+                                    <div className="required-mark">*</div>
+                                </Typography>
+                            </ExpansionPanelSummary>
+                            <ExpansionPanelDetails>
+                                <div className="col-12 no-gutters text-div-panel">
+                                    Опишіть тут детальніше яку саме людину Ви шукаєте.
+                                    З ким потрібно буде працювати, якого роду роботу виконувати, який результат Ви очікуєте.
+                                </div>
+                                <Text_Editor/>
+                            </ExpansionPanelDetails>
+                        </ExpansionPanel>
+                        <div className="col-8 separator-last-company"></div>
+                    </div>
+                );
+            case 3:
+                return (
                         <div>
                             <div className="row row-vacancy-info-check">
                                 <div className="col-8">
@@ -438,43 +627,8 @@ export default class Create_Vac extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/*<div className="row details-row-margin">*/}
-                                        {/*    <div className="col-4 ellipsis-col-details">*/}
-                                        {/*        <p className="block-name-details">Назва:</p>*/}
-                                        {/*        <p className="block-details">IT Risk and Assurance</p>*/}
-                                        {/*    </div>*/}
-                                        {/*    <div className="col-4 ellipsis-col-details">*/}
-                                        {/*        <p className="block-name-details">Зайнятість:</p>*/}
-                                        {/*        <p className="block-details">Full-time</p>*/}
-                                        {/*    </div>*/}
-                                        {/*    <div className="col-4 ellipsis-col-details">*/}
-                                        {/*        <p className="block-name-details">Зарплатня:</p>*/}
-                                        {/*        <p className="block-details">15000 грн</p>*/}
-                                        {/*    </div>*/}
-                                        {/*</div>*/}
-                                        {/*<div className="row details-row-margin-second">*/}
-                                        {/*    <div className="col-4 ellipsis-col-details">*/}
-                                        {/*        <p className="block-name-details">Зарплатня:</p>*/}
-                                        {/*        <p className="block-details">15000 грн</p>*/}
-                                        {/*    </div>*/}
-                                        {/*</div>*/}
                                     </div>
                                 </div>
-                                {/*<div className="row">*/}
-                                {/*    <div className="col-12">*/}
-                                {/*        <div className="row tags-labels">*/}
-                                {/*            <div className="col-8">Освіта</div>*/}
-                                {/*        </div>*/}
-                                {/*        <Chip label="4+ курс" className="chip-info"/>*/}
-                                {/*        <Chip label="Фінанси" className="chip-info"/>*/}
-                                {/*        <Chip label="Економіка" className="chip-info"/>*/}
-                                {/*        <div className="row tags-labels">*/}
-                                {/*            <div className="col-8">Навички</div>*/}
-                                {/*        </div>*/}
-                                {/*        <Chip label="MS Office" className="chip-info"/>*/}
-                                {/*        <Chip label="Бухоблік" className="chip-info"/>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
                                 <div className="row">
                                     <div className="col-12">
                                         <div className="row vacancy-info-categories-first">
@@ -561,17 +715,6 @@ export default class Create_Vac extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            {/*<div className="col-2 column-location no-gutters">*/}
-                            {/*    <div className="loc-div">*/}
-                            {/*        <div className="location-map">Локація:</div>*/}
-                            {/*        <p className="vacancy-text-address">м. Київ, вул. Жилянська, 48</p>*/}
-                            {/*        <iframe id="iframe-map" width="230" height="260" frameBorder="0" className="google-map" scrolling="no"*/}
-                            {/*                marginHeight="0" marginWidth="0"*/}
-                            {/*                src="https://www.google.com/maps/embed/v1/place?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%96%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%B0%2C%2048%2C%2050%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2&key=AIzaSyDC2eQOHheWPhWWxe8nYSbJS15QwLHkqiY"*/}
-                            {/*                allowFullScreen>*/}
-                            {/*        </iframe>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
                         </div>
                         </div>
 
@@ -580,7 +723,7 @@ export default class Create_Vac extends React.Component {
     }
 
     getNumberOfSteps() {
-        return 3;
+        return 4;
     }
 
 
@@ -650,6 +793,9 @@ export default class Create_Vac extends React.Component {
                                     <StepLabel>Опис вакансії</StepLabel>
                                 </Step>
                                 <Step key={2}>
+                                    <StepLabel>Про компанію</StepLabel>
+                                </Step>
+                                <Step key={3}>
                                     <StepLabel>Публікація</StepLabel>
                                 </Step>
                             </Stepper>
@@ -658,12 +804,26 @@ export default class Create_Vac extends React.Component {
                             <div className="steps-content-div">
                                 {activeStep === this.getNumberOfSteps() ? (
                                     <div>
-                                        <Typography>
-                                            Вся інформація заповнена!
-                                        </Typography>
-                                        <Button onClick={this.handleReset}>
-                                            Reset
-                                        </Button>
+                                        <div className="row row-expansion-panel-center">
+                                            <div className="col-8 align-center-text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-smile-create">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                                                </svg>
+                                                Вакансія опублікована!
+                                            </div>
+                                        </div>
+                                        <div className="row row-expansion-panel-center">
+                                            <div className="col-8 align-center-btn">
+                                                <a target="_blank" href="#" className="look-at-vac-link">
+                                                    <button className="look-at-vac-btn">
+                                                        Переглянути вакансію
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                     ) : (
                                     <div>

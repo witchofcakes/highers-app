@@ -130,6 +130,7 @@ export default class Empl_Vac_One extends React.Component {
                     <SideBar/>
 
                     <div className="col-3 no-gutters" id="leftCol-employer-vacancies">
+                        <div className="vacancy-employer-sidebar">Всі вакансії</div>
                         <Empl_Vac_All title={"Content Maker & Manager Trainee"} location={"Київ"} type={"Full-time"}/>
                         <Empl_Vac_All title={"IT Risk and Assurance"} location={"Київ"} type={"Full-time"} active={"active-vacancy-employer"}/>
                     </div>

@@ -5,7 +5,7 @@
     /*-moz-box-shadow: 9px 0px 20px -12px rgba(46,46,46,0.1);*/
     /*box-shadow: 9px 0px 20px -12px rgba(46,46,46,0.1);*/
     /*background-color: #F5F5F7;*/
-    background-color: #F6F6F6;
+    background-color: #F5F5F7;
     font-size: 16px;
     /*overflow-y: scroll;*/
     top: 0px;
@@ -13,6 +13,16 @@
     bottom: 0;
     width: 225px;
     margin-left: 55px;
+}
+
+.vacancy-employer-sidebar{
+    font-size: 15px;
+    font-weight: 500;
+    color: #212529;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: -31px;
+    margin-bottom: 9px;
 }
 
 #content-employer-vacancy {
