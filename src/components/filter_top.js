@@ -5,6 +5,7 @@ import Input from '@material-ui/core/Input';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Select from '@material-ui/core/Select';
+import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
 
 export default function Filter_Top() {
     const [state, setState] = React.useState({
@@ -65,8 +66,10 @@ export default function Filter_Top() {
                         {/*</form>*/}
 
                         <div>
-                            <FormControl>
-                                <Select value={state.category} onChange={handleChange_cat('category')} displayEmpty id="all-cat-filter-top">
+                            <FormControl id="course-select-course-form">
+                                <Select value={state.category}
+                                        IconComponent = {ExpandMoreRoundedIcon}
+                                        onChange={handleChange_cat('category')} displayEmpty id="all-cat-filter-top">
                                     <MenuItem value="" id="all-cat-select">Всі категорії</MenuItem>
                                     <MenuItem value={1} id="all-cat-select">Аудит</MenuItem>
                                     <MenuItem value={2} id="all-cat-select">Аналітика</MenuItem>
@@ -80,7 +83,7 @@ export default function Filter_Top() {
                         </div>
 
                     <div>
-                        <FormControl>
+                        <FormControl id="course-select-course-form">
                             {/*<InputLabel id="demo-mutiple-checkbox-label">Tag</InputLabel>*/}
                             <Select
                                 labelId="type-filter-top"
@@ -89,6 +92,7 @@ export default function Filter_Top() {
                                 displayEmpty
                                 value={personName}
                                 onChange={handleChangeType}
+                                IconComponent = {ExpandMoreRoundedIcon}
                                 input={<Input />}
                                 renderValue={selected => {
                                     if (selected.length === 0) {
@@ -110,8 +114,10 @@ export default function Filter_Top() {
                     </div>
 
                         <div>
-                            <FormControl>
-                                <Select value={state.money} onChange={handleChange_money('money')} displayEmpty id="type-filter-top">
+                            <FormControl id="course-select-course-form">
+                                <Select value={state.money}
+                                        IconComponent = {ExpandMoreRoundedIcon}
+                                        onChange={handleChange_money('money')} displayEmpty id="type-filter-top">
                                     <MenuItem value="" id="all-cat-select">Зарплатня</MenuItem>
                                     <MenuItem value={1} id="all-cat-select">5000+ грн</MenuItem>
                                     <MenuItem value={2} id="all-cat-select">7000+ грн</MenuItem>

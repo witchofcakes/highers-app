@@ -9,6 +9,7 @@ import './javascript/navbar.js';
 import './javascript/cover.js';
 import './stylesheets/employer_vacancies.css';
 import './stylesheets/create_vacancy.css';
+import './stylesheets/contacts.css';
 import './stylesheets/vacancy_employer.css';
 // import 'bootstrap/css/bootstrap.css';
 import * as serviceWorker from './serviceWorker';

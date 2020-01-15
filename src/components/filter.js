@@ -6,6 +6,7 @@ import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
+import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
 
 export default function CheckboxLabels() {
     const [state, setState] = React.useState({
@@ -59,8 +60,12 @@ export default function CheckboxLabels() {
                             {/*    </NativeSelect>*/}
                             {/*    <FormHelperText>With visually hidden label</FormHelperText>*/}
                             {/*</FormControl>*/}
-                            <FormControl>
-                                <Select value={state.age} onChange={handleChange_cat('age')} displayEmpty id="filter-category-material-ui">
+                            <FormControl id="course-select-course-form">
+                                <Select value={state.age}
+                                        IconComponent = {ExpandMoreRoundedIcon}
+                                        onChange={handleChange_cat('age')}
+                                        displayEmpty
+                                        id="filter-category-material-ui">
                                     <MenuItem value="" id="all-cat-select">Всі категорії</MenuItem>
                                     <MenuItem value={1} id="all-cat-select">Аудит</MenuItem>
                                     <MenuItem value={2} id="all-cat-select">Аналітика</MenuItem>

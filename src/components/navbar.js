@@ -20,13 +20,13 @@ class NavBar extends React.Component {
                             <a className="nav-link" href="/all-vacancies"><span className="underline">Вакансії</span></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Для роботодавця</a>
+                            <a className="nav-link" href="/employer-vacancies">Для роботодавця</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Про нас</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Контакти</a>
+                            <a className="nav-link" href="/contacts">Контакти</a>
                         </li>
                     </ul>
                 </div>

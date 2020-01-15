@@ -13,6 +13,7 @@ export default class Partners extends React.Component {
     render() {
         var settings = {
             dots: false,
+            arrows: false,
             infinite: true,
             speed: 500,
             slidesToShow: 4,
@@ -22,6 +23,7 @@ export default class Partners extends React.Component {
 
         };
         return (
+
             <Slider {...settings}>
                 <div className="partners-div-2">
                     <img src={deloitte} className="deloitte"/>
@@ -48,6 +50,7 @@ export default class Partners extends React.Component {
                     <img src={vencon} className="vencon"/>
                 </div>
             </Slider>
+
         );
     }
 }

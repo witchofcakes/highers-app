@@ -6,7 +6,6 @@ import service from '../images/service.svg';
 import Testimonials from "./testimonials";
 import Partners from "./partners";
 import Footer from "./footer";
-import search from '../images/search.svg'
 import arrow from '../images/arrow.svg'
 
 class Landing extends React.Component {
@@ -18,7 +17,7 @@ class Landing extends React.Component {
                 <div className="homepage-hero-module">
                     <div className="video-container">
                         <div className="filter"></div>
-                        <video playsinline="playsinline" autoPlay="autoplay" muted="muted" loop="loop" class="fillWidth">
+                        <video playsinline="playsinline" poster="../images/jooble-logo.png" autoPlay="autoplay" muted="muted" loop="loop" class="fillWidth">
                             <source src="https://res.cloudinary.com/ddxpsbpyv/video/upload/v1578778059/video_eiapzm.mp4" type="video/mp4"/>
                         </video>
                     </div>
@@ -26,14 +25,23 @@ class Landing extends React.Component {
                         <div className="d-flex h-100 text-center align-items-center">
                             <div className="w-100 text-white">
                                 <p className="display-3">Ми знаходимо роботу для студентів</p>
-                                {/*<p className="lead mb-0">With HTML5 Video and Bootstrap 4</p>*/}
                                 <div className="input-group land-input mb-3">
-                                    <button className="banner-vacancies">Всі вакансії</button>
-                                    <input type="text" className="form-control landing-form" placeholder="Введіть ключові слова. Наприклад: юрист, бухгалтер"
+                                    <a href="/all-vacancies" className="banner-vacancies-link">
+                                        <button className="banner-vacancies">Всі вакансії</button>
+                                    </a>
+                                    <div className="input-group-image-vac">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                             className="feather-search-landing">
+                                            <circle cx="11" cy="11" r="8"></circle>
+                                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        </svg>
+                                    </div>
+                                    <input type="text" className="form-control landing-form" placeholder="Введіть ключові слова. Наприклад: юрист(ка)"
                                            aria-label="Recipient's username" aria-describedby="basic-addon2"/>
                                         <div className="input-group-append">
                                             <button className="btn btn-outline-secondary" type="button">
-                                                <img src={search} className="search-but"/>
+                                                {/*<img src={search} className="search-but"/>*/}
+                                                <div>Знайти</div>
                                             </button>
                                         </div>
 
@@ -52,9 +60,11 @@ class Landing extends React.Component {
                             <p className="h5-text-adv">Working in channels gives everyone of your team a
                                 shared view of progress and purpose.
                             </p>
-                            <p className="all-vac-blue">
-                                All vacancies <img src={arrow} className="arrow-blue"/>
-                            </p>
+                            <a href="/all-vacancies" className="all-vac-blue">
+                                <p className="all-vac-blue">
+                                    Всі вакансії <img src={arrow} className="arrow-blue"/>
+                                </p>
+                            </a>
                         </div>
                     </div>
                     <div className="row">
@@ -84,9 +94,11 @@ class Landing extends React.Component {
                         <div className="col-8 container-h2">
                             <p className="h2-text">Trusted the world over</p>
                             <p className="h5-text">Teams of every size, shape and kind have already made Slack the place where their work happens.</p>
-                            <p className="all-vac-blue-2">
-                                All vacancies <img src={arrow} className="arrow-blue"/>
-                            </p>
+                            <a href="/all-vacancies" className="all-vac-blue-2">
+                                <p className="all-vac-blue-2">
+                                    Всі вакансії <img src={arrow} className="arrow-blue"/>
+                                </p>
+                            </a>
                         </div>
                     </div>
                     <div className="row testi-cent">
@@ -102,13 +114,15 @@ class Landing extends React.Component {
                             <p className="h5-text-partners">Working in channels gives everyone on your team a
                                 shared view of progress and purpose.
                             </p>
-                            <p className="all-vac-blue-3">
-                                All vacancies <img src={arrow} className="arrow-blue"/>
-                            </p>
+                            <a href="/all-vacancies" className="all-vac-blue-3">
+                                <p className="all-vac-blue-3">
+                                    Всі вакансії <img src={arrow} className="arrow-blue"/>
+                                </p>
+                            </a>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 partners-container-shadow">
                             <Partners/>
                         </div>
                     </div>
@@ -117,7 +131,9 @@ class Landing extends React.Component {
                     <div className="row phrase-cent-h2">
                         <div className="col-8 container-h2-phrase">
                             <p className="h2-text-phrase">Choose a better way to work</p>
-                            <button className="phrase-button">Всі вакансії</button>
+                            <a href="/all-vacancies">
+                                <button className="phrase-button">Всі вакансії</button>
+                            </a>
                         </div>
                     </div>
                 </div>

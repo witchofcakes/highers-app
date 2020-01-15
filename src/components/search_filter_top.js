@@ -37,8 +37,17 @@ export default class Search_Top extends React.Component  {
         return (
             <form id="search" autocomplete="off">
                 <input id="field" type="text"/>
-                <img onClick={this.clicked} id="icon" src={search_bl}/>
-                <img onClick={this.normal} id="icon-close" src={close_icon}/>
+                <svg onClick={this.clicked} id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                     className="feather-search-filter">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <svg onClick={this.normal} id="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     className="feather-x-filter">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
             </form>
         );
     }

@@ -32,7 +32,11 @@ class AllVac extends React.Component {
                     <div class="col-12">
                         <div className="input-group vac-input mb-3">
                             <div className="input-group-image-vac">
-                                <img src={search} className="search-vacancies-page"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                     className="feather-search-vacancies">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
                             </div>
                             <input type="text" className="form-control vac-form" placeholder="Введіть ключові слова. Наприклад: юрист, бухгалтер"
                                    aria-label="Recipient's username" aria-describedby="basic-addon2"/>
