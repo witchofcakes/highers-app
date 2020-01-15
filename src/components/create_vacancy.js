@@ -17,6 +17,9 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpandMoreIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Text_Editor from "./text_editor";
+import Chip from "@material-ui/core/Chip";
+import Paper from '@material-ui/core/Paper';
+import TagFacesIcon from '@material-ui/icons/TagFaces';
 
 function ChooseWorkType() {
     const [value, setValue] = React.useState('Full-time');
@@ -76,6 +79,37 @@ function ChooseWorkType() {
     );
 }
 
+function ChipArray() {
+
+    const [chipData, setChipData] = React.useState([
+        { key: 0, label: 'Angular' },
+        { key: 1, label: 'jQuery' },
+        { key: 2, label: 'Polymer' },
+        { key: 3, label: 'React' },
+        { key: 4, label: 'Vue.js' },
+    ]);
+
+    const handleDelete = chipToDelete => () => {
+        setChipData(chips => chips.filter(chip => chip.key !== chipToDelete.key));
+    };
+
+    return (
+        <div>
+            {chipData.map(data => {
+                let icon;
+
+                return (
+                    <Chip
+                        key={data.key}
+                        icon={icon}
+                        label={data.label}
+                        onDelete={data.label === 'React' ? undefined : handleDelete(data)}
+                    />
+                );
+            })}
+        </div>
+    );
+}
 
 export default class Create_Vac extends React.Component {
 
@@ -138,6 +172,15 @@ export default class Create_Vac extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        {/*<div className="title-vac-div">*/}
+                        {/*    <div className="col-8 no-gutters create-vac-input-name-title">*/}
+                        {/*        Теги*/}
+                        {/*        <div className="required-mark">*</div>*/}
+                        {/*    </div>*/}
+                        {/*    <div className="col-8 no-gutters">*/}
+                        {/*        <ChipArray/>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
                         <div className="title-vac-div">
                             <div className="col-8 no-gutters create-vac-input-name-salary">
                                 Зарплатня
@@ -213,6 +256,7 @@ export default class Create_Vac extends React.Component {
                                     <Text_Editor/>
                             </ExpansionPanelDetails>
                         </ExpansionPanel>
+                        <div className="col-8 separator"></div>
                         <ExpansionPanel className="col-8 panel-create-vac">
                             <ExpansionPanelSummary
                                 expandIcon={
@@ -220,8 +264,8 @@ export default class Create_Vac extends React.Component {
                                         <polyline points="6 9 12 15 18 9"></polyline>
                                     </svg>
                                 }
-                                aria-controls="panel2a-content"
-                                id="panel2a-header"
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
                             >
                                 <Typography className="panel-header">
                                     Вимоги
@@ -229,12 +273,14 @@ export default class Create_Vac extends React.Component {
                                 </Typography>
                             </ExpansionPanelSummary>
                             <ExpansionPanelDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                    sit amet blandit leo lobortis eget.
-                                </Typography>
+                                <div className="col-12 no-gutters text-div-panel">
+                                    Опишіть тут детальніше яку саме людину Ви шукаєте.
+                                    З ким потрібно буде працювати, якого роду роботу виконувати, який результат Ви очікуєте.
+                                </div>
+                                <Text_Editor/>
                             </ExpansionPanelDetails>
                         </ExpansionPanel>
+                        <div className="col-8 separator"></div>
                         <ExpansionPanel className="col-8 panel-create-vac">
                             <ExpansionPanelSummary
                                 expandIcon={
@@ -242,8 +288,8 @@ export default class Create_Vac extends React.Component {
                                         <polyline points="6 9 12 15 18 9"></polyline>
                                     </svg>
                                 }
-                                aria-controls="panel2a-content"
-                                id="panel2a-header"
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
                             >
                                 <Typography className="panel-header">
                                     Графік роботи
@@ -251,12 +297,14 @@ export default class Create_Vac extends React.Component {
                                 </Typography>
                             </ExpansionPanelSummary>
                             <ExpansionPanelDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                    sit amet blandit leo lobortis eget.
-                                </Typography>
+                                <div className="col-12 no-gutters text-div-panel">
+                                    Опишіть тут детальніше яку саме людину Ви шукаєте.
+                                    З ким потрібно буде працювати, якого роду роботу виконувати, який результат Ви очікуєте.
+                                </div>
+                                <Text_Editor/>
                             </ExpansionPanelDetails>
                         </ExpansionPanel>
+                        <div className="col-8 separator"></div>
                         <ExpansionPanel className="col-8 panel-create-vac">
                             <ExpansionPanelSummary
                                 expandIcon={
@@ -264,15 +312,23 @@ export default class Create_Vac extends React.Component {
                                         <polyline points="6 9 12 15 18 9"></polyline>
                                     </svg>
                                 }
-                                aria-controls="panel3a-content"
-                                id="panel3a-header"
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
                             >
                                 <Typography className="panel-header">
                                     Задачі
                                     <div className="required-mark">*</div>
                                 </Typography>
                             </ExpansionPanelSummary>
+                            <ExpansionPanelDetails>
+                                <div className="col-12 no-gutters text-div-panel">
+                                    Опишіть тут детальніше яку саме людину Ви шукаєте.
+                                    З ким потрібно буде працювати, якого роду роботу виконувати, який результат Ви очікуєте.
+                                </div>
+                                <Text_Editor/>
+                            </ExpansionPanelDetails>
                         </ExpansionPanel>
+                        <div className="col-8 separator"></div>
                         <ExpansionPanel className="col-8 panel-create-vac">
                             <ExpansionPanelSummary
                                 expandIcon={
@@ -280,23 +336,245 @@ export default class Create_Vac extends React.Component {
                                         <polyline points="6 9 12 15 18 9"></polyline>
                                     </svg>
                                 }
-                                aria-controls="panel3a-content"
-                                id="panel3a-header"
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
                             >
                                 <Typography className="panel-header">
                                     Від компанії
                                     <div className="required-mark">*</div>
                                 </Typography>
                             </ExpansionPanelSummary>
+                            <ExpansionPanelDetails>
+                                <div className="col-12 no-gutters text-div-panel">
+                                    Опишіть тут детальніше яку саме людину Ви шукаєте.
+                                    З ким потрібно буде працювати, якого роду роботу виконувати, який результат Ви очікуєте.
+                                </div>
+                                <Text_Editor/>
+                            </ExpansionPanelDetails>
                         </ExpansionPanel>
+                        <div className="col-8 separator-last"></div>
                     </div>
                 );
             case 2:
                 return (
-                    <div>
-                        <Typography>content.</Typography>
-                        <Button>And a big button for good measure</Button>
-                    </div>
+                        <div>
+                            <div className="row row-vacancy-info-check">
+                                <div className="col-8">
+                                    <div className="row">
+                                    <div className="col-5 no-gutters check-vacancy-create">Перевірте Вашу вакансію</div>
+                                    <div className="col-7 no-gutters check-vacancy-create-btn-div">
+                                        <Button
+                                            id="publish-btn-stepper-top"
+                                            variant="raised"
+                                            color="primary"
+                                            onClick={this.handleNext}
+                                            endIcon={
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                     className="feather-chevron-right-btn">
+                                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                                </svg>
+                                            }
+                                        > Опублікувати </Button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div className="row row-vacancy-info-center">
+                            <div className="col-8 no-gutters">
+                                <div className="row">
+                                    <div className="col-6">
+                                        <div className="vacancy-details-word">Деталі:</div>
+                                        <div className="row">
+                                            <div className="col-12">
+                                                <div className="row details-row-margin">
+                                                    <div className="col-12 ellipsis-col-details">
+                                                        <p className="block-name-details">Назва:</p>
+                                                        <p className="block-details">IT Risk and Assurance</p>
+                                                    </div>
+                                                </div>
+                                                <div className="row details-row-margin">
+                                                    <div className="col-12 ellipsis-col-details">
+                                                        <p className="block-name-details">Зайнятість:</p>
+                                                        <p className="block-details">Full-time</p>
+                                                    </div>
+                                                </div>
+                                                <div className="row details-row-margin">
+                                                    <div className="col-12 ellipsis-col-details">
+                                                        <p className="block-name-details">Зарплатня:</p>
+                                                        <p className="block-details">15000 грн</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-12">
+                                                <div className="row tags-labels">
+                                                    <div className="col-8">Освіта</div>
+                                                </div>
+                                                <Chip label="4+ курс" className="chip-info"/>
+                                                <Chip label="Фінанси" className="chip-info"/>
+                                                <Chip label="Економіка" className="chip-info"/>
+                                                <div className="row tags-labels">
+                                                    <div className="col-8">Навички</div>
+                                                </div>
+                                                <Chip label="MS Office" className="chip-info"/>
+                                                <Chip label="Бухоблік" className="chip-info"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-6">
+                                        <div className="location-map-create">Локація:</div>
+                                        <div className="row">
+                                            <div className="col-12 column-location">
+                                                <div className="loc-div-create">
+                                                    <p className="vacancy-text-address-create">м. Київ, вул. Жилянська, 48</p>
+                                                    <iframe id="iframe-map" width="100%" height="200" frameBorder="0" className="google-map-create" scrolling="no"
+                                                            marginHeight="0" marginWidth="0"
+                                                            src="https://www.google.com/maps/embed/v1/place?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%96%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%B0%2C%2048%2C%2050%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2&key=AIzaSyDC2eQOHheWPhWWxe8nYSbJS15QwLHkqiY"
+                                                            allowFullScreen>
+                                                    </iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/*<div className="row details-row-margin">*/}
+                                        {/*    <div className="col-4 ellipsis-col-details">*/}
+                                        {/*        <p className="block-name-details">Назва:</p>*/}
+                                        {/*        <p className="block-details">IT Risk and Assurance</p>*/}
+                                        {/*    </div>*/}
+                                        {/*    <div className="col-4 ellipsis-col-details">*/}
+                                        {/*        <p className="block-name-details">Зайнятість:</p>*/}
+                                        {/*        <p className="block-details">Full-time</p>*/}
+                                        {/*    </div>*/}
+                                        {/*    <div className="col-4 ellipsis-col-details">*/}
+                                        {/*        <p className="block-name-details">Зарплатня:</p>*/}
+                                        {/*        <p className="block-details">15000 грн</p>*/}
+                                        {/*    </div>*/}
+                                        {/*</div>*/}
+                                        {/*<div className="row details-row-margin-second">*/}
+                                        {/*    <div className="col-4 ellipsis-col-details">*/}
+                                        {/*        <p className="block-name-details">Зарплатня:</p>*/}
+                                        {/*        <p className="block-details">15000 грн</p>*/}
+                                        {/*    </div>*/}
+                                        {/*</div>*/}
+                                    </div>
+                                </div>
+                                {/*<div className="row">*/}
+                                {/*    <div className="col-12">*/}
+                                {/*        <div className="row tags-labels">*/}
+                                {/*            <div className="col-8">Освіта</div>*/}
+                                {/*        </div>*/}
+                                {/*        <Chip label="4+ курс" className="chip-info"/>*/}
+                                {/*        <Chip label="Фінанси" className="chip-info"/>*/}
+                                {/*        <Chip label="Економіка" className="chip-info"/>*/}
+                                {/*        <div className="row tags-labels">*/}
+                                {/*            <div className="col-8">Навички</div>*/}
+                                {/*        </div>*/}
+                                {/*        <Chip label="MS Office" className="chip-info"/>*/}
+                                {/*        <Chip label="Бухоблік" className="chip-info"/>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="row vacancy-info-categories-first">
+                                            <div className="col-8">
+                                                Кого ми шукаємо:
+                                            </div>
+                                        </div>
+                                        <p className="vacancy-text-align">З початку 2020 року влада Нідерландів відмовилася від назви «Голландія» ― її перестали використовувати як символ країни та на офіційному логотипі.
+                                            На новому логотипі замість слова «Голландія» зображені помаранчеві букви NL та написана назва країни англійською мовою — «Netherlands».
+                                            Влада Нідерландів вважає, що слово «Голландія» у іноземців часто асоціюється з тими розвагами, яких вони б хотіли уникати: легальними рекреаційними наркотиками та кварталом червоних ліхтарів.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="row vacancy-info-categories">
+                                            <div className="col-8">
+                                                Графік роботи:
+                                            </div>
+                                        </div>
+                                        <p className="vacancy-text">Full-time, з можливістю іноді відвідувати пари. Також з оплачуваною відпусткою на період сесії.</p>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="row vacancy-info-categories">
+                                            <div className="col-8">
+                                                Вимоги:
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li className="vacancy-text">Ступінь бакалавра в галузі ІТ або суміжній галузі.</li>
+                                            <li className="vacancy-text">Відмінне розуміння балансу обсягу, строку та вартості.</li>
+                                            <li className="vacancy-text">Успіх у роботі з широким спектром зацікавлених сторін із суперечливими потребами та вимогами до виконання стратегії спільних послуг / розвитку.</li>
+                                            <li className="vacancy-text">Переважний досвід інтеграції в технології SAP.</li>
+                                            <li className="vacancy-text">Досвід управління ескалаціями, вирішення конфліктів та керування організаційним процесом.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="row vacancy-info-categories">
+                                            <div className="col-8">
+                                                Буде плюсом:
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li className="vacancy-text">Від 3 до 5 років досвіду в розробці розроблених на замовлення ІТ-рішень.</li>
+                                            <li className="vacancy-text">Поєднання освіти та досвіду, що дають рівноцінні знання.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="row vacancy-info-categories">
+                                            <div className="col-8">
+                                                Задачі:
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li className="vacancy-text">Розробка та інтеграція нових функцій та функціональності з метою оптимізації бізнес-процесів та можливостей Salesforce.com.</li>
+                                            <li className="vacancy-text">Співпрацювати з адміністраторами Salesforce.com, бізнес-зацікавленими сторонами та іншими членами команди.</li>
+                                            <li className="vacancy-text">Зрозуміти дорожню карту додатка Salesforce та активно вмикайте план розширених можливостей бізнесу.</li>
+                                            <li className="vacancy-text">Переконатись, що програми збігаються зі специфікаціями дизайну та дотримуються ділової практики кодування.</li>
+                                            <li className="vacancy-text">Продемонструвати здібності за допомогою робочих процесів, макетів сторінок, тренувань, інформаційних панелей, створення та дезактивації користувачів, завантаження даних та всіх інших функцій Salesforce.com.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="row vacancy-info-categories">
+                                            <div className="col-8">
+                                                Ми пропонуємо:
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li className="vacancy-text">Офіс в стилі лофт</li>
+                                            <li className="vacancy-text">Повністю виплачені пільги на здоров'я</li>
+                                            <li className="vacancy-text">Медичне страхування</li>
+                                            <li className="vacancy-text">Баланс роботи та життя</li>
+                                            <li className="vacancy-text">Сплачена сімейна відпустка</li>
+                                            <li className="vacancy-text">Дивовижний потенціал зростання</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            {/*<div className="col-2 column-location no-gutters">*/}
+                            {/*    <div className="loc-div">*/}
+                            {/*        <div className="location-map">Локація:</div>*/}
+                            {/*        <p className="vacancy-text-address">м. Київ, вул. Жилянська, 48</p>*/}
+                            {/*        <iframe id="iframe-map" width="230" height="260" frameBorder="0" className="google-map" scrolling="no"*/}
+                            {/*                marginHeight="0" marginWidth="0"*/}
+                            {/*                src="https://www.google.com/maps/embed/v1/place?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%96%D0%B8%D0%BB%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%B0%2C%2048%2C%2050%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2&key=AIzaSyDC2eQOHheWPhWWxe8nYSbJS15QwLHkqiY"*/}
+                            {/*                allowFullScreen>*/}
+                            {/*        </iframe>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
+                        </div>
+                        </div>
+
                 );
         }
     }
@@ -372,7 +650,7 @@ export default class Create_Vac extends React.Component {
                                     <StepLabel>Опис вакансії</StepLabel>
                                 </Step>
                                 <Step key={2}>
-                                    <StepLabel>Інформація про вакансію</StepLabel>
+                                    <StepLabel>Публікація</StepLabel>
                                 </Step>
                             </Stepper>
                             </div>
@@ -398,17 +676,49 @@ export default class Create_Vac extends React.Component {
                                                 id="back-btn-stepper"
                                                 disabled={activeStep === 0}
                                                 onClick={this.handleBack}
+                                                startIcon={
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                         className="feather-chevron-left-btn">
+                                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                                    </svg>
+                                                }
                                             >
                                                 Назад
                                             </Button>
-                                            <Button
-                                                id="next-btn-stepper"
-                                                variant="raised"
-                                                color="primary"
-                                                onClick={this.handleNext}
-                                            >
-                                                {activeStep === this.getNumberOfSteps() - 1 ? 'Закінчити' : 'Далі'}
-                                            </Button>
+                                            {activeStep === this.getNumberOfSteps() - 1 ?
+                                                <Button
+                                                    id="publish-btn-stepper"
+                                                    variant="raised"
+                                                    color="primary"
+                                                    onClick={this.handleNext}
+                                                    endIcon={
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                             className="feather-chevron-right-btn">
+                                                            <polyline points="9 18 15 12 9 6"></polyline>
+                                                        </svg>
+                                                    }
+                                                > Опублікувати </Button>
+                                                :
+                                                <Button
+                                                    id="next-btn-stepper"
+                                                    variant="raised"
+                                                    color="primary"
+                                                    onClick={this.handleNext}
+                                                    endIcon={
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                             className="feather-chevron-right-btn">
+                                                            <polyline points="9 18 15 12 9 6"></polyline>
+                                                        </svg>
+                                                    }
+                                                >Далі</Button>
+                                            }
+
                                         </div>
                                     </div>
                                     </div>
