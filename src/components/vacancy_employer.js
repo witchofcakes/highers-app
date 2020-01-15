@@ -112,6 +112,7 @@ const TableCandidates = () => {
                 rowsPerPage={10}
                 page={0}
                 id="table-pagination"
+
                 // onChangePage={handleChangePage}
                 // onChangeRowsPerPage={handleChangeRowsPerPage}
             />
@@ -379,12 +380,12 @@ export default class Empl_Vac_One extends React.Component {
                                 </div>
                             </TabPanel>
                             <TabPanel>
-                                <div className="row row-vacancy-info">
+                                <div className="row row-vacancy-info-employer-vac-margin">
                                     <div className="col-12 no-gutters">
-                                        {/*<div id="fadeout-b" className="bottom-fadeout-candidates"></div>*/}
-                                        {/*<div id="fadeout-t" className="top-fadeout-candidates"></div>*/}
-                                        {/*<div id="fadeout-l" className="left-fadeout-candidates"></div>*/}
-                                        {/*<div id="fadeout-r" className="right-fadeout-candidates"></div>*/}
+                                        <div id="fadeout-b" className="bottom-fadeout-candidates-vac"></div>
+                                        <div id="fadeout-t" className="top-fadeout-candidates-vac"></div>
+                                        <div id="fadeout-l" className="left-fadeout-candidates-vac"></div>
+                                        <div id="fadeout-r" className="right-fadeout-candidates-vac"></div>
                                         <TableCandidates/>
                                     </div>
                                 </div>

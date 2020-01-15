@@ -217,6 +217,17 @@
     margin-bottom: 2px !important;
 }
 
+.feather-user-more{
+    width: 15px;
+    height: 15px;
+    stroke: #212529;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 2px !important;
+}
+
 .feather-filter{
     width: 19px;
     height: 19px;
