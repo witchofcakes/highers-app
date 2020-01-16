@@ -10,6 +10,9 @@ import DraftsIcon from '@material-ui/icons/Drafts';
 import SendIcon from '@material-ui/icons/Send';
 import Menu from '@material-ui/core/Menu';
 import PriorityHighIcon from '@material-ui/icons/PriorityHigh';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
 
 export default function Btn_More() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -20,6 +23,17 @@ export default function Btn_More() {
 
     const handleClose = () => {
         setAnchorEl(null);
+    };
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpenModal = () => {
+        setOpen(true);
+        setAnchorEl(null);
+    };
+
+    const handleCloseModal = () => {
+        setOpen(false);
     };
 
     return (
@@ -50,15 +64,7 @@ export default function Btn_More() {
                         <p className="menu-text-edit-delete">Редагувати вакансію</p>
                     </Typography>
                 </MenuItem>
-                {/*<MenuItem className="button-more-menu" onClick={handleClose}>*/}
-                {/*    <Typography variant="inherit" noWrap>*/}
-                {/*        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-edit-2">*/}
-                {/*            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>*/}
-                {/*        </svg>*/}
-                {/*        <p className="menu-text-edit-delete">Дезактивувати вакансію</p>*/}
-                {/*    </Typography>*/}
-                {/*</MenuItem>*/}
-                <MenuItem className="button-more-menu" onClick={handleClose}>
+                <MenuItem className="button-more-menu" onClick={handleOpenModal}>
                     <Typography variant="inherit" noWrap>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-trash">
                             <polyline points="3 6 5 6 21 6"></polyline>
@@ -67,6 +73,38 @@ export default function Btn_More() {
                         <p className="menu-text-edit-delete">Видалити вакансію</p>
                     </Typography>
                 </MenuItem>
+
+                        <Modal
+                            aria-labelledby="transition-modal-title"
+                            aria-describedby="transition-modal-description"
+                            className="modal-delete"
+                            open={open}
+                            onClose={handleCloseModal}
+                            closeAfterTransition
+                            BackdropComponent={Backdrop}
+                            BackdropProps={{
+                                timeout: 500,
+                            }}
+                        >
+                            <Fade in={open}>
+                                <div className="modal-paper">
+                                    <p id="transition-modal-title">Видалити вакансію?</p>
+                                    <p id="transition-modal-description">Ви не зможете анулювати цю дію.</p>
+                                    <a href="#">
+                                        <button className="delete-button-modal">
+                                            Видалити
+                                        </button>
+                                    </a>
+                                    <a href="#" onClick={handleCloseModal}>
+                                        <button className="delete-button-modal-cancel">
+                                            Назад
+                                        </button>
+                                    </a>
+                                </div>
+                            </Fade>
+                        </Modal>
+
+
             </Menu>
             </Paper>
         </div>

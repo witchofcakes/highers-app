@@ -1,10 +1,7 @@
 import React from "react";
-import Wide_SideBar from "./wide_sidebar";
-import Vac_Row from "./vacancy_row";
-import Pagination_Comp from "./pagination";
-import logo from "../images/logo.png";
-import Avatar from "@material-ui/core/Avatar";
-import avatar from "../images/avatar.jpeg";
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Chip from "@material-ui/core/Chip";
@@ -120,6 +117,60 @@ const TableCandidates = () => {
     )
 }
 
+function DeleteModal() {
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    return (
+        <a className="create-vac" href="#">
+            <LightTooltip title="Видалити вакансію">
+                <button className="but-delete-employer" onClick={handleOpen}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-trash-employer">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    </svg>
+                </button>
+            </LightTooltip>
+            <Modal
+                aria-labelledby="transition-modal-title"
+                aria-describedby="transition-modal-description"
+                className="modal-delete"
+                open={open}
+                onClose={handleClose}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                    timeout: 500,
+                }}
+            >
+                <Fade in={open}>
+                    <div className="modal-paper">
+                        <p id="transition-modal-title">Видалити вакансію?</p>
+                        <p id="transition-modal-description">Ви не зможете анулювати цю дію.</p>
+                        <a href="#">
+                            <button className="delete-button-modal">
+                                Видалити
+                            </button>
+                        </a>
+                        <a href="#" onClick={handleClose}>
+                            <button className="delete-button-modal-cancel">
+                                Назад
+                            </button>
+                        </a>
+                    </div>
+                </Fade>
+            </Modal>
+        </a>
+    );
+}
+
 export default class Empl_Vac_One extends React.Component {
 
     render() {
@@ -152,16 +203,7 @@ export default class Empl_Vac_One extends React.Component {
                                                 </button>
                                             </LightTooltip>
                                         </a>
-                                        <a className="create-vac" href="#">
-                                            <LightTooltip title="Видалити вакансію">
-                                                <button className="but-delete-employer">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-trash-employer">
-                                                        <polyline points="3 6 5 6 21 6"></polyline>
-                                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                                                    </svg>
-                                                </button>
-                                            </LightTooltip>
-                                        </a>
+                                        <DeleteModal/>
                                         <a className="create-vac" href="/create-vacancy">
                                             <button className="create-vac-employer">Створити вакансію</button>
                                         </a>

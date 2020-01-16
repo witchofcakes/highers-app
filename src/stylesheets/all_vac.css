@@ -396,7 +396,7 @@
     position: fixed;
     cursor: pointer;
     bottom: 30px;
-    left: 30px;
+    left: 45px;
     color: #ffffff;
     background-color: #35383c;
     opacity: 0.3;
@@ -426,7 +426,13 @@
     width: 255px;
 }
 
-
+.full-search-cont{
+    max-width: 1440px !important;
+    margin: 0 auto;
+    width: 100%;
+    padding-right: 76px;
+    padding-left: 76px;
+}
 
 
 /*.col-lg-3{*/

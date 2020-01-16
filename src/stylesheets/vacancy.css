@@ -4,7 +4,7 @@
 }
 
 .short-vac{
-    margin-left: 30px;
+    /*margin-left: 30px;*/
     /*padding-right: 140px;*/
 }
 
@@ -358,13 +358,17 @@
 
 .apply-button-but{
     float: right;
-    border-radius: 5px;
+    border-radius: 7px;
     border: 1px solid #FF6F61;
     background-color: #FF6F61;
     padding: 12px 40px 12px 40px;
     color: white;
     font-size: 14px;
     font-weight: 500;
+}
+
+.apply-button-but:focus{
+    outline: none !important;
 }
 
 .simplebar-track.simplebar-horizontal{
@@ -535,7 +539,7 @@
     font-size: 16px;
     font-weight: 500;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
     color: white
 }
 
@@ -544,10 +548,11 @@
 }
 
 .row-but-apply-bot{
+    border-radius: 15px;
     text-align: center;
     justify-content: center;
-    margin-left: -50px;
-    margin-right: -44px;
+    margin-left: -15px;
+    margin-right: -15px;
     background-color: #FFE0DB;
 }
 
@@ -778,4 +783,182 @@
 .logo-mount-vacancy{
     height: 45px;
     width: 45px;
+}
+
+.modal-apply{
+
+    overflow-y: scroll !important;
+    /*padding: 60px 20px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*text-align: center;*/
+}
+
+.modal-paper-apply{
+    height: 533px !important;
+    padding: 40px 40px 40px 40px;
+    /*margin-top: 300px !important;*/
+    /*text-align: center;*/
+    background: white;
+    border-radius: 10px !important;
+    -webkit-box-shadow: 0 25px 50px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 25px 50px 0 rgba(0,0,0,0.2);
+}
+
+.modal-apply .MuiBackdrop-root{
+    background: rgba(255,255,255,0.8) !important;
+}
+
+.column-apply-info{
+    margin-right: 40px;
+    background-color: rgba(255, 111, 97, 0.24);
+    width: 300px !important;
+}
+
+
+.column-apply-content{
+    width: 450px !important;
+}
+
+#next-btn-stepper-apply{
+    padding: 8px 45px !important;
+    float: right;
+    border: 1px solid #212529;
+    background-color: #212529 !important;
+    color: white !important;
+    border-radius: 5px !important;
+    text-transform: none !important;
+}
+
+#next-btn-stepper-apply:focus, #publish-btn-stepper-apply:focus, #back-btn-stepper-apply:focus{
+    outline: none !important;
+}
+
+#back-btn-stepper-apply{
+    border-radius: 5px !important;
+    /*border: 1px solid #212529 !important;*/
+    padding: 8px 0px !important;
+    text-transform: none !important;
+}
+
+#back-btn-stepper-apply.Mui-disabled {
+    /*border: 1px solid rgba(34, 34, 34, 0.19) !important;*/
+}
+
+#back-btn-stepper-apply.Mui-disabled .feather-chevron-left-btn {
+    stroke: rgba(34, 34, 34, 0.19) !important;
+}
+
+#transition-modal-title-apply{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px !important;
+    color: #212529 !important;
+    font-weight: 700 !important;
+}
+
+.input-title-apply{
+    color: #212529;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 13px;
+}
+
+.apply-input{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+}
+
+.apply-input:focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3;
+    outline: none !important;
+}
+
+.helper-text-apply{
+    font-size: 13.5px;
+    color: #6c6c6c;
+    margin-bottom: 13px;
+    margin-top: -7px;
+}
+
+.apply-title-small{
+    margin-bottom: 40px;
+}
+
+.apply-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.apply-stepper .MuiStep-horizontal{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 30px;
+}
+
+#stepper-icons-apply .MuiStepIcon-root{
+    width: 22px !important;
+    height: 22px !important;
+}
+
+#stepper-icons-apply .MuiStepIcon-root.MuiStepIcon-active{
+    color: #212529 !important;
+}
+
+#stepper-icons-apply .MuiStepIcon-root.MuiStepIcon-completed{
+    color: #212529 !important;
+}
+
+#stepper-icons-apply .MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+    font-weight: 400 !important;
+    font-family: 'Rubik', sans-serif !important;
+}
+
+.row-stepper-center-apply{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.row-stepper-center-apply .MuiStepper-root{
+    padding: 0px !important;
+}
+
+.buttons-vac-div-apply {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.english-card{
+    text-align: center;
+    font-size: 14px;
+    display: inline;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 111, 97, 0.24);
+    height: 80px;
+    width: 80px;
+}
+
+.english-level-card{
+    font-size: 12px;
+}
+
+.column-chips{
+    text-align: center;
+}
+
+.MuiChip-label{
+    font-family: 'Rubik', sans-serif !important;
+}
+
+#A1, #B1, #C1{
+    margin-bottom: 5px;
 }

@@ -59,7 +59,7 @@ class AllVac extends React.Component {
                 </div>
 
 
-                <div className="container">
+                <div className="full">
                 <div class="row">
                     <div className="col-lg-3 container-filter">
                         {/*<div className="position-fixed colll">*/}

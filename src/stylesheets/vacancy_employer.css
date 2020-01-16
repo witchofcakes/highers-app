@@ -248,3 +248,71 @@
     left: 0;
     z-index: 5;
 }
+
+.modal-delete{
+    padding: 150px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width: 740px;*/
+    /*padding: 0;*/
+
+    text-align: center;
+
+}
+
+.modal-paper{
+    /*width: 740px;*/
+    /*padding: 0;*/
+    text-align: center;
+    padding: 45px 50px;
+    /*background: rgba(255,255,255,0.8);*/
+    background: white;
+    border-radius: 10px !important;
+    -webkit-box-shadow: 0 25px 50px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 25px 50px 0 rgba(0,0,0,0.2);
+}
+
+.modal-delete .MuiBackdrop-root{
+    background: rgba(255,255,255,0.8) !important;
+}
+
+#transition-modal-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px !important;
+    color: #212529 !important;
+    font-weight: 700 !important;
+}
+
+#transition-modal-description{
+    font-size: 14px;
+    color: #212529;
+    margin-top: -7px;
+}
+
+.delete-button-modal{
+    border-radius: 7px;
+    background: #212529;
+    color: white;
+    font-size: 14px;
+    padding: 10px 15px;
+    border: 1px solid #212529;
+    border: none !important;
+    margin-right: 10px;
+    margin-top: 25px;
+}
+
+.delete-button-modal:focus, .delete-button-modal-cancel:focus{
+    outline: none !important;
+}
+
+.delete-button-modal-cancel{
+    border-radius: 7px;
+    background: white;
+    color: #212529;
+    /*border: 1px solid #212529;*/
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-top: 25px;
+    border: none !important;
+}

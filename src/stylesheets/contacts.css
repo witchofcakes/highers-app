@@ -1,10 +1,12 @@
 .container-contacts{
-    height: 100vh !important;
+
 }
 
 .contacts-row {
-    padding: 158px 150px 100px 150px;
-}
+    height: 85vh !important;
+     padding-top: 110px;
+    padding-bottom: 100px;
+ }
 
 .column-contacts{
     justify-content: center;
@@ -29,28 +31,50 @@
 }
 
 .contacts-email, .contacts-phone{
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 400;
     margin-bottom: 30px;
 }
 
 .link-employer-contacts{
     color: #212529;
-    background-image: linear-gradient(120deg, #ffe0db 100%, #8fd3f4 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 8px;
-    background-position: 0 95%;
-    transition: background-size 0.25s ease-in;
 
 }
 
 .link-employer-contacts:hover{
-    color: #135393;
-    text-decoration: none !important;
+    color: #212529;
 }
 
-/*.footer-contacts{*/
-/*    background-color: pink !important;*/
-/*    position: absolute;*/
-/*    bottom: 0;*/
-/*}*/
+.column-contacts-shadow{
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 25px 50px 0 rgba(0,0,0,0.2);
+    box-shadow: -1px 3px 9px 0px rgba(192, 192, 192, 0.2);
+    /*box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.03) !important;*/
+}
+
+.row-center-contacts{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container-2-contacts{
+    bottom: 0;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.employer-contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

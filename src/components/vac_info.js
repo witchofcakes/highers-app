@@ -1,13 +1,217 @@
 import React from 'react';
 import Vacancy_Short from "./vacancy_short";
+import { lighten, makeStyles, withStyles } from '@material-ui/core/styles';
 import SimpleBar from 'simplebar-react';
 import Chip from '@material-ui/core/Chip';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-
 import 'simplebar/dist/simplebar.min.css';
 import Footer_Vac from "./footer_vacancy";
 import Vacancy_Comp from "./vacancy_comp";
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop/Backdrop";
+import Fade from "@material-ui/core/Fade";
+import FormControl from "@material-ui/core/FormControl";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Radio from "@material-ui/core/Radio";
+import Tooltip from "@material-ui/core/Tooltip";
+import LinearProgress from '@material-ui/core/LinearProgress';
+import Apply from "./apply";
+
+const LightTooltip = withStyles(theme => ({
+    tooltip: {
+        backgroundColor: 'white',
+        color: '#212529',
+        boxShadow: theme.shadows[1],
+        fontSize: 11.5,
+        letterSpacing: '0.4px'
+    },
+}))(Tooltip);
+
+
+function ChooseEnglish() {
+    const [value, setValue] = React.useState('Full-time');
+
+    const handleChange = event => {
+        setValue(event.target.value);
+    };
+
+    return (
+        <div>
+            <RadioGroup aria-label="position" id="mui-worktype" name="position" value={value} onChange={handleChange}>
+                <FormControlLabel
+                    value="Full-time"
+                    id="radio-box-black"
+                    control={<Radio color={"primary"}/>}
+                    label="A1 - початковий"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="Part-time"
+                    id="radio-box-black"
+                    control={<Radio color={"primary"}/>}
+                    label="А2 - базовий"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="Full / Part-time"
+                    id="radio-box-black"
+                    control={<Radio color={"primary"}/>}
+                    label="В1 - середній"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="Full / Part-time"
+                    id="radio-box-black"
+                    control={<Radio color={"primary"}/>}
+                    label="В2 - вище середнього"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="Full / Part-time"
+                    id="radio-box-black"
+                    control={<Radio color={"primary"}/>}
+                    label="C1 - високий"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="Full / Part-time"
+                    id="radio-box-black"
+                    control={<Radio color={"primary"}/>}
+                    label="C2 - близький до рівня носія мови"
+                    labelPlacement="end"
+                />
+            </RadioGroup>
+        </div>
+
+
+    );
+}
+
+function ApplyModal() {
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const BorderLinearProgress = withStyles({
+        root: {
+            height: 10,
+            backgroundColor: lighten('#ff6c5c', 0.5),
+        },
+        bar: {
+            borderRadius: 20,
+            backgroundColor: '#ff6c5c',
+        },
+    })(LinearProgress);
+
+    return (
+        <div>
+            <div className="apply-button" onClick={handleOpen}>
+                <LightTooltip title="5хв і робота твоя!">
+                    <button className="apply-button-but">
+                        Apply now
+                    </button>
+                </LightTooltip>
+            </div>
+            <Modal
+                aria-labelledby="transition-modal-title-apply"
+                aria-describedby="transition-modal-description-apply"
+                className="modal-apply"
+                open={open}
+                onClose={handleClose}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                    timeout: 500,
+                }}
+            >
+                <Fade in={open}>
+                    <div className="row modal-paper-apply">
+                        <div className="column-apply-info">
+                            <div className="apply-title">
+                                Highers форма.
+                            </div>
+                            <div className="apply-title-small">
+                                Заповни форму, щоб з легкістю отримати престижну роботу.
+                            </div>
+                        </div>
+                        <div className="column-apply-content">
+                            <Apply/>
+                        </div>
+                        {/*<BorderLinearProgress*/}
+                        {/*    variant="determinate"*/}
+                        {/*    color="secondary"*/}
+                        {/*    value={50}*/}
+                        {/*/>*/}
+
+                        {/*<div className="input-title-apply">*/}
+                        {/*    Університет*/}
+                        {/*    <div className="required-mark">*</div>*/}
+                        {/*</div>*/}
+                        {/*<div className="helper-text-apply">*/}
+                        {/*    Вкажи абревіатуру навчального закладу. Наприклад: КНУ, КНЕУ, КМА.*/}
+                        {/*</div>*/}
+                        {/*<div>*/}
+                        {/*    <input type="text" className="apply-input" placeholder="Твій університет" aria-label="Назва вакансії"/>*/}
+                        {/*</div>*/}
+                        {/*<div className="input-title-apply">*/}
+                        {/*    Факультет*/}
+                        {/*    <div className="required-mark">*</div>*/}
+                        {/*</div>*/}
+                        {/*<div className="helper-text-apply">*/}
+                        {/*    Вкажи назву свого факультету. Наприклад: факультет інформатики.*/}
+                        {/*</div>*/}
+                        {/*<div>*/}
+                        {/*    <input type="text" className="apply-input" placeholder="Твій факультет" aria-label="Назва вакансії"/>*/}
+                        {/*</div>*/}
+                        {/*<div className="input-title-apply">*/}
+                        {/*    Спеціальність*/}
+                        {/*    <div className="required-mark">*</div>*/}
+                        {/*</div>*/}
+                        {/*<div className="helper-text-apply">*/}
+                        {/*    Вкажи назву своєї спеціальності. Наприклад: політологія.*/}
+                        {/*</div>*/}
+                        {/*<div>*/}
+                        {/*    <input type="text" className="apply-input" placeholder="Твоя спеціальність" aria-label="Назва вакансії"/>*/}
+                        {/*</div>*/}
+                        {/*<div className="input-title-apply">*/}
+                        {/*    Рівень англійської мови*/}
+                        {/*    <div className="required-mark">*</div>*/}
+                        {/*</div>*/}
+                        {/*<div>*/}
+                        {/*    <ChooseEnglish/>*/}
+                        {/*</div>*/}
+                        {/*<div className="input-title-apply">*/}
+                        {/*    Інші іноземні мови*/}
+                        {/*</div>*/}
+                        {/*<div className="helper-text-apply">*/}
+                        {/*    Якщо ти знаєш інші іноземні мови, то вкажи їх тут.*/}
+                        {/*</div>*/}
+                        {/*<div>*/}
+                        {/*    <input type="text" className="apply-input" placeholder="Твоя спеціальність" aria-label="Назва вакансії"/>*/}
+                        {/*</div>*/}
+                        {/*<div className="input-title-apply">*/}
+                        {/*    Бажана зарплатня*/}
+                        {/*</div>*/}
+                        {/*<div className="helper-text-apply">*/}
+                        {/*    Вкажи рівень зарплатні, на який ти претендуєш.*/}
+                        {/*</div>*/}
+                        {/*<div>*/}
+                        {/*    <input type="text" className="apply-input" placeholder="Бажана зарплатня" aria-label="Назва вакансії"/>*/}
+                        {/*</div>*/}
+                    </div>
+                </Fade>
+            </Modal>
+        </div>
+    );
+}
 
 
 class Vac extends React.Component {
@@ -58,9 +262,7 @@ class Vac extends React.Component {
                                         </div>
                                     </div>
                                     <div className="col-3">
-                                        <div className="apply-button">
-                                            <button className="apply-button-but">Apply now</button>
-                                        </div>
+                                        <ApplyModal/>
                                     </div>
                                 </div>
                             </div>
@@ -215,7 +417,6 @@ class Vac extends React.Component {
                                 <Footer_Vac/>
                             </div>
                         </div>
-
 
                     </div>
                 </div>

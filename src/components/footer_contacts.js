@@ -6,7 +6,7 @@ export default class Footer_Contacts extends React.Component {
         return (
             <div className="footer">
                 <div className="row">
-                    <div className="col-12 footer-container-2">
+                    <div className="col-12 footer-container-2-contacts">
                         <div className="col-4 footer-logo">
                             <img src={logo} className="logo-mount" />
                             <p className="copyright">© 2020 Copyright HIGHERS</p>
