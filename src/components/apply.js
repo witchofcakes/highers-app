@@ -13,12 +13,14 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
-import SideBar from "./sidebar";
+import Slider from '@material-ui/core/Slider';
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpandMoreIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
-import Text_Editor from "./text_editor";
+import OutlinedInput from '@material-ui/core/OutlinedInput';
+import InputLabel from '@material-ui/core/InputLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
 import Chip from "@material-ui/core/Chip";
 import Paper from '@material-ui/core/Paper';
 import Input from "@material-ui/core/Input";
@@ -42,7 +44,7 @@ function BootstrapTooltip(props) {
 }
 
 
-function ChooseWorkType() {
+function WorkTypeApply() {
     const [value, setValue] = React.useState('Full-time');
 
     const handleChange = event => {
@@ -54,9 +56,9 @@ function ChooseWorkType() {
             <RadioGroup aria-label="position" id="mui-worktype" name="position" value={value} onChange={handleChange} row>
                 <FormControlLabel
                     value="Full-time"
-                    id="radio-box-black"
+                    id="radio-box-black-apply"
                     control={<Radio color={"primary"}/>}
-                    label="Full-time"
+                    label="A1 - базовий"
                     labelPlacement="end"
                     className="col-4"
                 />
@@ -64,7 +66,7 @@ function ChooseWorkType() {
                     value="Part-time"
                     id="radio-box-black"
                     control={<Radio color={"primary"}/>}
-                    label="Part-time"
+                    label="B1 - середній"
                     labelPlacement="end"
                     className="col-4"
                 />
@@ -72,7 +74,7 @@ function ChooseWorkType() {
                     value="Full / Part-time"
                     id="radio-box-black"
                     control={<Radio color={"primary"}/>}
-                    label="Full / Part-time"
+                    label="С1 - високий"
                     labelPlacement="end"
                     className="col-4"
                 />
@@ -82,14 +84,21 @@ function ChooseWorkType() {
                     value="Стажування"
                     id="radio-box-black"
                     control={<Radio color={"primary"}/>}
-                    label="Стажування"
+                    label="A2 - початковий"
                     labelPlacement="end"
                     className="col-4"
                 />
                 <FormControlLabel
                     value="Віддалено"
                     control={<Radio color={"primary"}/>}
-                    label="Віддалено"
+                    label="В2 - вище середнього"
+                    labelPlacement="end"
+                    className="col-4"
+                />
+                <FormControlLabel
+                    value="Віддалено"
+                    control={<Radio color={"primary"}/>}
+                    label="С2 - носій мови"
                     labelPlacement="end"
                     className="col-4"
                 />
@@ -244,6 +253,67 @@ function Skills_Select() {
     );
 }
 
+function Level_Select() {
+    const [state, setState] = React.useState({
+        level: ''
+    });
+
+    const handleChange_level = name => event => {
+        setState({
+            ...state,
+            [name]: event.target.value,
+        });
+    };
+
+    return (
+
+        <FormControl id="course-select-level-form">
+            <Select value={state.level}
+                    onChange={handleChange_level('level')}
+                    displayEmpty id="course-select-level"
+                    IconComponent = {ExpandMoreRoundedIcon}
+            >
+                <MenuItem value="" disabled id="all-cat-select">
+                    <p className="course-placeholder">Рівень мови</p>
+                </MenuItem>
+                <MenuItem value={1} id="all-cat-select">A1 - базовий</MenuItem>
+                <MenuItem value={2} id="all-cat-select">A2 - початковий</MenuItem>
+                <MenuItem value={3} id="all-cat-select">B1 - середній</MenuItem>
+                <MenuItem value={4} id="all-cat-select">B2 - вище середнього</MenuItem>
+                <MenuItem value={5} id="all-cat-select">C1 - високий</MenuItem>
+                <MenuItem value={6} id="all-cat-select">C2 - носій мови</MenuItem>
+            </Select>
+        </FormControl>
+    );
+}
+
+function SalaryFilter(){
+    const [values, setValues] = React.useState({
+        salary: '',
+    });
+
+    const handleChangeSalary = prop => event => {
+        setValues({ ...values, [prop]: event.target.value });
+    };
+
+    return (
+    <FormControl className="col-12 salary-filter-form" variant="outlined">
+        <OutlinedInput
+            className="salary-filter-input"
+            value={values.salary}
+            onChange={handleChangeSalary('salary')}
+            startAdornment={<InputAdornment position="end">від</InputAdornment>}
+            endAdornment={<InputAdornment position="end">грн</InputAdornment>}
+            aria-describedby="outlined-weight-helper-text"
+            inputProps={{
+                'aria-label': 'salary',
+            }}
+            labelWidth={0}
+        />
+    </FormControl>
+    );
+}
+
 export default class Apply extends React.Component {
 
     constructor(props) {
@@ -325,6 +395,33 @@ export default class Apply extends React.Component {
                             Рівень англійської мови
                             <div className="required-mark">*</div>
                         </div>
+                        <div>
+                           {/*<WorkTypeApply/>*/}
+                        </div>
+                        <div className="input-title-apply">
+                            Інші іноземні мови
+                        </div>
+                        <div className="row">
+                            <div className="col-8 column-city">
+                                <p className="create-vac-input-name-sm">
+                                    Мова
+                                </p>
+                                <input type="text" className="create-vac-input-lang bottom-create" placeholder="Напиши тут мову" aria-label="Місто"/>
+                            </div>
+                            <div className="col-4 column-level">
+                                <p className="create-vac-input-name-sm-title">Рівень</p>
+                                <Level_Select/>
+                            </div>
+                        </div>
+                        <div className="input-title-apply">
+                            Бажаний рівень зарплатні
+                        </div>
+                        <SalaryFilter/>
+                    </div>
+                );
+            case 3:
+                return (
+                    <div>
                         <div className="row chips-apply">
                             <div className="col-4 column-chips">
                                 <Chip
@@ -369,27 +466,6 @@ export default class Apply extends React.Component {
                                 />
                             </div>
                         </div>
-
-                        <div className="input-title-apply">
-                            Факультет
-                            <div className="required-mark">*</div>
-                        </div>
-                        <div>
-                            <input type="text" className="apply-input" placeholder="Наприклад: факультет інформатики" aria-label="Назва вакансії"/>
-                        </div>
-                        <div className="input-title-apply">
-                            Спеціальність
-                            <div className="required-mark">*</div>
-                        </div>
-                        <div>
-                            <input type="text" className="apply-input" placeholder="Наприклад: політологія" aria-label="Назва вакансії"/>
-                        </div>
-                    </div>
-                );
-            case 3:
-                return (
-                    <div>
-                        Вітаю!
                     </div>
 
                 );

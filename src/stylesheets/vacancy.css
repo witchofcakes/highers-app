@@ -811,11 +811,107 @@
 }
 
 .column-apply-info{
-    margin-right: 40px;
-    background-color: rgba(255, 111, 97, 0.24);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: -40px 40px -40px -40px;
+    position: relative;
+    /*background-color: rgba(255, 111, 97, 0.24);*/
     width: 300px !important;
+
+    background-size: cover !important;
+    /*background: url("../images/office.jpg") no-repeat;*/
+    /*background-position: 75% !important;*/
+    background: url("../images/office1.jpg") no-repeat;
+    background-position: 42% !important;
+    /*background: url("../images/office2.jpg") no-repeat;*/
+    /*background-position: 75% !important;*/
 }
 
+.filter-apply {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #FF6F61;
+    width: 100%;
+    background: linear-gradient(180deg, #FF6F61, rgba(255, 135, 158, 0.58));
+    opacity: .8;
+    z-index: 1;
+}
+
+.apply-title-small{
+    margin-bottom: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Rubik;
+    letter-spacing: 2px;
+    color: #212529;
+    /*color: rgb(255, 216, 213);*/
+    z-index: 2 !important;
+    position: relative;
+    margin-top: -5px;
+}
+
+.apply-title{
+    font-family: Helvetica;
+    margin-top: 30px;
+    letter-spacing: 3px;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: #212529;
+    /*color: rgb(255, 216, 213);*/
+    text-align: center;
+    z-index: 2 !important;
+    position: relative;
+}
+
+.apply-title-phrase-div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.apply-title-phrase{
+    display: flex;
+    justify-content: center;
+    font-family: Rubik;
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: #212529;
+    /*color: rgb(255, 216, 213);*/
+    z-index: 2 !important;
+    position: relative;
+}
+
+.check-text{
+    display: inline;
+}
+
+.div-column-1 {
+    margin-bottom: 5px;
+    margin-left: -25px;
+}
+
+.div-column-2 {
+    margin-bottom: 5px;
+    margin-left: -5px;
+}
+
+
+.feather-check-apply{
+    width: 20px;
+    height: 20px;
+    stroke: #212529;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    fill: none;
+}
 
 .column-apply-content{
     width: 450px !important;
@@ -886,17 +982,6 @@
     margin-top: -7px;
 }
 
-.apply-title-small{
-    margin-bottom: 40px;
-}
-
-.apply-title{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
 .apply-stepper .MuiStep-horizontal{
     padding-left: 50px;
     padding-right: 50px;
@@ -961,4 +1046,96 @@
 
 #A1, #B1, #C1{
     margin-bottom: 5px;
+}
+
+#radio-box-black-apply{
+    font-size: 14px !important;
+}
+
+#course-select-level{
+    width: 121px;
+    margin-left: -35px;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 13px 30px 13px 15px;
+}
+
+#course-select-level-form .MuiSelect-select:focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3;
+    outline: none !important;
+}
+
+#course-select-level-form:focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3;
+    outline: none !important;
+}
+
+#course-select-level-form .MuiSelect-icon {
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 7px !important;
+    margin-top: 0px !important;
+}
+
+.create-vac-input-lang{
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 10px 15px;
+    /*margin-right: 20px;*/
+}
+
+.create-vac-input-lang:focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3 !important;
+    outline: none !important;
+}
+
+.create-vac-input-name-sm-title {
+    color: #212529;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: -35px;
+}
+
+.column-level{
+    margin-left: -3px !important;
+}
+
+.salary-filter-input .MuiOutlinedInput-input{
+    padding: 13px 0px !important;
+    font-size: 15px !important;
+    margin-left: 15px !important;
+    margin-right: 5px !important;
+}
+
+.salary-filter-form .MuiOutlinedInput-root{
+    border-radius: 5px !important;
+}
+
+.salary-filter-form .MuiOutlinedInput-adornedStart{
+    padding-left: 9px !important;
+}
+
+.salary-filter-form .MuiOutlinedInput-adornedEnd{
+    padding-right: 17px !important;
+}
+
+.salary-filter-input .MuiOutlinedInput-notchedOutline {
+    border-color: #EBEBEC !important;
+}
+
+.salary-filter-form .Mui-focused > .MuiOutlinedInput-notchedOutline{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3 !important;
+    outline: none !important;
+}
+
+.salary-filter-input .MuiTypography-body1{
+    color: #757575 !important;
+    font-size: 15px !important;
 }

@@ -1,0 +1,101 @@
+.login-container{
+    width: 400px !important;
+    position: relative;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px;
+}
+
+.login-center{
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container-fluid-login{
+    height: 100vh;
+    /*background: rgba(255, 111, 97, 0.11);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-image: url("../images/office6.jpg");*/
+    background-image: linear-gradient(180deg, rgba(255, 111, 97, 0.1), transparent);
+    /*background-color: rgba(255, 111, 97, 0.11);*/
+}
+
+.login-name-login{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.button-login{
+    width: 100%;
+    background-color: #212529;
+    border-radius: 7px;
+    border: none !important;
+    color: white;
+    margin-top: 5px;
+    font-size: 14px;
+    padding: 12px 15px;
+}
+
+.button-login:focus{
+    outline: none !important;
+}
+
+.explainer-text{
+    font-size: 14px;
+    color: #9c9c9c;
+}
+
+.login-input{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.login-input::placeholder{
+    font-size: 14px;
+}
+
+.logo-mount-login{
+    height: 62px;
+    width: 64px;
+}
+
+.login-logo{
+    box-shadow: 0 -5px 18px 0 rgba(154, 154, 154, 0.1);
+    /*box-shadow: 0 5px 10px 0 rgba(170, 170, 170, 0.1);*/
+    padding: 10px;
+    top: -43px;
+    margin: 0 auto;
+    left: 39%;
+    position: absolute;
+    border-radius: 100%;
+    background-color: white;
+    /*box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);*/
+}
+
+.login-name-password{
+    float: right;
+    display: inline;
+    color: #9c9c9c;
+    font-size: 14px;
+}
+
+.login-name-password:hover{
+    color: #135393;
+}
+
+.login-name{
+    display: inline;
+    font-size: 14px;
+    font-weight: 500;
+}

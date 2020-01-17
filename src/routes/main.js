@@ -11,6 +11,8 @@ import Empl_Vac_One from "../components/vacancy_employer";
 import Create_Vac from "../components/create_vacancy";
 import Contact_Us from "../components/contacts";
 import Apply from "../components/apply";
+import Empl_Candidate from "../components/employer_candidate";
+import Login from "../components/login_employer";
 
 const Main = () => (
         <div>
@@ -20,12 +22,13 @@ const Main = () => (
                     <Route path="/employer-candidates" component={EmployerContainer} />
                     <Route path="/employer-vacancy" component={EmployerContainer} />
                     <Route path="/create-vacancy" component={EmployerContainer} />
+                    <Route path="/candidate" component={EmployerContainer} />
+                    <Route path="/login-employer" component={EmployerContainer} />
                     <Route path="/test" component={EmployerContainer} />
                     <Route component={DefaultContainer}/>
                 </Switch>
             </BrowserRouter>
         </div>
-
 )
 
 const EmployerContainer = () => (
@@ -34,6 +37,8 @@ const EmployerContainer = () => (
             <Route path="/employer-candidates" component={Empl_Cand} />
             <Route path="/employer-vacancy" component={Empl_Vac_One} />
             <Route path="/create-vacancy" component={Create_Vac} />
+            <Route path="/candidate" component={Empl_Candidate} />
+            <Route path="/login-employer" component={Login} />
             <Route path="/test" component={Test} />
         </Switch>
 
@@ -52,7 +57,6 @@ const DefaultContainer = () => (
             </Switch>
         </div>
 )
-
 
 export default Main;
 

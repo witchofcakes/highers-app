@@ -1,0 +1,105 @@
+#content-employer-candidate {
+    width: 70%;
+    padding-top: 110px;
+    position: relative;
+    margin-left: 120px;
+    padding-bottom: 80px;
+    transition: margin-left 250ms ease-out,transform 250ms ease-out,-webkit-transform 250ms ease-out;
+    /*padding-right: 74px;*/
+}
+
+.all-vac-text-candidate{
+    font-size: 25px;
+    color: #212529;
+    font-weight: 500;
+}
+
+.row-resume{
+    display: flex;
+    justify-content: center;
+}
+
+.vacancy-title-candidate-name{
+    font-size: 16px;
+    color: #9c9c9c;
+    display: inline;
+}
+
+.vacancy-title-candidate{
+    display: inline;
+    font-size: 16px;
+    color: #212529;
+}
+
+.row-margin-candidate{
+    margin-top: 15px;
+}
+
+#select-status-icon-candidate .MuiSelect-icon{
+    /*max-width: 160px;*/
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 3px !important;
+    margin-top: 3px !important;
+}
+
+#select-status-candidate{
+    font-size: 15px !important;
+    /*max-width: 160px;*/
+    margin-top: 7px;
+    background-color: white !important;
+}
+
+.test-status-2, .new-status-2, .interview-status-2, .accepted-status-2, .decline-status-2 {
+    padding: 5px;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.accepted-status-2{
+    background-color: #24a148;
+}
+
+.decline-status-2{
+    background-color: #da1e28;
+}
+
+.test-status-2{
+    background-color: #f1c21b;
+}
+
+.interview-status-2{
+    background-color: #ff832b;
+}
+
+.new-status-2{
+    background-color: #61dafb;
+}
+
+.resume-button-candidate{
+    margin-left: -7px !important;
+    background: none !important;
+    border: none !important;
+    margin-bottom: 0px !important;
+}
+
+.resume-button-candidate:focus{
+    outline: none !important;
+}
+
+.block-candidate-title{
+    font-weight: 500;
+}
+
+.resume-borders{
+    margin-left: -50px;
+    padding: 60px;
+
+    /*border: 5px solid rgba(255, 111, 97, 0.5);*/
+}
+
+.row-margin-block{
+    margin-top: 20px;
+    margin-bottom: -10px;
+}

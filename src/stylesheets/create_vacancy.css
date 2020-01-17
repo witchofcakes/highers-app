@@ -23,7 +23,8 @@
     margin-bottom: 50px;
 }
 
-.create-vac-input:focus, .create-vac-input-city:focus, .create-vac-input-salary:focus, .create-vac-input-street:focus{
+.create-vac-input:focus, .create-vac-input-city:focus, .create-vac-input-salary:focus, .create-vac-input-street:focus,
+.login-input:focus{
     box-shadow: none !important;
     border: 1px solid #d2d2d3;
     outline: none !important;
@@ -411,6 +412,7 @@ border-radius: 50%;
  }
 
 .column-street{
+
     margin-left: 0px !important;
 }
 

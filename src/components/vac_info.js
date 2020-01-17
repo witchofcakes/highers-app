@@ -135,11 +135,38 @@ function ApplyModal() {
                 <Fade in={open}>
                     <div className="row modal-paper-apply">
                         <div className="column-apply-info">
+                            <div className="filter-apply"></div>
                             <div className="apply-title">
-                                Highers форма.
+                                HIGHERS
                             </div>
                             <div className="apply-title-small">
-                                Заповни форму, щоб з легкістю отримати престижну роботу.
+                                форма
+                            </div>
+                            <div className="row apply-title-phrase-div">
+                                <div className="col-12 apply-title-phrase">
+                                    <div className="div-column-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-check-apply">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        <p className="check-text">Топові компанії</p>
+                                    </div>
+                                </div>
+                                <div className="col-12 apply-title-phrase">
+                                    <div className="div-column-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-check-apply">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        <p className="check-text">Ніяких хвилювань</p>
+                                    </div>
+                                </div>
+                                <div className="col-12 apply-title-phrase">
+                                    <div className="div-column-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-check-apply">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        <p className="check-text">Престижна робота</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="column-apply-content">

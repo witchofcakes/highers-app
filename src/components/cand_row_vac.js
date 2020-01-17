@@ -49,7 +49,7 @@ export default class Cand_Row_Vac extends React.Component {
                     {this.props.number}
                 </TableCell>
                 <TableCell className="cand-row-name" align="left">
-                    <a target="_blank" href="#" className="cand-row-link">
+                    <a target="_blank" href="/candidate" className="cand-row-link">
                         <p className="td-margin">{this.props.surname}</p>
                         <p className="td-margin">{this.props.name}</p>
                     </a>
