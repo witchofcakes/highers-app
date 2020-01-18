@@ -172,67 +172,6 @@ function ApplyModal() {
                         <div className="column-apply-content">
                             <Apply/>
                         </div>
-                        {/*<BorderLinearProgress*/}
-                        {/*    variant="determinate"*/}
-                        {/*    color="secondary"*/}
-                        {/*    value={50}*/}
-                        {/*/>*/}
-
-                        {/*<div className="input-title-apply">*/}
-                        {/*    Університет*/}
-                        {/*    <div className="required-mark">*</div>*/}
-                        {/*</div>*/}
-                        {/*<div className="helper-text-apply">*/}
-                        {/*    Вкажи абревіатуру навчального закладу. Наприклад: КНУ, КНЕУ, КМА.*/}
-                        {/*</div>*/}
-                        {/*<div>*/}
-                        {/*    <input type="text" className="apply-input" placeholder="Твій університет" aria-label="Назва вакансії"/>*/}
-                        {/*</div>*/}
-                        {/*<div className="input-title-apply">*/}
-                        {/*    Факультет*/}
-                        {/*    <div className="required-mark">*</div>*/}
-                        {/*</div>*/}
-                        {/*<div className="helper-text-apply">*/}
-                        {/*    Вкажи назву свого факультету. Наприклад: факультет інформатики.*/}
-                        {/*</div>*/}
-                        {/*<div>*/}
-                        {/*    <input type="text" className="apply-input" placeholder="Твій факультет" aria-label="Назва вакансії"/>*/}
-                        {/*</div>*/}
-                        {/*<div className="input-title-apply">*/}
-                        {/*    Спеціальність*/}
-                        {/*    <div className="required-mark">*</div>*/}
-                        {/*</div>*/}
-                        {/*<div className="helper-text-apply">*/}
-                        {/*    Вкажи назву своєї спеціальності. Наприклад: політологія.*/}
-                        {/*</div>*/}
-                        {/*<div>*/}
-                        {/*    <input type="text" className="apply-input" placeholder="Твоя спеціальність" aria-label="Назва вакансії"/>*/}
-                        {/*</div>*/}
-                        {/*<div className="input-title-apply">*/}
-                        {/*    Рівень англійської мови*/}
-                        {/*    <div className="required-mark">*</div>*/}
-                        {/*</div>*/}
-                        {/*<div>*/}
-                        {/*    <ChooseEnglish/>*/}
-                        {/*</div>*/}
-                        {/*<div className="input-title-apply">*/}
-                        {/*    Інші іноземні мови*/}
-                        {/*</div>*/}
-                        {/*<div className="helper-text-apply">*/}
-                        {/*    Якщо ти знаєш інші іноземні мови, то вкажи їх тут.*/}
-                        {/*</div>*/}
-                        {/*<div>*/}
-                        {/*    <input type="text" className="apply-input" placeholder="Твоя спеціальність" aria-label="Назва вакансії"/>*/}
-                        {/*</div>*/}
-                        {/*<div className="input-title-apply">*/}
-                        {/*    Бажана зарплатня*/}
-                        {/*</div>*/}
-                        {/*<div className="helper-text-apply">*/}
-                        {/*    Вкажи рівень зарплатні, на який ти претендуєш.*/}
-                        {/*</div>*/}
-                        {/*<div>*/}
-                        {/*    <input type="text" className="apply-input" placeholder="Бажана зарплатня" aria-label="Назва вакансії"/>*/}
-                        {/*</div>*/}
                     </div>
                 </Fade>
             </Modal>

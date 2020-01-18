@@ -26,7 +26,17 @@ import Paper from '@material-ui/core/Paper';
 import Input from "@material-ui/core/Input";
 import Checkbox from "@material-ui/core/Checkbox";
 import ListItemText from "@material-ui/core/ListItemText";
+import Dropzone_Comp from "./dropzone.js";
 
+const LightTooltip = withStyles(theme => ({
+    tooltip: {
+        backgroundColor: 'white',
+        color: '#212529',
+        boxShadow: theme.shadows[1],
+        fontSize: 11.5,
+        letterSpacing: '0.4px'
+    },
+}))(Tooltip);
 
 const useStylesBootstrap = makeStyles(theme => ({
     arrow: {
@@ -123,21 +133,21 @@ function Course_Select() {
 
     return (
 
-        <FormControl id="course-select-course-form">
+        <FormControl id="course-select-course-form-2">
             <Select value={state.course}
                     onChange={handleChange_course('course')}
-                    displayEmpty id="course-select-course"
+                    displayEmpty id="course-select-course-2"
                     IconComponent = {ExpandMoreRoundedIcon}
             >
                 <MenuItem value="" disabled id="all-cat-select">
                     <p className="course-placeholder">Курс</p>
                 </MenuItem>
-                <MenuItem value={1} id="all-cat-select">1+</MenuItem>
-                <MenuItem value={2} id="all-cat-select">2+</MenuItem>
-                <MenuItem value={3} id="all-cat-select">3+</MenuItem>
-                <MenuItem value={4} id="all-cat-select">4+</MenuItem>
-                <MenuItem value={5} id="all-cat-select">5+</MenuItem>
-                <MenuItem value={6} id="all-cat-select">6+</MenuItem>
+                <MenuItem value={1} id="all-cat-select">1</MenuItem>
+                <MenuItem value={2} id="all-cat-select">2</MenuItem>
+                <MenuItem value={3} id="all-cat-select">3</MenuItem>
+                <MenuItem value={4} id="all-cat-select">4</MenuItem>
+                <MenuItem value={5} id="all-cat-select">5</MenuItem>
+                <MenuItem value={6} id="all-cat-select">6</MenuItem>
             </Select>
         </FormControl>
     );
@@ -199,7 +209,7 @@ function Education_Select() {
     );
 }
 
-function Skills_Select() {
+function Work_Select() {
     const ITEM_HEIGHT = 48;
     const ITEM_PADDING_TOP = 8;
     const MenuProps = {
@@ -212,8 +222,11 @@ function Skills_Select() {
     };
 
     const names = [
-        'MS Office',
-        'Бухоблік',
+        'Full-time',
+        'Part-time',
+        'Full/Part-time',
+        'Стажування',
+        'Віддалено',
     ];
 
     const [personName, setPersonName] = React.useState([]);
@@ -223,10 +236,10 @@ function Skills_Select() {
     };
 
     return (
-        <FormControl id="course-select-course-form">
+        <FormControl id="course-select-work-form">
             <Select
                 labelId="type-filter-top"
-                id="course-select-skills"
+                id="course-select-work"
                 multiple
                 displayEmpty
                 value={personName}
@@ -235,7 +248,7 @@ function Skills_Select() {
                 input={<Input />}
                 renderValue={selected => {
                     if (selected.length === 0) {
-                        return <p className="course-placeholder">Навички</p>;
+                        return <p className="course-placeholder">Тип зайнятості</p>;
                     }
 
                     return selected.join(', ');
@@ -297,7 +310,7 @@ function SalaryFilter(){
     };
 
     return (
-    <FormControl className="col-12 salary-filter-form" variant="outlined">
+    <FormControl className="col-7 salary-filter-form" variant="outlined">
         <OutlinedInput
             className="salary-filter-input"
             value={values.salary}
@@ -308,9 +321,99 @@ function SalaryFilter(){
             inputProps={{
                 'aria-label': 'salary',
             }}
+            placeholder="2000"
             labelWidth={0}
         />
     </FormControl>
+    );
+}
+
+function ChooseEnglish(){
+    const [state, setState] = React.useState({
+        levelEng: '',
+        click: 'A1',
+    });
+
+    const handleClickEng = name => event => {
+        console.log("begin "+name)
+        setState({
+            ...state,
+            [name]: event.target.value,
+        });
+
+        var eng1 = document.getElementById(state.click);
+        eng1.setAttribute('style', 'border: ' + '1px solid #ebebec');
+        setState({
+            ...state,
+            click: name,
+        });
+
+        var eng = document.getElementById(name);
+        eng.setAttribute('style', 'border: ' + '1px solid #212529 !important');
+        setState({
+            ...state,
+            click: name,
+        });
+
+    };
+
+    return (
+        <div className="col-12">
+            <LightTooltip title="А1 - початковий">
+                <Chip
+                    label="A1"
+                    onClick={handleClickEng("A1")}
+                    variant="outlined"
+                    id="A1"
+                    className="col-2 A1"
+                />
+            </LightTooltip>
+            <LightTooltip title="A2 - базовий">
+                <Chip
+                    label="A2"
+                    onClick={handleClickEng("A2")}
+                    variant="outlined"
+                    id="A2"
+                    className="col-2 A2"
+                />
+            </LightTooltip>
+            <LightTooltip title="B1 - середній">
+                <Chip
+                    label="B1"
+                    onClick={handleClickEng("B1")}
+                    variant="outlined"
+                    id="B1"
+                    className="col-2 B1"
+                />
+            </LightTooltip>
+            <LightTooltip title="B2 - вище середнього">
+                <Chip
+                    label="B2"
+                    onClick={handleClickEng("B2")}
+                    variant="outlined"
+                    id="B2"
+                    className="col-2 B2"
+                />
+            </LightTooltip>
+            <LightTooltip title="C1 - високий">
+                <Chip
+                    label="C1"
+                    onClick={handleClickEng("C1")}
+                    variant="outlined"
+                    id="C1"
+                    className="col-2 C1"
+                />
+            </LightTooltip>
+            <LightTooltip title="C2 - носій мови">
+                <Chip
+                    label="C2"
+                    onClick={handleClickEng("C2")}
+                    variant="outlined"
+                    id="C2"
+                    className="col-2 C2"
+                />
+            </LightTooltip>
+        </div>
     );
 }
 
@@ -326,13 +429,8 @@ export default class Apply extends React.Component {
         this.handleNext = this.handleNext.bind(this);
         this.handleBack = this.handleBack.bind(this);
         this.handleReset = this.handleReset.bind(this);
-        this.handleClick = this.handleClick.bind(this);
         this.handleChange_salary=this.handleChange_salary.bind(this);
     }
-
-    handleClick = () => {
-        // console.log('You clicked the Chip.');
-    };
 
     getStepContent(step) {
         switch (step) {
@@ -380,11 +478,12 @@ export default class Apply extends React.Component {
                             <input type="text" className="apply-input" placeholder="Наприклад: факультет інформатики" aria-label="Назва вакансії"/>
                         </div>
                         <div className="input-title-apply">
-                            Спеціальність
+                            Спеціальність та курс
                             <div className="required-mark">*</div>
                         </div>
                         <div>
-                            <input type="text" className="apply-input" placeholder="Наприклад: політологія" aria-label="Назва вакансії"/>
+                            <input type="text" className="col-8 apply-input-specialization" placeholder="Наприклад: політологія" aria-label="Назва вакансії"/>
+                            <Course_Select/>
                         </div>
                     </div>
                 );
@@ -396,6 +495,12 @@ export default class Apply extends React.Component {
                             <div className="required-mark">*</div>
                         </div>
                         <div>
+                            <div className="row">
+                                <ChooseEnglish/>
+
+                            </div>
+                        </div>
+                        <div>
                            {/*<WorkTypeApply/>*/}
                         </div>
                         <div className="input-title-apply">
@@ -403,69 +508,79 @@ export default class Apply extends React.Component {
                         </div>
                         <div className="row">
                             <div className="col-8 column-city">
-                                <p className="create-vac-input-name-sm">
-                                    Мова
-                                </p>
-                                <input type="text" className="create-vac-input-lang bottom-create" placeholder="Напиши тут мову" aria-label="Місто"/>
+                                {/*<p className="create-vac-input-name-sm">*/}
+                                {/*    Мова*/}
+                                {/*</p>*/}
+                                <input type="text" className="create-vac-input-lang bottom-create-apply" placeholder="Напиши тут мову" aria-label="Місто"/>
                             </div>
                             <div className="col-4 column-level">
-                                <p className="create-vac-input-name-sm-title">Рівень</p>
+                                {/*<p className="create-vac-input-name-sm-title">Рівень</p>*/}
                                 <Level_Select/>
                             </div>
                         </div>
                         <div className="input-title-apply">
-                            Бажаний рівень зарплатні
+                            Бажана зайнятість та зарплатня
                         </div>
+                        <Work_Select/>
                         <SalaryFilter/>
                     </div>
                 );
             case 3:
                 return (
                     <div>
-                        <div className="row chips-apply">
-                            <div className="col-4 column-chips">
-                                <Chip
-                                    label="A1 - базовий"
-                                    onClick={this.handleClick}
-                                    variant="outlined"
-                                    id="A1"
-                                />
-                                <Chip
-                                    label="A2 - початковий"
-                                    onClick={this.handleClick}
-                                    variant="outlined"
-                                    id="A2"
-                                />
-                            </div>
-                            <div className="col-4 column-chips no-gutters">
-                                <Chip
-                                    label="B1 - середній"
-                                    onClick={this.handleClick}
-                                    variant="outlined"
-                                    id="B1"
-                                />
-                                <Chip
-                                    label="B2 - вище середнього"
-                                    onClick={this.handleClick}
-                                    variant="outlined"
-                                    id="B2"
-                                />
-                            </div>
-                            <div className="col-4 column-chips">
-                                <Chip
-                                    label="C1 - високий"
-                                    onClick={this.handleClick}
-                                    variant="outlined"
-                                    id="C1"
-                                />
-                                <Chip
-                                    label="C2 - носій мови"
-                                    onClick={this.handleClick}
-                                    variant="outlined"
-                                    id="C2"
-                                />
+                        <div className="input-title-apply">
+                            Якщо ти маєш резюме, завантаж сюди.
+                            <b className="resume-important">&nbsp;Якщо не маєш</b>, завантажувати <b className="resume-important">НЕ потрібно</b>, пропусти цей пункт
+                        </div>
+                        <div className="row">
+                            <div className="col-12">
+                                <Dropzone_Comp/>
                             </div>
                         </div>
+                        {/*<div className="row chips-apply">*/}
+                        {/*    <div className="col-4 column-chips">*/}
+                        {/*        <Chip*/}
+                        {/*            label="A1 - базовий"*/}
+                        {/*            onClick={this.handleClick}*/}
+                        {/*            variant="outlined"*/}
+                        {/*            id="A1"*/}
+                        {/*        />*/}
+                        {/*        <Chip*/}
+                        {/*            label="A2 - початковий"*/}
+                        {/*            onClick={this.handleClick}*/}
+                        {/*            variant="outlined"*/}
+                        {/*            id="A2"*/}
+                        {/*        />*/}
+                        {/*    </div>*/}
+                        {/*    <div className="col-4 column-chips no-gutters">*/}
+                        {/*        <Chip*/}
+                        {/*            label="B1 - середній"*/}
+                        {/*            onClick={this.handleClick}*/}
+                        {/*            variant="outlined"*/}
+                        {/*            id="B1"*/}
+                        {/*        />*/}
+                        {/*        <Chip*/}
+                        {/*            label="B2 - вище середнього"*/}
+                        {/*            onClick={this.handleClick}*/}
+                        {/*            variant="outlined"*/}
+                        {/*            id="B2"*/}
+                        {/*        />*/}
+                        {/*    </div>*/}
+                        {/*    <div className="col-4 column-chips">*/}
+                        {/*        <Chip*/}
+                        {/*            label="C1 - високий"*/}
+                        {/*            onClick={this.handleClick}*/}
+                        {/*            variant="outlined"*/}
+                        {/*            id="C1"*/}
+                        {/*        />*/}
+                        {/*        <Chip*/}
+                        {/*            label="C2 - носій мови"*/}
+                        {/*            onClick={this.handleClick}*/}
+                        {/*            variant="outlined"*/}
+                        {/*            id="C2"*/}
+                        {/*        />*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
                     </div>
 
                 );
@@ -550,18 +665,18 @@ export default class Apply extends React.Component {
                                                     <line x1="9" y1="9" x2="9.01" y2="9"></line>
                                                     <line x1="15" y1="9" x2="15.01" y2="9"></line>
                                                 </svg>
-                                                Вакансія опублікована!
+                                                Урааа! Форма успішно надіслана роботодавцю!
                                             </div>
                                         </div>
-                                        <div className="row row-expansion-panel-center">
-                                            <div className="col-8 align-center-btn">
-                                                <a target="_blank" href="#" className="look-at-vac-link">
-                                                    <button className="look-at-vac-btn">
-                                                        Переглянути вакансію
-                                                    </button>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        {/*<div className="row row-expansion-panel-center">*/}
+                                        {/*    <div className="col-8 align-center-btn">*/}
+                                        {/*        <a target="_blank" href="#" className="look-at-vac-link">*/}
+                                        {/*            <button className="look-at-vac-btn">*/}
+                                        {/*                Переглянути вакансію*/}
+                                        {/*            </button>*/}
+                                        {/*        </a>*/}
+                                        {/*    </div>*/}
+                                        {/*</div>*/}
                                     </div>
                                 ) : (
                                     <div>
@@ -599,7 +714,7 @@ export default class Apply extends React.Component {
                                                                 <polyline points="9 18 15 12 9 6"></polyline>
                                                             </svg>
                                                         }
-                                                    > Опублікувати </Button>
+                                                    > Завершити </Button>
                                                     :
                                                     <Button
                                                         id="next-btn-stepper-apply"

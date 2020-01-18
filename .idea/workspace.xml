@@ -6,16 +6,13 @@
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/apply.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apply.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cand_row_vac.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cand_row_vac.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/candidate_row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/candidate_row.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/employer_candidate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/employer_candidate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/tester.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tester.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/vac_info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vac_info.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/contacts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/contacts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/create_vacancy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/create_vacancy.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/employer_vacancies.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/employer_vacancies.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/employer_candidate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/employer_candidate.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/vacancy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/vacancy.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,7 +113,7 @@
       <workItem from="1578573708823" duration="24686000" />
       <workItem from="1578644264363" duration="31361000" />
       <workItem from="1578685341751" duration="4958000" />
-      <workItem from="1578731115642" duration="234604000" />
+      <workItem from="1578731115642" duration="268750000" />
     </task>
     <servers />
   </component>

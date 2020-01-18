@@ -20,9 +20,19 @@
 }
 
 .vacancy-title-candidate-name{
-    font-size: 16px;
-    color: #9c9c9c;
+    letter-spacing: 1px;
+    font-size: .6875rem;
+    font-weight: 500;
+    line-height: 1rem;
     display: inline;
+    text-transform: uppercase;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #5f6368;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .vacancy-title-candidate{
@@ -32,7 +42,7 @@
 }
 
 .row-margin-candidate{
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 #select-status-icon-candidate .MuiSelect-icon{
@@ -89,6 +99,7 @@
 }
 
 .block-candidate-title{
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -100,6 +111,6 @@
 }
 
 .row-margin-block{
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: -10px;
 }

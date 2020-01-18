@@ -10,6 +10,8 @@ import './javascript/cover.js';
 import './stylesheets/employer_vacancies.css';
 import './stylesheets/employer_candidate.css';
 import './stylesheets/login_employer.css';
+import '../node_modules/dropzone/dist/min/dropzone.min.css';
+import './stylesheets/employer_profile.css';
 import './stylesheets/create_vacancy.css';
 import './stylesheets/contacts.css';
 import './stylesheets/vacancy_employer.css';

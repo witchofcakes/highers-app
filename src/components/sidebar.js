@@ -72,7 +72,7 @@ export default class SideBar extends React.Component {
                         <div className="sidebar-column-avatar">
                             <LightTooltip title="Мій профіль" placement="right">
                                 <button className="button-avatar">
-                                    <a href="#">
+                                    <a href="/employer-profile">
                                         <Avatar src={avatar} className="avatar-picture-sidebar" />
                                     </a>
                                 </button>

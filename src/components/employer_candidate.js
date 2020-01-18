@@ -16,6 +16,9 @@ import Select from "@material-ui/core/Select";
 import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
+import Avatar from "@material-ui/core/Avatar";
+import avatar from "../images/avatar.jpeg";
+import Upload_Profile from "./upload_profile";
 
 export default class Empl_Candidate extends React.Component {
 
@@ -43,60 +46,71 @@ export default class Empl_Candidate extends React.Component {
         return (
             <div className="full">
                 <div className="row">
+
                     <SideBar/>
-                    <div className="col" id="content-employer-candidate">
+
+                    <div className="col" id="content-employer">
                         <div className="row row-resume">
-                            <div className="col-8 resume-borders">
-                                <div className="row row-all-vac-margin align-items-center">
-                                    <div className="col-6">
-                                        <div className="all-vac-text-candidate">Кріс Хемсворт</div>
-                                    </div>
-                                    <div className="col-6 ml-auto">
-                                        <FormControl id="select-status-icon-candidate">
-                                            <Select value={this.state.status}
-                                                    onChange={this.handleChange_status('status')}
-                                                    displayEmpty id="select-status-candidate"
-                                                    IconComponent = {ExpandMoreRoundedIcon}
-                                            >
-                                                <MenuItem value="" id="all-cat-select">
-                                                    <div className="new-status-2"></div>
-                                                    Новий
-                                                </MenuItem>
-                                                <MenuItem value={1} id="all-cat-select">
-                                                    <div className="test-status-2"></div>
-                                                    Тест
-                                                </MenuItem>
-                                                <MenuItem value={2} id="all-cat-select">
-                                                    <div className="interview-status-2"></div>
-                                                    Співбесіда
-                                                </MenuItem>
-                                                <MenuItem value={3} id="all-cat-select">
-                                                    <div className="accepted-status-2"></div>
-                                                    Прийнятий
-                                                </MenuItem>
-                                                <MenuItem value={4} id="all-cat-select">
-                                                    <div className="decline-status-2"></div>
-                                                    Відмова
-                                                </MenuItem>
-                                            </Select>
-                                        </FormControl>
+                            <div className="col-9 resume-borders">
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="row align-items-center">
+                                            <div className="col-6">
+                                                <div className="all-vac-text-candidate">Кріс Хемсворт</div>
+                                            </div>
+                                            <div className="col-6 ml-auto">
+                                                <FormControl id="select-status-icon-candidate">
+                                                    <Select value={this.state.status}
+                                                            onChange={this.handleChange_status('status')}
+                                                            displayEmpty id="select-status-candidate"
+                                                            IconComponent = {ExpandMoreRoundedIcon}
+                                                    >
+                                                        <MenuItem value="" id="all-cat-select">
+                                                            <div className="new-status-2"></div>
+                                                            Новий
+                                                        </MenuItem>
+                                                        <MenuItem value={1} id="all-cat-select">
+                                                            <div className="test-status-2"></div>
+                                                            Тест
+                                                        </MenuItem>
+                                                        <MenuItem value={2} id="all-cat-select">
+                                                            <div className="interview-status-2"></div>
+                                                            Співбесіда
+                                                        </MenuItem>
+                                                        <MenuItem value={3} id="all-cat-select">
+                                                            <div className="accepted-status-2"></div>
+                                                            Прийнятий
+                                                        </MenuItem>
+                                                        <MenuItem value={4} id="all-cat-select">
+                                                            <div className="decline-status-2"></div>
+                                                            Відмова
+                                                        </MenuItem>
+                                                    </Select>
+                                                </FormControl>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-12">
-                                        <div className="row">
-                                            <div className="col-5">
+                                        <div className="row row-margin-block">
+                                            <div className="col-6">
+                                                <p className="block-candidate-title">Профіль</p>
+                                            </div>
+                                        </div>
+                                        <div className="row row-margin-candidate">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate-name">Назва вакансії</p>
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate">IT Risk and Assurance</p>
                                             </div>
                                         </div>
                                         <div className="row row-margin-candidate">
-                                            <div className="col-5">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate-name">Резюме</p>
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
                                                 {(() => {
                                                     if (this.state.cv==true){
                                                         return (
@@ -119,11 +133,19 @@ export default class Empl_Candidate extends React.Component {
                                             </div>
                                         </div>
                                         <div className="row row-margin-candidate">
-                                            <div className="col-5">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate-name">Контакти</p>
                                             </div>
-                                            <div className="col-7">
-                                                <p className="vacancy-title-candidate">+380673658659</p>
+                                            <div className="col-6">
+                                                <p className="vacancy-title-candidate">+38 (067) 365 86 59</p>
+                                            </div>
+                                        </div>
+                                        <div className="row row-margin-candidate">
+                                            <div className="col-6">
+                                                <p className="vacancy-title-candidate-name">Дата заповнення</p>
+                                            </div>
+                                            <div className="col-6">
+                                                <p className="vacancy-title-candidate">08 січня 2020</p>
                                             </div>
                                         </div>
                                         <div className="row row-margin-block">
@@ -132,34 +154,34 @@ export default class Empl_Candidate extends React.Component {
                                             </div>
                                         </div>
                                         <div className="row row-margin-candidate">
-                                            <div className="col-5">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate-name">Курс</p>
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate">1</p>
                                             </div>
                                         </div>
                                         <div className="row row-margin-candidate">
-                                            <div className="col-5">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate-name">Університет</p>
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate">КНУ</p>
                                             </div>
                                         </div>
                                         <div className="row row-margin-candidate">
-                                            <div className="col-5">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate-name">Факультет</p>
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate">Філології</p>
                                             </div>
                                         </div>
                                         <div className="row row-margin-candidate">
-                                            <div className="col-5">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate-name">Спеціальність</p>
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate">Інженерія програмного забезпечення</p>
                                             </div>
                                         </div>
@@ -169,18 +191,18 @@ export default class Empl_Candidate extends React.Component {
                                             </div>
                                         </div>
                                         <div className="row row-margin-candidate">
-                                            <div className="col-5">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate-name">Рівень англійської мови</p>
                                             </div>
-                                            <div className="col-7">
-                                                <p className="vacancy-title-candidate">В2</p>
+                                            <div className="col-6">
+                                                <p className="vacancy-title-candidate">В2 - вище середнього</p>
                                             </div>
                                         </div>
                                         <div className="row row-margin-candidate">
-                                            <div className="col-5">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate-name">Інші іноземні мови</p>
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate"></p>
                                             </div>
                                         </div>
@@ -190,18 +212,18 @@ export default class Empl_Candidate extends React.Component {
                                             </div>
                                         </div>
                                         <div className="row row-margin-candidate">
-                                            <div className="col-5">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate-name">Бажана зарплатня</p>
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate">5000+</p>
                                             </div>
                                         </div>
                                         <div className="row row-margin-candidate">
-                                            <div className="col-5">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate-name">Зайнятість</p>
                                             </div>
-                                            <div className="col-7">
+                                            <div className="col-6">
                                                 <p className="vacancy-title-candidate">Full-time, Part-time, Стажування</p>
                                             </div>
                                         </div>
@@ -212,6 +234,7 @@ export default class Empl_Candidate extends React.Component {
                     </div>
                 </div>
             </div>
+
 
         );
     }

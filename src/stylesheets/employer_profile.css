@@ -1,0 +1,121 @@
+.jss978{
+    display: none;
+}
+
+.upload-button{
+    background-color: white !important;
+    border: none !important;
+    color: #212529 !important;
+    text-transform: none !important;
+}
+
+.upload-button:hover{
+    color: #135393 !important;
+}
+
+.modal-paper-upload{
+    width: 380px !important;
+    height: 533px !important;
+    padding: 40px 40px 40px 40px;
+    /*margin-top: 300px !important;*/
+    /*text-align: center;*/
+    background: white;
+    border-radius: 10px !important;
+    -webkit-box-shadow: 0 25px 50px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 25px 50px 0 rgba(0,0,0,0.2);
+}
+
+.modal-upload .MuiBackdrop-root{
+    background: rgba(255,255,255,0.8) !important;
+}
+
+.modal-upload{
+    overflow-y: scroll !important;
+    /*padding: 60px 20px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*text-align: center;*/
+}
+
+.save-changes{
+    width: 100%;
+    background: #212529;
+    color: white;
+    font-size: 15px;
+    border: 1px solid #212529 !important;
+    border-radius: 5px;
+    padding: 12px 15px;
+    letter-spacing: 0.4px;
+    margin-top: 50px;
+}
+
+.avatar-picture-upload{
+    height: 60px !important;
+    width: 60px !important;
+    margin-right: 30px !important;
+}
+
+.profile-input{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 10px 15px;
+    margin-bottom: 0px;
+}
+
+.profile-input:focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3;
+    outline: none !important;
+}
+
+.upload-picture{
+    display: flex;
+    align-items: center;
+ }
+
+.feather-camera-upload{
+    width: 17px;
+    height: 17px;
+    stroke: #212529;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 2px !important;
+    margin-right: 10px;
+}
+
+.upload-button:hover .feather-camera-upload{
+    stroke: #135393 !important;
+}
+
+.save-upload-btn{
+    background: white;
+    color: #212529;
+    border: 1px solid #212529;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 35px;
+}
+
+.cancel-upload-btn{
+    margin-top: 35px;
+    background: white;
+    color: #212529;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    float: right;
+}
+
+.save-upload-btn:focus, .cancel-upload-btn:focus{
+    outline: none !important;
+}
+
+.cancel-upload-btn:hover{
+    color: #135393;
+}
