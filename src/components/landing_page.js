@@ -24,7 +24,7 @@ class Landing extends React.Component {
                     <div className="container h-100">
                         <div className="d-flex h-100 text-center align-items-center">
                             <div className="w-100 text-white">
-                                <p className="display-3">Ми знаходимо роботу для студентів</p>
+                                <p className="display-3">Найкраща робота для найкращих студентів</p>
                                 <div className="input-group land-input mb-3">
                                     <div className="input-group-image-vac">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"

@@ -17,16 +17,16 @@ class NavBar extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarText">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="/all-vacancies"><span className="underline">Вакансії</span></a>
+                            <a className="nav-link" href="#">Про нас</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/contacts">Контакти</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/employer-vacancies">Для роботодавця</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Про нас</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/contacts">Контакти</a>
+                            <a className="nav-link" href="/all-vacancies"><span className="underline">Вакансії</span></a>
                         </li>
                     </ul>
                 </div>
