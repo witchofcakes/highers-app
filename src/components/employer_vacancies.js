@@ -11,7 +11,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import {makeStyles} from "@material-ui/core";
 import SideBar from "./sidebar";
-
+import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
 
 
 function createData(number, name, vacancy, education, languages, contacts, type, cv, status, date) {
@@ -50,9 +50,9 @@ const TableVacancies = () => {
             <TableContainer className="container-mui-table">
                 <PerfectScrollbar>
                     <Table stickyHeader className={classes.table} aria-label="simple table">
-                        <TableHead>
+                        <TableHead className="table-head">
                             <TableRow>
-                                <TableCell align="left">#</TableCell>
+                                <TableCell className="table-head" align="left">#</TableCell>
                                 <TableCell align="left">Назва</TableCell>
                                 <TableCell align="left">Приорітет</TableCell>
                                 <TableCell align="left">Локація</TableCell>
@@ -62,7 +62,7 @@ const TableVacancies = () => {
                                 <TableCell align="left">Мови</TableCell>
                                 <TableCell align="left">Статус</TableCell>
                                 <TableCell align="left">Дата</TableCell>
-                                <TableCell align="center">Більше</TableCell>
+                                <TableCell className="table-head-end" align="center">Більше</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -91,6 +91,9 @@ const TableVacancies = () => {
                 rowsPerPage={10}
                 page={0}
                 id="table-pagination"
+                labelRowsPerPage="Рядків на сторінці"
+                nextIconButtonText="Наступна сторінка"
+                backIconButtonText="Попередня сторінка"
                 // onChangePage={handleChangePage}
                 // onChangeRowsPerPage={handleChangeRowsPerPage}
             />

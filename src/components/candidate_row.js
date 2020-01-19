@@ -30,6 +30,7 @@ export default class Cand_Row extends React.Component {
             salary: this.props.salary,
             workType: this.props.workType,
             surname: this.props.surname,
+            specialization: this.props.specialization,
             status: '',
         }
         this.handleChange_status = this.handleChange_status.bind(this);
@@ -60,6 +61,7 @@ export default class Cand_Row extends React.Component {
                 <TableCell className="cand-row-education" align="left">
                     <p className="td-margin">{this.props.university}</p>
                     <p className="td-margin">{this.props.faculty}</p>
+                    <p className="td-margin">{this.props.specialization}</p>
                     <p className="td-margin">{this.props.course} курс</p>
                 </TableCell>
                 <TableCell className="cand-row-languages" align="left">

@@ -39,6 +39,7 @@
 
 .container-mui-table {
     height: 500px;
+    border-radius: 8px !important;
 }
 
 .paper-mui-table{
@@ -439,8 +440,9 @@
     padding: .75rem;
     vertical-align: top;
      font-family: 'Rubik', sans-serif !important;
-    border-bottom: 1px solid #EBEBEC !important;
+    /*border-bottom: 1px solid #EBEBEC !important;*/
     font-weight: 400 !important;
+     background-color: #f7f9fd !important;
 }
 
  .MuiTableCell-root{
@@ -773,3 +775,15 @@ td{
     max-width: 200px !important;
 }
 
+/*.table-head{*/
+/*    border-bottom-left-radius: 8px;*/
+/*}*/
+
+/*.table-head-end{*/
+/*    border-bottom-right-radius: 8px;*/
+/*}*/
+
+.MuiTablePagination-caption {
+    flex-shrink: 0;
+    font-family: 'Rubik', sans-serif !important;
+}

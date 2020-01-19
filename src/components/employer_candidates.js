@@ -12,6 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import {makeStyles} from "@material-ui/core";
 import TablePagination from '@material-ui/core/TablePagination';
 import SideBar from "./sidebar";
+import ExpandMoreRoundedIcon from "@material-ui/core/SvgIcon/SvgIcon";
 
 function createData(number, name, vacancy, education, languages, contacts, type, cv, status, date) {
     return { number, name, vacancy, education, languages, contacts, type, cv, status, date };
@@ -65,15 +66,15 @@ const TableCandidates = () => {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                <Cand_Row number={"1"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} cv={"true"} date={"08 січ"}/>
-                                <Cand_Row number={"2"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} date={"08 січ"}/>
-                                <Cand_Row number={"3"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Інженерії та природоохоронних систем"} english={"Англ - B2"} workType={"Full-time, Part-time, Стажування"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
-                                <Cand_Row number={"4"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} cv={"true"} date={"08 січ"}/>
-                                <Cand_Row number={"5"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} cv={"true"} date={"08 січ"}/>
-                                <Cand_Row number={"6"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Інженерії та природоохоронних систем"} english={"Англ - B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
-                                <Cand_Row number={"7"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} cv={"true"} date={"08 січ"}/>
-                                <Cand_Row number={"8"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} date={"08 січ"}/>
-                                <Cand_Row number={"9"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Інженерії та природоохоронних систем"} english={"Англ - B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
+                                <Cand_Row number={"1"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} specialization={"Зовнішня політологія"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} cv={"true"} date={"08 січ"}/>
+                                <Cand_Row number={"2"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} specialization={"Менеджмент підприємства"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} date={"08 січ"}/>
+                                <Cand_Row number={"3"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Інженерії та природоохоронних систем"} specialization={"Екологія"} english={"Англ - B2"} workType={"Full-time, Part-time, Стажування"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
+                                <Cand_Row number={"4"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} specialization={"Зовнішня політологія"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} cv={"true"} date={"08 січ"}/>
+                                <Cand_Row number={"5"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} specialization={"Менеджмент підприємства"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} cv={"true"} date={"08 січ"}/>
+                                <Cand_Row number={"6"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Інженерії та природоохоронних систем"} specialization={"Екологія"} english={"Англ - B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
+                                <Cand_Row number={"7"} surname={"Караульна"} name={"Валерія"} contacts={"(067) 856-45-78"} vacancy={"IT Risk and Assurance"} course={"3"} university={"КНУ"} faculty={"Політологія"} specialization={"Зовнішня політологія"} english={"Англ - B2"} workType={"Full-time"} salary={"8000+"} languages={"Ісп - А2"} cv={"true"} date={"08 січ"}/>
+                                <Cand_Row number={"8"} surname={"Борисова"} name={"Юлія"} contacts={"(069) 183-99-26"} vacancy={"Менеджер із роботи з бізнес - клієнтами"} course={"5"} university={"КНТЕУ"} faculty={"Менеджмент"} specialization={"Менеджмент підприємства"} english={"Англ - B1"} workType={"Part-time"} salary={"13000+"} languages={"Нім - В2"} date={"08 січ"}/>
+                                <Cand_Row number={"9"} surname={"Коваленко"} name={"Катя"} contacts={"(068) 415-34-23"} vacancy={"Content Maker & Manager Trainee"} course={"4"} university={"КНЕУ"} faculty={"Інженерії та природоохоронних систем"} specialization={"Екологія"} english={"Англ - B2"} workType={"Full-time, Part-time"} salary={"5000+"} languages={"Кит - А1"} date={"08 січ"}/>
                                 {/*{emptyRows > 0 && (*/}
                                 {/*    <TableRow style={{ height: 76 * emptyRows }}>*/}
                                 {/*        <TableCell colSpan={5} />*/}
@@ -90,6 +91,9 @@ const TableCandidates = () => {
                     rowsPerPage={10}
                     page={0}
                     id="table-pagination"
+                    labelRowsPerPage="Рядків на сторінці"
+                    nextIconButtonText="Наступна сторінка"
+                    backIconButtonText="Попередня сторінка"
                     // onChangePage={handleChangePage}
                     // onChangeRowsPerPage={handleChangeRowsPerPage}
                 />

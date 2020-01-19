@@ -20,6 +20,7 @@ export default class Upload_Profile extends React.Component {
             borderRadius: 200,
             width: 250,
             height: 250,
+            value: 1,
         }
         this.handleClose = this.handleClose.bind(this)
         this.handleOpen = this.handleOpen.bind(this)
@@ -52,7 +53,6 @@ export default class Upload_Profile extends React.Component {
             open: false,
         })
     };
-
 
     render() {
 
@@ -102,8 +102,8 @@ export default class Upload_Profile extends React.Component {
                                 image={this.state.image}
                                 className="editor-canvas"
                             />
-                            <div className="col-12">
-                                <p>Збільшити</p>
+                            <div className="col-12 zoom-upload-div">
+                                {/*<p className="zoom-upload">Збільшити</p>*/}
                                 <input
                                     name="scale"
                                     type="range"

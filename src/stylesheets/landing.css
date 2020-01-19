@@ -30,7 +30,7 @@ body{
 }
 
 .banner-vacancies{
-    margin-right: 30px;
+    margin-left: 30px;
     background-color: #FF6F61;
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -118,10 +118,8 @@ body{
 .input-group-full-search{
     padding-right: 110px !important;
     padding-left: 110px !important;
-    text-align: right;
+    text-align: left;
 }
-
-
 
 
 .btn.btn-outline-secondary{

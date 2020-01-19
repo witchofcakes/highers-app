@@ -26,9 +26,6 @@ class Landing extends React.Component {
                             <div className="w-100 text-white">
                                 <p className="display-3">Ми знаходимо роботу для студентів</p>
                                 <div className="input-group land-input mb-3">
-                                    <a href="/all-vacancies" className="banner-vacancies-link">
-                                        <button className="banner-vacancies">Всі вакансії</button>
-                                    </a>
                                     <div className="input-group-image-vac">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                              className="feather-search-landing">
@@ -44,10 +41,12 @@ class Landing extends React.Component {
                                                 <div>Знайти</div>
                                             </button>
                                         </div>
-
+                                    <a href="/all-vacancies" className="banner-vacancies-link">
+                                        <button className="banner-vacancies">Всі вакансії</button>
+                                    </a>
                                 </div>
                                 <div className="input-group-full-search mb-3">
-                                    <a className="full-search" href="#">Розширений пошук</a>
+                                    <a className="full-search" href="/all-vacancies">Розширений пошук</a>
                                 </div>
                             </div>
                         </div>

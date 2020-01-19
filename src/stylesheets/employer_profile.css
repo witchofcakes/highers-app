@@ -119,3 +119,96 @@
 .cancel-upload-btn:hover{
     color: #135393;
 }
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #1973cb;
+    height: 3px;
+    border-radius: 4px;
+}
+input[type=range]::-webkit-slider-thumb {
+    border-radius: 100% !important;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -11px;
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 3px 9px 0px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.13), 0 0 0 1px rgba(0,0,0,0.02);
+    background-color: #fff;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #1973cb;
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #1973cb;
+    height: 3px;
+    border-radius: 4px;
+}
+input[type=range]::-moz-range-thumb {
+    border-radius: 100% !important;
+    cursor: pointer;
+    margin-top: -11px;
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 3px 9px 0px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.13), 0 0 0 1px rgba(0,0,0,0.02);
+    background-color: #fff;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #1973cb;
+    height: 3px;
+    border-radius: 4px;
+}
+input[type=range]::-ms-fill-lower {
+    cursor: pointer;
+    background: #1973cb;
+    height: 3px;
+    border-radius: 4px;
+}
+input[type=range]::-ms-fill-upper {
+    cursor: pointer;
+    background: #1973cb;
+    height: 3px;
+    border-radius: 4px;
+}
+input[type=range]::-ms-thumb {
+    border-radius: 100% !important;
+    cursor: pointer;
+    margin-top: -11px;
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 3px 9px 0px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.13), 0 0 0 1px rgba(0,0,0,0.02);
+    background-color: #fff;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #1973cb;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #1973cb;
+}
+
+.zoom-upload{
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.zoom-upload-div{
+    margin-top: 15px;
+}

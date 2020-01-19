@@ -109,7 +109,9 @@ const TableCandidates = () => {
                 rowsPerPage={10}
                 page={0}
                 id="table-pagination"
-
+                labelRowsPerPage="Рядків на сторінці"
+                nextIconButtonText="Наступна сторінка"
+                backIconButtonText="Попередня сторінка"
                 // onChangePage={handleChangePage}
                 // onChangeRowsPerPage={handleChangeRowsPerPage}
             />
