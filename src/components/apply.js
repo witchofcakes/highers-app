@@ -497,7 +497,6 @@ export default class Apply extends React.Component {
                         <div>
                             <div className="row">
                                 <ChooseEnglish/>
-
                             </div>
                         </div>
                         <div>
@@ -537,52 +536,7 @@ export default class Apply extends React.Component {
                                 <Dropzone_Comp/>
                             </div>
                         </div>
-                        {/*<div className="row chips-apply">*/}
-                        {/*    <div className="col-4 column-chips">*/}
-                        {/*        <Chip*/}
-                        {/*            label="A1 - базовий"*/}
-                        {/*            onClick={this.handleClick}*/}
-                        {/*            variant="outlined"*/}
-                        {/*            id="A1"*/}
-                        {/*        />*/}
-                        {/*        <Chip*/}
-                        {/*            label="A2 - початковий"*/}
-                        {/*            onClick={this.handleClick}*/}
-                        {/*            variant="outlined"*/}
-                        {/*            id="A2"*/}
-                        {/*        />*/}
-                        {/*    </div>*/}
-                        {/*    <div className="col-4 column-chips no-gutters">*/}
-                        {/*        <Chip*/}
-                        {/*            label="B1 - середній"*/}
-                        {/*            onClick={this.handleClick}*/}
-                        {/*            variant="outlined"*/}
-                        {/*            id="B1"*/}
-                        {/*        />*/}
-                        {/*        <Chip*/}
-                        {/*            label="B2 - вище середнього"*/}
-                        {/*            onClick={this.handleClick}*/}
-                        {/*            variant="outlined"*/}
-                        {/*            id="B2"*/}
-                        {/*        />*/}
-                        {/*    </div>*/}
-                        {/*    <div className="col-4 column-chips">*/}
-                        {/*        <Chip*/}
-                        {/*            label="C1 - високий"*/}
-                        {/*            onClick={this.handleClick}*/}
-                        {/*            variant="outlined"*/}
-                        {/*            id="C1"*/}
-                        {/*        />*/}
-                        {/*        <Chip*/}
-                        {/*            label="C2 - носій мови"*/}
-                        {/*            onClick={this.handleClick}*/}
-                        {/*            variant="outlined"*/}
-                        {/*            id="C2"*/}
-                        {/*        />*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
                     </div>
-
                 );
         }
     }

@@ -7,6 +7,7 @@ import './stylesheets/all_vac.css';
 import './stylesheets/vacancy.css';
 import './javascript/navbar.js';
 import './javascript/cover.js';
+import './javascript/language_add';
 import './stylesheets/employer_vacancies.css';
 import './stylesheets/employer_candidate.css';
 import './stylesheets/login_employer.css';

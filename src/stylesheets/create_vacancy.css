@@ -74,6 +74,14 @@
     padding-bottom: 20px;
 }
 
+.create-vac-input-name-title-2{
+    color: #212529;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 50px !important;
+    padding-bottom: 20px;
+}
+
 .create-vac-input-name-salary{
     color: #212529;
     font-size: 14px;
@@ -835,6 +843,88 @@ border-radius: 50%;
 #course-select-skills{
     width: 202px;
     margin-left: -84px;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 13px 30px 13px 15px;
+}
+
+.eng-lang-bold{
+    display: inline;
+    font-weight: 500;
+}
+
+.create-vac-input-lang-2{
+    width: 310px;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 10px 15px;
+    /*margin-right: 20px;*/
+}
+
+.create-vac-input-lang-2:focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3 !important;
+    outline: none !important;
+}
+
+.add-button-lang{
+    background: white;
+    border: none;
+    border-radius: 100%;
+}
+
+.add-button-lang-delete{
+    float: right;
+    margin-top: 8px;
+    background: white;
+    border: none;
+    border-radius: 100%;
+}
+
+.add-button-lang:focus, .add-button-lang-delete:focus{
+    outline: none !important;
+}
+
+.feather-plus-circle-create{
+    width: 20px;
+    height: 20px;
+    stroke: #3e3e3e;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 3px;
+}
+
+.feather-x-create{
+    width: 21px;
+    height: 21px;
+    stroke: rgba(33, 37, 41, 0.89);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 3px;
+}
+
+.add-more-text{
+    display: inline;
+    font-size: 14px;
+    margin-left: 8px;
+    color: #3e3e3e;
+}
+
+.column-button-add{
+    margin-top: 20px !important;
+    text-align: center;
+}
+
+#course-select-level-create{
+    background-color: white !important;
+    width: 191px;
+    margin-left: 5px;
     border-radius: 5px;
     border: 1px solid #EBEBEC;
     font-size: 15px;

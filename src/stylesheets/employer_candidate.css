@@ -38,6 +38,7 @@
 .vacancy-title-candidate{
     display: inline;
     font-size: 16px;
+    word-break: break-word !important;
     color: #212529;
 }
 

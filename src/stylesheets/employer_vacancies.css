@@ -39,7 +39,8 @@
 
 .container-mui-table {
     height: 500px;
-    border-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+    border-top-left-radius: 8px !important;
 }
 
 .paper-mui-table{

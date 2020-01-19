@@ -23,7 +23,21 @@ import Paper from '@material-ui/core/Paper';
 import Input from "@material-ui/core/Input";
 import Checkbox from "@material-ui/core/Checkbox";
 import ListItemText from "@material-ui/core/ListItemText";
+import Tooltip from "@material-ui/core/Tooltip";
+import Upload_Profile from "./upload_profile";
+import Avatar from "@material-ui/core/Avatar";
+import avatar from "../images/avatar.jpeg";
+import Upload_Company from "./upload_profile_company";
 
+const LightTooltip = withStyles(theme => ({
+    tooltip: {
+        backgroundColor: 'white',
+        color: '#212529',
+        boxShadow: theme.shadows[1],
+        fontSize: 11.5,
+        letterSpacing: '0.4px'
+    },
+}))(Tooltip);
 
 function ChooseWorkType() {
     const [value, setValue] = React.useState('Full-time');
@@ -227,6 +241,130 @@ function Skills_Select() {
     );
 }
 
+function ChooseEnglish() {
+    const [state, setState] = React.useState({
+        levelEng: '',
+        click: 'A1',
+    });
+
+    const handleClickEng = name => event => {
+        console.log("begin " + name)
+        setState({
+            ...state,
+            [name]: event.target.value,
+        });
+
+        var eng1 = document.getElementById(state.click);
+        eng1.setAttribute('style', 'border: ' + '1px solid #ebebec');
+        setState({
+            ...state,
+            click: name,
+        });
+
+        var eng = document.getElementById(name);
+        eng.setAttribute('style', 'border: ' + '1px solid #212529 !important');
+        setState({
+            ...state,
+            click: name,
+        });
+
+    };
+
+    return (
+        <div className="col-12">
+            <LightTooltip title="А1 - початковий">
+                <Chip
+                    label="A1"
+                    onClick={handleClickEng("A1")}
+                    variant="outlined"
+                    id="A1"
+                    className="col-2 A1"
+                />
+            </LightTooltip>
+            <LightTooltip title="A2 - базовий">
+                <Chip
+                    label="A2"
+                    onClick={handleClickEng("A2")}
+                    variant="outlined"
+                    id="A2"
+                    className="col-2 A2"
+                />
+            </LightTooltip>
+            <LightTooltip title="B1 - середній">
+                <Chip
+                    label="B1"
+                    onClick={handleClickEng("B1")}
+                    variant="outlined"
+                    id="B1"
+                    className="col-2 B1"
+                />
+            </LightTooltip>
+            <LightTooltip title="B2 - вище середнього">
+                <Chip
+                    label="B2"
+                    onClick={handleClickEng("B2")}
+                    variant="outlined"
+                    id="B2"
+                    className="col-2 B2"
+                />
+            </LightTooltip>
+            <LightTooltip title="C1 - високий">
+                <Chip
+                    label="C1"
+                    onClick={handleClickEng("C1")}
+                    variant="outlined"
+                    id="C1"
+                    className="col-2 C1"
+                />
+            </LightTooltip>
+            <LightTooltip title="C2 - носій мови">
+                <Chip
+                    label="C2"
+                    onClick={handleClickEng("C2")}
+                    variant="outlined"
+                    id="C2"
+                    className="col-2 C2"
+                />
+            </LightTooltip>
+        </div>
+    );
+}
+
+
+function Level_Select() {
+    const [state, setState] = React.useState({
+        level: ''
+    });
+
+    const handleChange_level = name => event => {
+        setState({
+            ...state,
+            [name]: event.target.value,
+        });
+    };
+
+    return (
+
+        <FormControl id="course-select-level-form">
+            <Select value={state.level}
+                    onChange={handleChange_level('level')}
+                    displayEmpty id="course-select-level-create"
+                    IconComponent = {ExpandMoreRoundedIcon}
+            >
+                <MenuItem value="" disabled id="all-cat-select">
+                    <p className="course-placeholder">Рівень мови</p>
+                </MenuItem>
+                <MenuItem value={1} id="all-cat-select">A1 - базовий</MenuItem>
+                <MenuItem value={2} id="all-cat-select">A2 - початковий</MenuItem>
+                <MenuItem value={3} id="all-cat-select">B1 - середній</MenuItem>
+                <MenuItem value={4} id="all-cat-select">B2 - вище середнього</MenuItem>
+                <MenuItem value={5} id="all-cat-select">C1 - високий</MenuItem>
+                <MenuItem value={6} id="all-cat-select">C2 - носій мови</MenuItem>
+            </Select>
+        </FormControl>
+    );
+}
+
 export default class Create_Vac extends React.Component {
 
     constructor(props) {
@@ -235,6 +373,8 @@ export default class Create_Vac extends React.Component {
             display: true,
             value: 'Estimate',
             activeStep: 0,
+            name: "",
+            shareholders: [{ name: "" }]
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleNext = this.handleNext.bind(this);
@@ -242,6 +382,31 @@ export default class Create_Vac extends React.Component {
         this.handleReset = this.handleReset.bind(this);
         this.handleChange_salary=this.handleChange_salary.bind(this);
     }
+
+    handleNameChange = evt => {
+        this.setState({ name: evt.target.value });
+    };
+
+    handleShareholderNameChange = idx => evt => {
+        const newShareholders = this.state.shareholders.map((shareholder, sidx) => {
+            if (idx !== sidx) return shareholder;
+            return { ...shareholder, name: evt.target.value };
+        });
+
+        this.setState({ shareholders: newShareholders });
+    };
+
+    handleAddShareholder = () => {
+        this.setState({
+            shareholders: this.state.shareholders.concat([{ name: "" }])
+        });
+    };
+
+    handleRemoveShareholder = idx => () => {
+        this.setState({
+            shareholders: this.state.shareholders.filter((s, sidx) => idx !== sidx)
+        });
+    };
 
     getStepContent(step) {
         switch (step) {
@@ -313,6 +478,72 @@ export default class Create_Vac extends React.Component {
                                         <div className="required-mark">*</div>
                                     </p>
                                     <Skills_Select/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="title-vac-div">
+                            <div className="col-8 no-gutters create-vac-input-name-title-2">
+                                Мови
+                            </div>
+                            <div className="col-8 no-gutters">
+                                <div className="row">
+                                    <div className="col-12 column-city no-gutters">
+                                        <p className="create-vac-input-name-sm">
+                                            Рівень <p className="eng-lang-bold">англійської</p> мови
+                                        </p>
+                                        <ChooseEnglish/>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12 column-city no-gutters">
+                                        <p className="create-vac-input-name-sm">
+                                            Інші іноземні мови
+                                        </p>
+                                        <div className="row">
+                                            <div className="col-6 no-gutters column-city">
+                                                <input type="text" className="create-vac-input-lang-2 bottom-create-apply" placeholder="Мова" aria-label="Місто"/>
+                                            </div>
+                                            <div className="col-4 column-level">
+                                                <Level_Select/>
+                                            </div>
+                                            <div className="col-2 column-button-add">
+
+                                            </div>
+                                        </div>
+
+                                            {this.state.shareholders.map((shareholder, idx) => (
+                                                <div className="row">
+                                                    <div className="col-6 no-gutters column-city">
+                                                        <input type="text" onChange={this.handleShareholderNameChange(idx)} className="create-vac-input-lang-2 bottom-create-apply" placeholder="Мова" aria-label="Місто"/>
+                                                    </div>
+                                                    <div className="col-4 column-level">
+                                                        <Level_Select/>
+                                                    </div>
+                                                    <div className="col-2 no-gutters column-level">
+                                                    <button
+                                                        type="button"
+                                                        onClick={this.handleRemoveShareholder(idx)}
+                                                        className="add-button-lang-delete"
+                                                    >
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-x-create">
+                                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                        </svg>
+                                                    </button>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                            <div className="column-button-add">
+                                                <button onClick={this.handleAddShareholder} className="add-button-lang">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-plus-circle-create">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <line x1="12" y1="8" x2="12" y2="16"></line>
+                                                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                                                    </svg>
+                                                    <p className="add-more-text">Додати більше мов</p>
+                                                </button>
+                                            </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -494,6 +725,36 @@ export default class Create_Vac extends React.Component {
                 return (
                     <div className="row row-expansion-panel-center">
                         <ExpansionPanel className="col-8 panel-create-vac-first">
+                            <ExpansionPanelSummary
+                                expandIcon={
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-chevron-down">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                }
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                            >
+                                <Typography className="panel-header">
+                                    Лого компанії
+                                    <div className="required-mark">*</div>
+                                </Typography>
+                            </ExpansionPanelSummary>
+                            <ExpansionPanelDetails>
+                                <div className="col-12 no-gutters text-div-panel">
+                                    Оберіть логотип компанії, який буде показаний на вакансії.
+                                </div>
+                                <div className="row">
+                                    <div className="col-2">
+                                        <Avatar src={avatar} className="avatar-picture-upload" />
+                                    </div>
+                                    <div className="col-10 no-gutters upload-picture">
+                                        <Upload_Company/>
+                                    </div>
+                                </div>
+                            </ExpansionPanelDetails>
+                        </ExpansionPanel>
+                        <div className="col-8 separator"></div>
+                        <ExpansionPanel className="col-8 panel-create-vac">
                             <ExpansionPanelSummary
                                 expandIcon={
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-chevron-down">
