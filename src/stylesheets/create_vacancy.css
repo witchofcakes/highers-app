@@ -228,7 +228,7 @@
     top: 0px;
     padding-top: 10px;
     bottom: 0;
-    margin-left: -30px !important;
+    margin-left: 15px !important;
     /*padding-right: 15px !important;*/
     width: 85px !important;
 }
@@ -303,7 +303,7 @@
 }
 
 .sidebar-column-back{
-    position: fixed;
+    position: absolute;
     bottom: 85px;
     left: 8px;
 }
@@ -374,9 +374,9 @@
 }
 
 .sidebar-column-avatar{
-    position: fixed;
-    bottom: 15px;
-    left: 22px;
+    position: absolute;
+    bottom: 5px;
+    left: 12px;
 }
 
 .all-vac-employer-sidebar:hover .feather-file-text-sidebar, .candidates-employer-sidebar:hover .feather-user-sidebar{

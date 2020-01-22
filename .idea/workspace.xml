@@ -2,9 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a402fc95-8c4c-4da0-b3e1-6d4570d563e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/employer_candidates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/employer_candidates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/employer_profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/employer_profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/employer_vacancies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/employer_vacancies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer_contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer_contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer_vacancy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer_vacancy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/vacancies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vacancies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/vacancy_employer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vacancy_employer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/all_vac.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/all_vac.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/contacts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/contacts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/create_vacancy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/create_vacancy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/employer_vacancies.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/employer_vacancies.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/vacancy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/vacancy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/vacancy_employer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/vacancy_employer.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +122,11 @@
       <workItem from="1578644264363" duration="31361000" />
       <workItem from="1578685341751" duration="4958000" />
       <workItem from="1578731115642" duration="287234000" />
-      <workItem from="1579464590032" duration="243000" />
+      <workItem from="1579464590032" duration="1818000" />
+      <workItem from="1579468879142" duration="827000" />
+      <workItem from="1579516062116" duration="596000" />
+      <workItem from="1579539191718" duration="2485000" />
+      <workItem from="1579715949244" duration="9797000" />
     </task>
     <servers />
   </component>

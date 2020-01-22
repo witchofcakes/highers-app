@@ -1395,3 +1395,6 @@ div.filepicker {
     background-color: #8fd3f4;
 }
 
+.row-mobile{
+    display: none;
+}

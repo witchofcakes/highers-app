@@ -4,7 +4,7 @@ import logo from '../images/logo-mountain.png'
 export default class Footer_Contacts extends React.Component {
     render() {
         return (
-            <div className="footer">
+            <div className="full footer">
                 <div className="row">
                     <div className="col-12 footer-container-2-contacts">
                         <div className="col-4 footer-logo">

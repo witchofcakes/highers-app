@@ -9,12 +9,12 @@ export default class Empl_Profile extends React.Component {
     render() {
         return (
 
-            <div className="full">
+            <div>
                 <div className="row">
 
                     <SideBar/>
 
-                    <div className="col" id="content-employer">
+                    <div className="full col" id="content-employer">
                         <div className="row row-resume">
                             <div className="col-8 resume-borders">
                                 <div className="row">

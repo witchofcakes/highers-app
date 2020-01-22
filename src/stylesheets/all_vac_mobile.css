@@ -1,0 +1,71 @@
+@media (max-width: 1200px) {
+
+    .vac-input {
+        padding-right: 50px !important;
+        padding-left: 50px !important;
+    }
+
+}
+
+@media (min-width: 1100px) and (max-width: 1179px) {
+
+    .google-map{
+        width: 210px !important;
+    }
+
+}
+
+@media (min-width: 1180px) and (max-width: 1210px) {
+
+    .google-map{
+        width: 230px !important;
+    }
+
+}
+
+@media (min-width: 1324px) and (max-width: 3440px) {
+
+    .google-map{
+        width: 270px !important;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1210px) {
+
+    .row-desktop{
+        display: none !important;
+    }
+
+    .row-mobile{
+        display: inline !important;
+    }
+
+    .footer-icons-div {
+        float: none !important;
+        margin-bottom: 20px;
+    }
+
+    .footer-container-2 {
+        background-color: white;
+        align-items: center;
+        display: inline !important;
+        justify-content: unset !important;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #telegram, #insta{
+        height: 33px !important;
+        width: 33px !important;
+    }
+
+}
+
+@media (min-width: 1110px) and (max-width: 1180px) {
+
+    .row-filter{
+        margin-left: 50px !important;
+    }
+
+}

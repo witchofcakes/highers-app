@@ -106,12 +106,12 @@ export default class Empl_Cand extends React.Component {
     render() {
 
         return (
-            <div className="full">
+            <div>
                 <div className="row">
 
                     <SideBar/>
 
-                    <div className="col" id="content-employer">
+                    <div className="full col" id="content-employer">
                         <div className="row">
                             <div className="col-12">
                                 <div className="row row-all-vac-margin align-items-center">

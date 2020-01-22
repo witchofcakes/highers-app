@@ -178,7 +178,7 @@ export default class Empl_Vac_One extends React.Component {
     render() {
 
         return (
-            <div className="full">
+            <div>
                 <div className="row">
 
                     <SideBar/>

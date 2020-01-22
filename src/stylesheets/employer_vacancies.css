@@ -27,7 +27,8 @@
     width: 70%;
     padding-top: 70px;
     position: relative;
-    margin-left: 120px;
+    margin-left: 135px;
+    margin-right: 20px;
     padding-bottom: 80px;
     transition: margin-left 250ms ease-out,transform 250ms ease-out,-webkit-transform 250ms ease-out;
     /*padding-right: 74px;*/
@@ -38,7 +39,7 @@
 }
 
 .container-mui-table {
-    height: 500px;
+    height: 100vh;
     border-top-right-radius: 8px !important;
     border-top-left-radius: 8px !important;
 }

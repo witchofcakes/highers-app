@@ -9,6 +9,7 @@ import './javascript/navbar.js';
 import './javascript/cover.js';
 import './javascript/language_add';
 import './stylesheets/employer_vacancies.css';
+import './stylesheets/all_vac_mobile.css';
 import './stylesheets/employer_candidate.css';
 import './stylesheets/login_employer.css';
 import '../node_modules/dropzone/dist/min/dropzone.min.css';

@@ -73,8 +73,8 @@
 }
 
 .column-contacts-shadow-1{
-    margin-right: 20px;
-    margin-left: -35px;
+    /*margin-right: 20px;*/
+    /*margin-left: -35px;*/
     padding-top: 25px;
     padding-bottom: 25px;
     text-align: center;
@@ -85,8 +85,8 @@
 }
 
 .column-contacts-shadow{
-    margin-right: 20px;
-    margin-left: 20px;
+    /*margin-right: 20px;*/
+    /*margin-left: 20px;*/
     padding-top: 25px;
     padding-bottom: 25px;
     text-align: center;
@@ -155,5 +155,7 @@
 }
 
 .row-contacts{
+    display: flex;
+    justify-content: center;
     margin-bottom: 30px;
 }

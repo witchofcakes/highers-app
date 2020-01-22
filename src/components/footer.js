@@ -11,10 +11,10 @@ import fb from '../images/facebook.svg'
 class Footer extends React.Component {
     render() {
         return (
-            <div className="footer">
+            <div className="full footer">
                 <div className="row">
                     <div className="col-12 footer-container-2">
-                        <div className="col-4 footer-logo">
+                        <div className="col-4 no-gutters footer-logo">
                             <img src={logo} className="logo-mount" />
                             <p className="copyright">© 2020 Copyright HIGHERS</p>
                         </div>
@@ -30,7 +30,7 @@ class Footer extends React.Component {
                             </a>
 
                         </div>
-                        <div className="col-4 footer-icons">
+                        <div className="col-4 no-gutters footer-icons">
                             <div className="footer-icons-div">
                             <a target="_blank" href="https://t.me/higherspro">
                                 <svg id="telegram" height="38px" width="38px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

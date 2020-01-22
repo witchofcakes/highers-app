@@ -28,7 +28,7 @@ class AllVac extends React.Component {
         return (
             <div>
             <div class="container container-search">
-                <div class="row">
+                <div class="row center-row">
                     <div class="col-12">
                         <div className="input-group vac-input mb-3">
                             <div className="input-group-image-vac">

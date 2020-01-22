@@ -23,10 +23,10 @@ export default class Contact_Us extends React.Component  {
                             </div>
                         </div>
                         <div className="row row-center-contacts">
-                            <div className="col-3 column-contacts-shadow">
+                            <div className="col-4 column-contacts-shadow">
 
                             </div>
-                            <div className="col-6 column-contacts-shadow-1">
+                            <div className="col-4 column-contacts-shadow-1">
                                 <div className="row row-contacts">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-email-contacts">
                                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -50,7 +50,7 @@ export default class Contact_Us extends React.Component  {
                                 </p>
                                 </div>
                             </div>
-                            <div className="col-3 column-contacts-shadow">
+                            <div className="col-4 column-contacts-shadow">
 
                             </div>
                             {/*<div className="col-12 column-contacts-shadow">*/}
