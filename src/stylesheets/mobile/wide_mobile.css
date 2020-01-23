@@ -31,7 +31,7 @@
 
 }
 
-@media (min-width: 992px) and (max-width: 1210px) {
+@media (min-width: 0px) and (max-width: 1210px) {
 
     .row-desktop{
         display: none !important;
@@ -69,3 +69,64 @@
     }
 
 }
+
+@media (min-width: 0px) and (max-width: 992px) {
+
+    .navbar-light .navbar-toggler{
+        display: none !important;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 992px) {
+
+    .pad-filter{
+        width: 100% !important;
+    }
+
+    #filter-category-material-ui{
+        width: 100% !important;
+    }
+
+    div#course-select-course-form {
+        width: 100% !important;
+    }
+
+    .button-ok-filter{
+        width: 100% !important;
+    }
+
+}
+
+.navbar-mobile{
+    display: none;
+}
+
+@media (min-width: 0px) and (max-width: 992px) {
+
+    .navbar-desktop{
+        display: none !important;
+    }
+
+    .navbar-mobile{
+        display: inline !important;
+    }
+
+}
+
+/*.vacancy-mobile{*/
+/*    display: none;*/
+/*}*/
+
+/*@media (min-width: 0px) and (max-width: 661px) {*/
+
+/*    .vacancy-mobile{*/
+/*        display: inline !important;*/
+/*    }*/
+
+/*    .vacancy-desktop{*/
+/*        display: none !important;*/
+/*    }*/
+
+/*}*/
+

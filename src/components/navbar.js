@@ -6,7 +6,7 @@ class NavBar extends React.Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light">
+            <nav className="navbar navbar-expand-lg navbar-light navbar-desktop">
                 <div className="full-filter">
                     <div className="row">
                 <a className="navbar-brand" href="/"><img src={logo} className="logo-main"/></a>

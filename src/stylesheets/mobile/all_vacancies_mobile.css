@@ -1,0 +1,172 @@
+.mobile-vacancies{
+    display: none;
+}
+
+@media (min-width: 0px) and (max-width: 992px) {
+    .scroll-top{
+        bottom: 60px !important;
+    }
+
+    .mobile-vacancies{
+        display: inline !important;
+    }
+
+    .desktop-vacancies{
+        display: none !important;
+    }
+
+}
+
+.MuiBottomNavigation-root{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 70px !important;
+    z-index: 1030;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.MuiBottomNavigationAction-root.Mui-selected .MuiBottomNavigationAction-wrapper .feather-menu-bottombar,
+.MuiBottomNavigationAction-root.Mui-selected .MuiBottomNavigationAction-wrapper .feather-file-bottombar,
+.MuiBottomNavigationAction-root.Mui-selected .MuiBottomNavigationAction-wrapper .feather-search-bottombar {
+    stroke: #212529 !important;
+
+}
+
+.MuiBottomNavigationAction-root.Mui-selected {
+    outline: none !important;
+    color: #212529 !important;
+}
+
+.MuiBottomNavigationAction-label.Mui-selected{
+
+    font-size: 12px !important;
+    font-family: 'Rubik', sans-serif !important;
+    color: #212529 !important;
+}
+
+.MuiBottomNavigationAction-label{
+    color: #b5b6b7 !important;
+    font-size: 12px !important;
+    font-family: 'Rubik', sans-serif !important;
+}
+
+.feather-search-bottombar{
+    width: 25px;
+    height: 25px;
+    stroke: #b5b6b7;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 3px;
+}
+
+.feather-file-bottombar{
+    width: 25px;
+    height: 25px;
+    stroke: #b5b6b7;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 3px;
+}
+
+.feather-menu-bottombar{
+    width: 25px;
+    height: 25px;
+    stroke: #b5b6b7;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 3px;
+}
+
+.MuiDrawer-paperAnchorRight{
+    background-color: #212529 !important;
+}
+
+.all-vacancies-menu-btn{
+    background: #212529;
+    border: 2px solid white;
+    border-radius: 7px;
+    font-size: 16px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.list-btn-menu{
+    position: absolute !important;
+    bottom: 15px !important;
+    margin-left: 20px !important;
+    /* display: flex; */
+    justify-content: center;
+    margin-right: 20px !important;
+}
+
+.list-item-menu .MuiListItemText-primary{
+    color: white !important;
+    font-size: 18px !important;
+}
+
+.MuiListItem-gutters {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.list-text-menu{
+    margin-top: 115px !important;
+}
+
+.feather-x-menu-close{
+    width: 27px;
+    height: 27px;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin-bottom: 3px;
+}
+
+.list-x-btn{
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+    background: #212529;
+    border: none !important;
+}
+
+.side-menu .MuiBackdrop-root{
+    background-color: rgba(255,255,255,0.8) !important;
+}
+
+.feather-sliders-menu{
+    width: 23px;
+    height: 23px;
+    stroke: #212529;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.button-filter-menu{
+    background-color: white;
+    border: none;
+}
+
+.button-filter-menu:focus{
+    outline: none !important
+}
+
+.navbar-mobile{
+    z-index: 1040;
+}

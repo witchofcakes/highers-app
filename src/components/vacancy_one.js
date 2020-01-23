@@ -10,6 +10,7 @@ import Vacancy from "./vacancy_long";
 import Filter_Top from "./filter_top";
 import arrow from "../images/left-arrow-2.svg";
 import Search_Top from "./search_filter_top";
+import Vac_Mobile from "./vacancy_page_mobile";
 
 class Vac_Page extends React.Component {
 
@@ -17,34 +18,37 @@ class Vac_Page extends React.Component {
 
         return (
             <div>
-               <div className="container">
-                   <div className="row">
-                       <div className="col-12 filter-top">
-                           <div className="row">
-                               <div className="col-12 full-filter">
-                                   <div className="row">
-                                        <div>
-                                            <a className="back-to-vac-link" href="/all-vacancies">
-                                                <button className="back-to-vac-but">
-                                                    <img src={arrow} className="arrow-back"/> Всі вакансії
-                                                </button>
-                                            </a>
-                                             <Search_Top/>
-                                        </div>
-                                        <div>
-                                            <Filter_Top/>
-                                        </div>
-                                    </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
+            {/*<div className="desktop-description">*/}
+            {/*   <div className="container">*/}
+            {/*       <div className="row">*/}
+            {/*           <div className="col-12 filter-top">*/}
+            {/*               <div className="row">*/}
+            {/*                   <div className="col-12 full-filter">*/}
+            {/*                       <div className="row">*/}
+            {/*                            <div>*/}
+            {/*                                <a className="back-to-vac-link" href="/all-vacancies">*/}
+            {/*                                    <button className="back-to-vac-but">*/}
+            {/*                                        <img src={arrow} className="arrow-back"/> Всі вакансії*/}
+            {/*                                    </button>*/}
+            {/*                                </a>*/}
+            {/*                                <Search_Top/>*/}
+            {/*                            </div>*/}
+            {/*                            <div>*/}
+            {/*                                <Filter_Top/>*/}
+            {/*                            </div>*/}
+            {/*                        </div>*/}
+            {/*                   </div>*/}
+            {/*               </div>*/}
+            {/*           </div>*/}
+            {/*       </div>*/}
+            {/*   </div>*/}
 
-                <Vac/>
-
+            {/*    <Vac/>*/}
+            {/*</div>*/}
+                <div className="mobile-description">
+                    <Vac_Mobile/>
+                </div>
             </div>
-
 
         );
     }

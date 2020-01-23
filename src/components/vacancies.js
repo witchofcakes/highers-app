@@ -10,6 +10,7 @@ import Vacancy from "./vacancy_long";
 import Filter_Top from "./filter_top";
 import arrow from "../images/left-arrow-2.svg";
 import Search_Top from "./search_filter_top";
+import AllVac_Mobile from "./mobile/all_vacancies_mob";
 
 class AllVac extends React.Component {
 
@@ -27,6 +28,7 @@ class AllVac extends React.Component {
 
         return (
             <div>
+                <div className="desktop-vacancies">
             <div class="container container-search">
                 <div class="row center-row">
                     <div class="col-12">
@@ -117,6 +119,10 @@ class AllVac extends React.Component {
 
                 <div className="footer-vac">
                     <Footer/>
+                </div>
+                </div>
+                <div className="mobile-vacancies">
+                    <AllVac_Mobile/>
                 </div>
             </div>
         );
