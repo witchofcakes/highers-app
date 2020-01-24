@@ -993,8 +993,6 @@
 }
 
 .apply-stepper .MuiStep-horizontal{
-    padding-left: 50px;
-    padding-right: 50px;
     margin-bottom: 30px;
 }
 
@@ -1397,4 +1395,56 @@ div.filepicker {
 
 .row-mobile{
     display: none;
+}
+
+/*#course-select-course-form-2-mobile{*/
+/*    width: 28.4%;*/
+/*    margin-left: 35px;*/
+/*}*/
+
+#course-select-course-2-mobile{
+    /* width: 68px; */
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 13px 30px 13px 15px;
+}
+
+#course-select-course-form-2-mobile .MuiSelect-select:focus{
+    background: white !important;
+    box-shadow: none !important;
+}
+
+#course-select-course-form-2-mobile:focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3;
+    outline: none !important;
+}
+
+#course-select-course-form-2-mobile .MuiSelect-icon {
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 7px !important;
+    margin-top: 0px !important;
+}
+
+.create-vac-input-lang-mobile{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 10px 15px;
+    /*margin-right: 20px;*/
+}
+
+.create-vac-input-lang-mobile:focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3 !important;
+    outline: none !important;
+}
+
+.MuiStepper-root {
+    justify-content: center;
+    display: flex;
+    padding: 24px;
 }

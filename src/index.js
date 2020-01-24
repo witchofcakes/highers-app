@@ -10,7 +10,7 @@ import './javascript/cover.js';
 import './javascript/language_add';
 import './stylesheets/employer_vacancies.css';
 import './stylesheets/mobile/wide_mobile.css';
-import './stylesheets/mobile/vacancy.css';
+import './stylesheets/vacancy_mobile.css';
 import './stylesheets/mobile/all_vacancies_mobile.css';
 import './stylesheets/employer_candidate.css';
 import './stylesheets/login_employer.css';

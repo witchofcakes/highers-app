@@ -27,6 +27,9 @@ import Input from "@material-ui/core/Input";
 import Checkbox from "@material-ui/core/Checkbox";
 import ListItemText from "@material-ui/core/ListItemText";
 import Dropzone_Comp from "./dropzone.js";
+import Bottom_Bar_User from "./mobile/bottom_bar";
+import NavBar_Mobile from "./navbar_mobile";
+import NavBar_Mobile_Back from "./navbar_mobile_back";
 
 const LightTooltip = withStyles(theme => ({
     tooltip: {
@@ -133,10 +136,10 @@ function Course_Select() {
 
     return (
 
-        <FormControl id="course-select-course-form-2">
+        <FormControl id="course-select-course-form-2-mobile">
             <Select value={state.course}
                     onChange={handleChange_course('course')}
-                    displayEmpty id="course-select-course-2"
+                    displayEmpty id="course-select-course-2-mobile"
                     IconComponent = {ExpandMoreRoundedIcon}
             >
                 <MenuItem value="" disabled id="all-cat-select">
@@ -236,10 +239,10 @@ function Work_Select() {
     };
 
     return (
-        <FormControl id="course-select-work-form">
+        <FormControl id="course-select-work-form-mobile">
             <Select
                 labelId="type-filter-top"
-                id="course-select-work"
+                id="course-select-work-mobile"
                 multiple
                 displayEmpty
                 value={personName}
@@ -280,10 +283,10 @@ function Level_Select() {
 
     return (
 
-        <FormControl id="course-select-level-form">
+        <FormControl id="course-select-level-form-mobile">
             <Select value={state.level}
                     onChange={handleChange_level('level')}
-                    displayEmpty id="course-select-level"
+                    displayEmpty id="course-select-level-mobile"
                     IconComponent = {ExpandMoreRoundedIcon}
             >
                 <MenuItem value="" disabled id="all-cat-select">
@@ -310,7 +313,7 @@ function SalaryFilter(){
     };
 
     return (
-        <FormControl className="col-7 salary-filter-form" variant="outlined">
+        <FormControl className="salary-filter-form-mobile" variant="outlined">
             <OutlinedInput
                 className="salary-filter-input"
                 value={values.salary}
@@ -481,9 +484,27 @@ export default class Apply_Page extends React.Component {
                             Спеціальність та курс
                             <div className="required-mark">*</div>
                         </div>
-                        <div>
-                            <input type="text" className="col-8 apply-input-specialization" placeholder="Наприклад: політологія" aria-label="Назва вакансії"/>
-                            <Course_Select/>
+                        <div className="row row-wide">
+                            <div className="col-8">
+                                <input type="text" className="apply-input-specialization" placeholder="Наприклад: політологія" aria-label="Назва вакансії"/>
+                            </div>
+                            <div className="col-4">
+                                <Course_Select/>
+                            </div>
+                        </div>
+                        <div className="row row-narrow">
+                            <div className="col-12">
+                                <div className="row">
+                                    <div className="col-12 no-gutters margin-top-column">
+                                        <input type="text" className="apply-input-specialization" placeholder="Наприклад: політологія" aria-label="Назва вакансії"/>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12 no-gutters">
+                                        <Course_Select/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 );
@@ -505,23 +526,54 @@ export default class Apply_Page extends React.Component {
                         <div className="input-title-apply">
                             Інші іноземні мови
                         </div>
-                        <div className="row">
+                        <div className="row row-wide">
                             <div className="col-8 column-city">
-                                {/*<p className="create-vac-input-name-sm">*/}
-                                {/*    Мова*/}
-                                {/*</p>*/}
-                                <input type="text" className="create-vac-input-lang bottom-create-apply" placeholder="Напиши тут мову" aria-label="Місто"/>
+                                <input type="text" className="create-vac-input-lang-mobile bottom-create-apply" placeholder="Напиши тут мову" aria-label="Місто"/>
                             </div>
                             <div className="col-4 column-level">
                                 {/*<p className="create-vac-input-name-sm-title">Рівень</p>*/}
                                 <Level_Select/>
                             </div>
                         </div>
+                        <div className="row row-narrow">
+                            <div className="col-12">
+                                <div className="row">
+                                    <div className="col-12 no-gutters margin-top-column">
+                                        <input type="text" className="create-vac-input-lang-mobile bottom-create-apply" placeholder="Напиши тут мову" aria-label="Місто"/>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12 no-gutters">
+                                        <Level_Select/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div className="input-title-apply">
                             Бажана зайнятість та зарплатня
                         </div>
-                        <Work_Select/>
-                        <SalaryFilter/>
+                        <div className="row row-wide">
+                            <div className="col-8 column-city">
+                                <Work_Select/>
+                            </div>
+                            <div className="col-4 column-city">
+                                <SalaryFilter/>
+                            </div>
+                        </div>
+                        <div className="row row-narrow">
+                            <div className="col-12">
+                                <div className="row">
+                                    <div className="col-12 no-gutters margin-top-column-work">
+                                        <Work_Select/>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12 no-gutters margin-bottom-apply-page">
+                                        <SalaryFilter/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 );
             case 3:
@@ -576,7 +628,9 @@ export default class Apply_Page extends React.Component {
         const { activeStep } = this.state;
         return (
             <div>
-                <div className="row center-row">
+                <NavBar_Mobile_Back/>
+
+                <div className="row center-row row-apply-page">
                     <div className="col-11">
                         <div>
                             <div className="row row-stepper-center-apply-mobile">
@@ -694,6 +748,7 @@ export default class Apply_Page extends React.Component {
                         </div>
                     </div>
                 </div>
+                {/*<Bottom_Bar_User/>*/}
             </div>
 
         );

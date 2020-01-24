@@ -7,6 +7,36 @@ import NativeSelect from '@material-ui/core/NativeSelect';
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
+import OutlinedInput from "@material-ui/core/OutlinedInput";
+import InputAdornment from "@material-ui/core/InputAdornment";
+
+function SalaryFilter(){
+    const [values, setValues] = React.useState({
+        salary: '',
+    });
+
+    const handleChangeSalary = prop => event => {
+        setValues({ ...values, [prop]: event.target.value });
+    };
+
+    return (
+        <FormControl className="salary-filter-form-mobile" variant="outlined">
+            <OutlinedInput
+                className="salary-filter-input"
+                value={values.salary}
+                onChange={handleChangeSalary('salary')}
+                startAdornment={<InputAdornment position="end">від</InputAdornment>}
+                endAdornment={<InputAdornment position="end">грн</InputAdornment>}
+                aria-describedby="outlined-weight-helper-text"
+                inputProps={{
+                    'aria-label': 'salary',
+                }}
+                placeholder="2000"
+                labelWidth={0}
+            />
+        </FormControl>
+    );
+}
 
 export default function Filter_Mobile() {
     const [state, setState] = React.useState({
@@ -140,15 +170,7 @@ export default function Filter_Mobile() {
                 <div className="col-12 no-gutters">
                     <div className="row">
                         <div className="col-12 pad-filter">
-                            <form>
-                                <div className="form-group row">
-                                    <label htmlFor="inputPassword" className="col-2 col-form-label salary-filter">Від</label>
-                                    <div className="col-5 no-gutters">
-                                        <input type="text" className="form-control salary-text-filter" id="inputPassword"/>
-                                    </div>
-                                    <label htmlFor="inputPassword" className="col-2 col-form-label salary-filter-grn">грн</label>
-                                </div>
-                            </form>
+                            <SalaryFilter/>
                         </div>
                     </div>
                 </div>

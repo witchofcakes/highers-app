@@ -5,7 +5,7 @@ export default class Vacancy_Mob extends React.Component {
         return (
             <div className="container" id="border-bottom-container">
                 <div className="row align-items-center vac-title-short vacancy-2">
-                    <div className="col-2 no-gutters">
+                    <div className="image-container-mobile">
                         <div className={this.props.image}/>
                     </div>
                     <div className="col-10 no-gutters">

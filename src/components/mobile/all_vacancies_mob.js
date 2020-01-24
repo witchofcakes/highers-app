@@ -6,6 +6,8 @@ import Scroll from "../scroll_top";
 import Vacancy from "../vacancy_long";
 import Bottom_Bar_User from "./bottom_bar";
 import Vacancy_Mob from "./vacancy_mobile";
+import NavBar_Mobile from "../navbar_mobile";
+import Pagination_Mob from "./mobile_pagination";
 
 export default class AllVac_Mobile extends React.Component {
 
@@ -23,7 +25,7 @@ export default class AllVac_Mobile extends React.Component {
 
         return (
             <div>
-
+                <NavBar_Mobile/>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 categories-cont">
@@ -95,7 +97,7 @@ export default class AllVac_Mobile extends React.Component {
                             <Vacancy_Mob title={"Менеджер із роботи з бізнес - клієнтами"} company={"ProCredit Bank"} type={"Full-time"} salary={"8000 грн"} image={"box-image-3"}/>
 
                             <div className="row align-items-center pagination-row">
-                                <Pagination_Comp/>
+                                <Pagination_Mob/>
                             </div>
 
                         </div>
@@ -103,9 +105,9 @@ export default class AllVac_Mobile extends React.Component {
                     </div>
                 </div>
 
-                <div className="footer-vac">
-                    <Footer/>
-                </div>
+                {/*<div className="footer-vac">*/}
+                {/*    <Footer/>*/}
+                {/*</div>*/}
 
                 <Bottom_Bar_User/>
 

@@ -10,6 +10,7 @@ import Footer_Vac from "./footer_vacancy";
 import Vacancy_Comp from "./vacancy_comp";
 import Vacancy_Short_Mob from "./mobile/vacancy_short_mob";
 import NavBar_Mobile_Back from "./navbar_mobile_back";
+import Vacancy_Comp_Mobile from "./vacancy_comp_mobile";
 
 export default class Vac_Mobile extends React.Component {
 
@@ -29,10 +30,10 @@ export default class Vac_Mobile extends React.Component {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-1">
-                                        <div className="box-image-short-vac"/>
+                                    <div className="image-container-mobile">
+                                        <div className="box-image-short-vac-mobile"/>
                                     </div>
-                                    <div className="col-8">
+                                    <div className="col-9">
                                         <div className="title-vacancy">
                                             Content Maker & Manager Trainee
                                         </div>
@@ -158,7 +159,7 @@ export default class Vac_Mobile extends React.Component {
                             </TabPanel>
                             <TabPanel>
                                 <div className="row row-vacancy-info">
-                                    <div className="col-8 no-gutters">
+                                    <div className="col-12 no-gutters">
                                         <div className="row">
                                             <div className="col-12">
                                                 <div className="vacancy-info-categories-company">Про компанію:</div>
@@ -175,22 +176,25 @@ export default class Vac_Mobile extends React.Component {
                                                 <p className="vacancy-text">Full-time, з можливістю іноді відвідувати пари. Також з оплачуваною відпусткою на період сесії.</p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="col-4 no-gutters">
-                                        <div className="vacancy-info-categories-company-vac">Вакансії компанії:</div>
-                                        <Vacancy_Comp title={"IT Risk and Assurance"} company={"Ernst & Young"} type={"Full / Part-time"} salary={"13000 грн"}/>
-                                        <Vacancy_Comp title={"Менеджер із роботи з бізнес - клієнтами"} company={"Deloitte"} type={"Full-time"} salary={"15000 грн"}/>
-                                        <Vacancy_Comp title={"Content Maker & Manager Trainee"} company={"Deloitte"} type={"Full-time"} salary={"8000 грн"}/>
-                                        <Vacancy_Comp title={"Content Maker & Manager Trainee"} company={"Deloitte"} type={"Full-time"} salary={"8000 грн"}/>
+
+                                    <div className="row">
+                                    <div className="col-12">
+                                        <div className="vacancy-info-categories-company-vac-mobile">Вакансії компанії:</div>
+                                        <Vacancy_Comp_Mobile title={"IT Risk and Assurance"} company={"Ernst & Young"} type={"Full / Part-time"} salary={"13000 грн"}/>
+                                        <Vacancy_Comp_Mobile title={"Менеджер із роботи з бізнес - клієнтами"} company={"Deloitte"} type={"Full-time"} salary={"15000 грн"}/>
+                                        <Vacancy_Comp_Mobile title={"Content Maker & Manager Trainee"} company={"Deloitte"} type={"Full-time"} salary={"8000 грн"}/>
+                                        <Vacancy_Comp_Mobile title={"Content Maker & Manager Trainee"} company={"Deloitte"} type={"Full-time"} salary={"8000 грн"}/>
                                         <div className="vac-company-div">
                                             <a target="_blank" href="/all-vacancies" className="all-vac-company-blue">
-                                                <button className="all-vac-company-but">
+                                                <button className="all-vac-company-but-mobile">
                                                     <a className="all-vac-company-blue">
                                                         Всі вакансії компанії
                                                     </a>
                                                 </button>
                                             </a>
                                         </div>
+                                    </div>
+                                    </div>
                                     </div>
                                 </div>
                             </TabPanel>

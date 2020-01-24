@@ -5,11 +5,12 @@ import logo from '../images/logo.png'
 export default class NavBar_Mobile_Back extends React.Component {
 
     render() {
+
         return (
             <nav className="navbar navbar-expand-lg navbar-light navbar-mobile">
                 <div className="full-filter-mobile">
                     <div className="row">
-                        <button className="button-filter-menu">
+                        <button onClick={() => { document.location.href = "/vacancy"; }} className="button-filter-menu">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-chevron-left-menu">
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>

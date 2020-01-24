@@ -5,13 +5,19 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mobile/navbar_mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar_mobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tester.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tester.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/apply_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apply_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobile/all_vacancies_mob.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobile/all_vacancies_mob.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobile/filter_mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobile/filter_mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobile/vacancy_mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobile/vacancy_mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobile/vacancy_short_mob.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobile/vacancy_short_mob.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar_mobile_back.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar_mobile_back.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/vacancy_page_mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vacancy_page_mobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/mobile/all_vacancies_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/mobile/all_vacancies_mobile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/mobile/vacancy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/mobile/vacancy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/mobile/vacancy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/vacancy_mobile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/mobile/wide_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/mobile/wide_mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/vacancy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/vacancy.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,16 +59,16 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Zver\WebstormProjects\highers_platform\src\components" />
-      <recent name="C:\Users\Zver\WebstormProjects\highers_platform\src\stylesheets\mobile" />
-      <recent name="C:\Users\Zver\WebstormProjects\highers_platform\src\images" />
-      <recent name="C:\Users\Zver\WebstormProjects\highers_platform\public" />
-      <recent name="C:\Users\Zver\WebstormProjects\highers_platform\src\javascript" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Zver\WebstormProjects\highers_platform\src\images" />
       <recent name="C:\Users\Zver\WebstormProjects\highers_website\highers_platform\src\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Zver\WebstormProjects\highers_platform\src\components" />
+      <recent name="C:\Users\Zver\WebstormProjects\highers_platform\src\stylesheets" />
+      <recent name="C:\Users\Zver\WebstormProjects\highers_platform\src\stylesheets\mobile" />
+      <recent name="C:\Users\Zver\WebstormProjects\highers_platform\src\images" />
+      <recent name="C:\Users\Zver\WebstormProjects\highers_platform\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -116,7 +122,8 @@
       <workItem from="1579468879142" duration="827000" />
       <workItem from="1579516062116" duration="596000" />
       <workItem from="1579539191718" duration="2485000" />
-      <workItem from="1579715949244" duration="36732000" />
+      <workItem from="1579715949244" duration="46970000" />
+      <workItem from="1579890092228" duration="6231000" />
     </task>
     <servers />
   </component>

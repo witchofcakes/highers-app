@@ -185,3 +185,145 @@ div#filter-menu {
     padding: 0px !important;
     width: 100% !important;
 }
+
+#course-select-level-mobile{
+    background-color: white !important;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 13px 30px 13px 15px;
+}
+
+#course-select-level-form-mobile .MuiSelect-select:focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3;
+    outline: none !important;
+}
+
+#course-select-level-form-mobile :focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3;
+    outline: none !important;
+}
+
+#course-select-level-form-mobile  .MuiSelect-icon {
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 7px !important;
+    margin-top: 0px !important;
+}
+
+#course-select-level-form-mobile{
+    width: 100%;
+}
+
+.salary-filter-form-mobile{
+    width: 100% !important;
+    margin-bottom: 25.5px !important;
+}
+
+.salary-filter-form-mobile .MuiOutlinedInput-root{
+    border-radius: 5px !important;
+}
+
+.salary-filter-form-mobile .MuiOutlinedInput-adornedStart{
+    padding-left: 9px !important;
+}
+
+.salary-filter-form-mobile .MuiOutlinedInput-adornedEnd{
+    padding-right: 17px !important;
+}
+
+.salary-filter-form-mobile .Mui-focused > .MuiOutlinedInput-notchedOutline{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3 !important;
+    outline: none !important;
+}
+
+#course-select-work-form-mobile .MuiSelect-select:focus{
+    background: white !important;
+    box-shadow: none !important;
+}
+
+#course-select-work-form-mobile:focus{
+    box-shadow: none !important;
+    border: 1px solid #d2d2d3;
+    outline: none !important;
+}
+
+#course-select-work-form-mobile .MuiSelect-icon {
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 7px !important;
+    margin-top: 0px !important;
+}
+
+#course-select-work-form-mobile{
+    width: 100%;
+}
+
+#course-select-work-mobile {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #EBEBEC;
+    font-size: 15px;
+    padding: 13px 30px 13px 15px;
+}
+
+#course-select-course-form-2-mobile{
+    width: 100%;
+}
+
+.row-contacts-mobile{
+    display: flex !important;
+    justify-content: left !important;
+    margin-bottom: 30px;
+}
+
+.contacts-big-text-mobile{
+    padding-top: 110px;
+    padding-bottom: 40px;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #212529;
+    z-index: 2 !important;
+    position: relative;
+}
+
+.box-image-short-vac-mobile{
+    border-radius: 50px;
+    width: 45px;
+    height: 45px;
+    margin-left: 15px;
+    background-color: #61dafb;
+    background-image: url("../images/deloitte-sm-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.vacancy-info-categories-company-vac-mobile{
+    color: #2e3134;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.all-vac-company-but-mobile{
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border: 1px solid #135393;
+    border-radius: 5px;
+}
+
+.all-vac-company-but-mobile:focus{
+    outline: none !important;
+}
