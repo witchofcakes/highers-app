@@ -14,7 +14,8 @@ import Apply from "../components/apply";
 import Empl_Candidate from "../components/employer_candidate";
 import Login from "../components/login_employer";
 import Empl_Profile from "../components/employer_profile";
-import NavBar_Mobile from "../components/mobile/navbar_mobile";
+import NavBar_Mobile from "../components/navbar_mobile";
+import Apply_Page from "../components/apply_page";
 
 const Main = () => (
         <div>
@@ -52,13 +53,14 @@ const EmployerContainer = () => (
 const DefaultContainer = () => (
         <div>
             <NavBar/>
-            <NavBar_Mobile/>
+            {/*<NavBar_Mobile/>*/}
             <Switch>
                 <Route exact path="/" component={Landing} />
                 <Route path="/all-vacancies" component={AllVac} />
                 <Route path="/vacancy" component={Vac_Page} />
                 <Route path="/contacts" component={Contact_Us} />
                 <Route path="/apply" component={Apply} />
+                <Route path="/apply-page" component={Apply_Page} />
             </Switch>
         </div>
 )

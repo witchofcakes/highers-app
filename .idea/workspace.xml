@@ -3,13 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a402fc95-8c4c-4da0-b3e1-6d4570d563e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/vacancies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vacancies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/vacancy_one.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vacancy_one.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobile/navbar_mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar_mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tester.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tester.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/vacancy_page_mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/vacancy_page_mobile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/all_vac_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/mobile/wide_mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/mobile/all_vacancies_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/mobile/all_vacancies_mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/mobile/vacancy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/mobile/vacancy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/mobile/wide_mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/mobile/wide_mobile.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +116,7 @@
       <workItem from="1579468879142" duration="827000" />
       <workItem from="1579516062116" duration="596000" />
       <workItem from="1579539191718" duration="2485000" />
-      <workItem from="1579715949244" duration="24290000" />
+      <workItem from="1579715949244" duration="36732000" />
     </task>
     <servers />
   </component>
