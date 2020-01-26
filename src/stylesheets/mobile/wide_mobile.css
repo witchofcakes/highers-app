@@ -247,3 +247,173 @@
 .margin-bottom-apply-page{
     margin-bottom: -25px;
 }
+
+@media (min-width: 374px) and (max-width: 419px) {
+
+    .contacts-email, .contacts-phone, .link-employer-contacts{
+        font-size: 22px !important;
+    }
+
+    .feather-email-contacts, .feather-call-contacts, .feather-job-contacts{
+        width: 27px !important;
+        height: 27px !important;
+        margin-top: 3px;
+    }
+
+    .contacts-big-text-mobile{
+        font-size: 38px !important;
+    }
+
+}
+
+@media (min-width: 354px) and (max-width: 373px) {
+
+    .contacts-email, .contacts-phone, .link-employer-contacts{
+        font-size: 20px !important;
+    }
+
+    .feather-email-contacts, .feather-call-contacts, .feather-job-contacts{
+        width: 25px !important;
+        height: 25px !important;
+        margin-top: 3px;
+    }
+
+    .contacts-big-text-mobile{
+        font-size: 38px !important;
+    }
+
+}
+
+@media (min-width: 336px) and (max-width: 353px) {
+
+    .contacts-email, .contacts-phone, .link-employer-contacts{
+        font-size: 19px !important;
+    }
+
+    .feather-email-contacts, .feather-call-contacts, .feather-job-contacts{
+        width: 24px !important;
+        height: 24px !important;
+        margin-top: 3px;
+    }
+
+    .contacts-big-text-mobile{
+        font-size: 38px !important;
+    }
+
+}
+
+@media (min-width: 324px) and (max-width: 335px) {
+
+    .contacts-email, .contacts-phone, .link-employer-contacts{
+        font-size: 18px !important;
+    }
+
+    .feather-email-contacts, .feather-call-contacts, .feather-job-contacts{
+        width: 23px !important;
+        height: 23px !important;
+        margin-top: 3px;
+    }
+
+    .contacts-big-text-mobile{
+        font-size: 35px !important;
+    }
+
+}
+
+@media (min-width: 315px) and (max-width: 323px) {
+
+    .contacts-email, .contacts-phone, .link-employer-contacts{
+        font-size: 17px !important;
+    }
+
+    .feather-email-contacts, .feather-call-contacts, .feather-job-contacts{
+        width: 22px !important;
+        height: 22px !important;
+        margin-top: 3px;
+    }
+
+    .contacts-big-text-mobile{
+        font-size: 35px !important;
+    }
+
+}
+
+@media (min-width: 303px) and (max-width: 314px) {
+
+    .contacts-email, .contacts-phone, .link-employer-contacts{
+        font-size: 16px !important;
+    }
+
+    .feather-email-contacts, .feather-call-contacts, .feather-job-contacts{
+        width: 21px !important;
+        height: 21px !important;
+        margin-top: 3px;
+    }
+
+    .contacts-big-text-mobile{
+        font-size: 35px !important;
+    }
+
+}
+
+@media (min-width: 282px) and (max-width: 302px) {
+
+    .contacts-email, .contacts-phone, .link-employer-contacts{
+        font-size: 16px !important;
+    }
+
+    .feather-email-contacts, .feather-call-contacts, .feather-job-contacts{
+        width: 21px !important;
+        height: 21px !important;
+        margin-top: 3px;
+    }
+
+    .contacts-big-text-mobile{
+        font-size: 31px !important;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 283px) {
+
+    .contacts-email, .contacts-phone, .link-employer-contacts{
+        font-size: 15px !important;
+    }
+
+    .feather-email-contacts, .feather-call-contacts, .feather-job-contacts{
+        width: 20px !important;
+        height: 20px !important;
+        margin-top: 3px;
+    }
+
+    .contacts-big-text-mobile{
+        font-size: 31px !important;
+    }
+}
+
+.add-btn-employer{
+    background-color: #FF6F61 !important;
+    position: fixed !important;
+    bottom: 15px !important;
+    right: 10px !important;
+    z-index: 2000 !important;
+}
+
+.feather-plus-mobile{
+    width: 23px;
+    height: 23px;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+#table-pagination-mobile{
+    border-top: 1px solid #EBEBEC !important;
+}
+
+#table-pagination-mobile .MuiTablePagination-toolbar {
+    float: left;
+    min-height: 52px;
+    padding-right: 2px;
+}

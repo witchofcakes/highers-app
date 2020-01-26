@@ -12,7 +12,9 @@ import Paper from '@material-ui/core/Paper';
 import {makeStyles} from "@material-ui/core";
 import TablePagination from '@material-ui/core/TablePagination';
 import SideBar from "./sidebar";
-import ExpandMoreRoundedIcon from "@material-ui/core/SvgIcon/SvgIcon";
+import Fab from '@material-ui/core/Fab';
+import IconButton from '@material-ui/core/IconButton';
+import AddIcon from '@material-ui/icons/Add';
 
 function createData(number, name, vacancy, education, languages, contacts, type, cv, status, date) {
     return { number, name, vacancy, education, languages, contacts, type, cv, status, date };
@@ -84,18 +86,29 @@ const TableCandidates = () => {
                         </Table>
                     </PerfectScrollbar>
                 </TableContainer>
+                {/*<TablePagination*/}
+                {/*    rowsPerPageOptions={[10, 25, 100]}*/}
+                {/*    component="div"*/}
+                {/*    count={12}*/}
+                {/*    rowsPerPage={10}*/}
+                {/*    page={0}*/}
+                {/*    id="table-pagination"*/}
+                {/*    labelRowsPerPage="Рядків на сторінці"*/}
+                {/*    nextIconButtonText="Наступна сторінка"*/}
+                {/*    backIconButtonText="Попередня сторінка"*/}
+                {/*    // onChangePage={handleChangePage}*/}
+                {/*    // onChangeRowsPerPage={handleChangeRowsPerPage}*/}
+                {/*/>*/}
                 <TablePagination
-                    rowsPerPageOptions={[10, 25, 100]}
+                    rowsPerPageOptions={[]}
                     component="div"
                     count={12}
                     rowsPerPage={10}
                     page={0}
-                    id="table-pagination"
+                    id="table-pagination-mobile"
                     labelRowsPerPage="Рядків на сторінці"
                     nextIconButtonText="Наступна сторінка"
                     backIconButtonText="Попередня сторінка"
-                    // onChangePage={handleChangePage}
-                    // onChangeRowsPerPage={handleChangeRowsPerPage}
                 />
             </Paper>
     )
@@ -107,11 +120,46 @@ export default class Empl_Cand extends React.Component {
 
         return (
             <div>
-                <div className="row">
+                {/*<div className="row row-desktop">*/}
 
-                    <SideBar/>
+                {/*    <SideBar/>*/}
 
-                    <div className="full col" id="content-employer">
+                {/*    <div className="full col" id="content-employer">*/}
+                {/*        <div className="row">*/}
+                {/*            <div className="col-12">*/}
+                {/*                <div className="row row-all-vac-margin align-items-center">*/}
+                {/*                    <div className="all-vac-text-employer">Всі кандидати</div>*/}
+                {/*                    <div className="ml-auto">*/}
+                {/*                        <form className="search-form-employer" autoComplete="off">*/}
+                {/*                            <div className="feather-search-div">*/}
+                {/*                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-search">*/}
+                {/*                                    <circle cx="11" cy="11" r="8"></circle>*/}
+                {/*                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>*/}
+                {/*                                </svg>*/}
+                {/*                            </div>*/}
+                {/*                            <input className="search-employer" placeholder="Пошук кандидатів" type="text"/>*/}
+                {/*                        </form>*/}
+
+                {/*                        <a target="_blank" className="create-vac" href="/create-vacancy">*/}
+                {/*                            <button className="create-vac-employer">Створити вакансію</button>*/}
+                {/*                        </a>*/}
+                {/*                    </div>*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+
+                {/*        <div className="row">*/}
+                {/*            <div id="fadeout-b" className="bottom-fadeout-candidates"></div>*/}
+                {/*            <div id="fadeout-t" className="top-fadeout-candidates"></div>*/}
+                {/*            <div id="fadeout-l" className="left-fadeout-candidates"></div>*/}
+                {/*            <div id="fadeout-r" className="right-fadeout-candidates"></div>*/}
+                {/*            <TableCandidates/>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
+
+                <div className="row row-mobile">
+                    <div className="full col">
                         <div className="row">
                             <div className="col-12">
                                 <div className="row row-all-vac-margin align-items-center">
@@ -126,24 +174,22 @@ export default class Empl_Cand extends React.Component {
                                             </div>
                                             <input className="search-employer" placeholder="Пошук кандидатів" type="text"/>
                                         </form>
-
-                                        <a target="_blank" className="create-vac" href="/create-vacancy">
-                                            <button className="create-vac-employer">Створити вакансію</button>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div className="row">
-                            <div id="fadeout-b" className="bottom-fadeout-candidates"></div>
-                            <div id="fadeout-t" className="top-fadeout-candidates"></div>
-                            <div id="fadeout-l" className="left-fadeout-candidates"></div>
-                            <div id="fadeout-r" className="right-fadeout-candidates"></div>
                             <TableCandidates/>
                         </div>
                     </div>
                 </div>
+                <Fab size="medium" color="secondary" aria-label="add" className="add-btn-employer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="feather-plus-mobile">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </Fab>
             </div>
 
         );

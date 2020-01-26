@@ -1,6 +1,9 @@
 import React from 'react';
 import Footer from "./footer";
 import Footer_Contacts from "./footer_contacts";
+import NavBar_Mobile from "./navbar_mobile";
+import Bottom_Bar_User from "./mobile/bottom_bar";
+import NavBar_Mobile_Logo from "./navbar_mobile_logo";
 
 export default class Contact_Us extends React.Component  {
 
@@ -56,6 +59,7 @@ export default class Contact_Us extends React.Component  {
                 {/*    <Footer_Contacts/>*/}
                 {/*    </div>*/}
                 {/*</div>*/}
+                <NavBar_Mobile_Logo/>
                 <div className="full">
                     <div className="row contacts-row">
                         <div className="col-12">
@@ -93,6 +97,7 @@ export default class Contact_Us extends React.Component  {
                     {/*<div className="col-12">*/}
                     {/*    <Footer_Contacts/>*/}
                     {/*</div>*/}
+                <Bottom_Bar_User/>
             </div>
         );
     }
