@@ -1,4 +1,5 @@
 {
+  "homepage": "http://witchofcakes.github.io/highers-app",
   "name": "highers_platform",
   "version": "0.1.0",
   "private": true,
@@ -46,6 +47,8 @@
     "tinymce": "^5.1.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -68,6 +71,7 @@
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-editor-classic": "^16.0.0",
-    "@fortawesome/fontawesome-free": "^5.12.0"
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "gh-pages": "^2.2.0"
   }
 }

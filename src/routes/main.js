@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Router, BrowserRouter } from 'react-router-dom';
+import { HashRouter, Switch, Route, Router, BrowserRouter } from 'react-router-dom';
 import Landing from '../components/landing_page.js';
 import NavBar from "../components/navbar.js";
 import AllVac from '../components/vacancies.js';
@@ -18,6 +18,7 @@ import NavBar_Mobile from "../components/navbar_mobile";
 import Apply_Page from "../components/apply_page";
 
 const Main = () => (
+    <HashRouter basename="/">
         <div>
             <BrowserRouter>
                 <Switch>
@@ -33,6 +34,7 @@ const Main = () => (
                 </Switch>
             </BrowserRouter>
         </div>
+    </HashRouter>
 )
 
 const EmployerContainer = () => (
