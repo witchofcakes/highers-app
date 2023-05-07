@@ -44,7 +44,7 @@
     "simplebar": "^5.1.0",
     "simplebar-react": "^2.1.0",
     "styled-components": "^4.4.1",
-    "tinymce": "^5.1.5"
+    "tinymce": "^5.10.7"
   },
   "scripts": {
     "predeploy": "npm run build",
