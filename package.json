@@ -15,7 +15,7 @@
     "@testing-library/user-event": "^7.2.1",
     "@tinymce/tinymce-react": "^3.3.2",
     "feather-icons": "^4.25.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.15",
     "material-table": "^1.55.0",
     "node-sass": "^4.13.0",
